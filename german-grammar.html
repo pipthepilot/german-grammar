@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>German Grammar Cheat Codes</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 3'%3E%3Crect width='5' height='1' fill='%23000'/%3E%3Crect y='1' width='5' height='1' fill='%23DD0000'/%3E%3Crect y='2' width='5' height='1' fill='%23FFCE00'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a field manual. Condensed signage headings, gender colour-coding everywhere (der blue, die red, das green, plural grey), a signal-yellow highlighter for the cheat codes themselves. */
+:root{
+  --paper:#f3f4f1;
+  --sheet:#ffffff;
+  --ink:#16191d;
+  --muted:#5b616b;
+  --rule:#d9dcd6;
+  --signal:#f5c400;
+  --signal-ink:#1a1600;
+  --der:#2457c5; --der-bg:#e6edfb;
+  --die:#c8322f; --die-bg:#fbe8e7;
+  --das:#1a7d45; --das-bg:#e3f3e9;
+  --pl:#6a6f78;  --pl-bg:#eceef1;
+  --font-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --font-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#111418; --sheet:#181c21; --ink:#e9ebee; --muted:#9aa1ab; --rule:#2b3138;
+    --signal:#ffd23f; --signal-ink:#1a1600;
+    --der:#7ea6ff; --der-bg:#18233b;
+    --die:#ff8a80; --die-bg:#3a1c1c;
+    --das:#6fd39b; --das-bg:#15301f;
+    --pl:#aab0b9; --pl-bg:#23282f;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#111418; --sheet:#181c21; --ink:#e9ebee; --muted:#9aa1ab; --rule:#2b3138;
+  --signal:#ffd23f; --signal-ink:#1a1600;
+  --der:#7ea6ff; --der-bg:#18233b;
+  --die:#ff8a80; --die-bg:#3a1c1c;
+  --das:#6fd39b; --das-bg:#15301f;
+  --pl:#aab0b9; --pl-bg:#23282f;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.55}
+h1,h2,h3,h4{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.05}
+h2{font-size:clamp(30px,5vw,46px);font-weight:850;font-stretch:72%;letter-spacing:.005em;text-transform:uppercase}
+h3{font-size:22px;font-weight:750;font-stretch:85%;margin-bottom:8px}
+h4{font-size:16px;font-weight:700;font-stretch:90%;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:18px 0 6px}
+p{margin:0 0 10px;max-width:68ch}
+ul{margin:0 0 10px;padding-left:20px}
+li{margin-bottom:4px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* masthead */
+header.mast{border-bottom:3px solid var(--ink);padding:36px 0 24px}
+.mast-grid{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}
+.mast h1{font-size:clamp(46px,9vw,104px);font-weight:900;font-stretch:62%;text-transform:uppercase;letter-spacing:-.005em}
+.mast h1 .hl{background:var(--signal);color:var(--signal-ink);padding:0 .12em}
+.mast .sub{font-size:18px;color:var(--muted);margin-top:12px;max-width:60ch}
+.legend{display:flex;flex-direction:column;gap:6px;font-family:var(--font-mono);font-size:14px}
+.legend span{display:flex;align-items:center;gap:8px}
+.sw{width:14px;height:14px;border-radius:3px;display:inline-block}
+@media (max-width:700px){.mast-grid{grid-template-columns:1fr}.legend{flex-direction:row;flex-wrap:wrap}}
+
+/* nav */
+nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+nav.toc .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:thin}
+nav.toc a{flex:none;text-decoration:none;font-family:var(--font-display);font-stretch:80%;font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.03em;padding:6px 12px;border:1.5px solid var(--ink);border-radius:999px}
+nav.toc a:hover{background:var(--ink);color:var(--paper)}
+
+section{padding:48px 0 16px;border-bottom:1px solid var(--rule)}
+.sec-head{display:flex;gap:18px;align-items:baseline;margin-bottom:22px;flex-wrap:wrap}
+.sec-num{font-family:var(--font-mono);font-size:14px;color:var(--muted)}
+.sec-head p{color:var(--muted);margin:0;flex-basis:100%}
+
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.panel{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:20px 22px}
+.panel.flush{padding:0;overflow:hidden}
+
+/* gender colour classes */
+.m{color:var(--der);font-weight:600}.f{color:var(--die);font-weight:600}.n{color:var(--das);font-weight:600}.p{color:var(--pl);font-weight:600}
+.tag{display:inline-block;font-family:var(--font-mono);font-weight:600;font-size:13px;padding:1px 7px;border-radius:4px}
+.tag.m{background:var(--der-bg)}.tag.f{background:var(--die-bg)}.tag.n{background:var(--das-bg)}.tag.p{background:var(--pl-bg)}
+.de{font-style:italic}
+.ex{font-family:var(--font-body);padding-left:12px;border-left:3px solid var(--rule);margin:6px 0}
+.ex .en{display:block;color:var(--muted);font-size:14px;font-style:normal}
+mark,.hi{background:var(--signal);color:var(--signal-ink);padding:0 3px;border-radius:2px}
+
+/* cheat codes strip */
+.codes{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:0;border:2px solid var(--ink);border-radius:6px;overflow:hidden;background:var(--sheet)}
+.code{padding:16px 18px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.code b{display:block;font-family:var(--font-mono);font-size:12px;color:var(--muted);font-weight:500;margin-bottom:4px}
+.code strong{display:block;font-family:var(--font-display);font-stretch:80%;font-size:19px;line-height:1.15;margin-bottom:4px}
+.code span{font-size:14px;color:var(--muted)}
+
+/* tables */
+.tbl-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--font-display);font-stretch:85%;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+td.mono,.mono{font-family:var(--font-mono);font-size:15px}
+table.art td,table.art th{text-align:center}
+table.art td:first-child,table.art th:first-child{text-align:left}
+table.art td{font-family:var(--font-mono);font-size:17px;font-weight:600}
+table.art td.case{font-family:var(--font-display);font-stretch:85%;font-size:16px;font-weight:700}
+td.case small{display:block;font-family:var(--font-body);font-weight:400;font-size:12px;color:var(--muted);font-stretch:100%}
+.chg{box-shadow:inset 0 -3px 0 var(--signal)}
+th.m{color:var(--der)}th.f{color:var(--die)}th.n{color:var(--das)}th.p{color:var(--pl)}
+
+/* ending chips */
+.endings{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
+.endings span{font-family:var(--font-mono);font-weight:600;font-size:15px;padding:3px 9px;border-radius:4px}
+.col-m .endings span{background:var(--der-bg);color:var(--der)}
+.col-f .endings span{background:var(--die-bg);color:var(--die)}
+.col-n .endings span{background:var(--das-bg);color:var(--das)}
+.col-m{border-top:6px solid var(--der)}.col-f{border-top:6px solid var(--die)}.col-n{border-top:6px solid var(--das)}
+.col-m h3{color:var(--der)}.col-f h3{color:var(--die)}.col-n h3{color:var(--das)}
+.pct{font-family:var(--font-mono);font-size:12px;color:var(--muted)}
+
+/* tools */
+.tool{border:2px solid var(--ink)}
+.tool label{font-weight:600;display:block;margin-bottom:6px}
+.tool input[type=text]{width:100%;font:500 20px var(--font-body);padding:10px 12px;border:1.5px solid var(--ink);border-radius:4px;background:var(--paper);color:var(--ink)}
+.guess-out{margin-top:14px;min-height:84px;display:flex;gap:14px;align-items:flex-start}
+.big-art{font-family:var(--font-display);font-stretch:70%;font-weight:900;font-size:56px;line-height:.9;min-width:90px}
+.guess-out .why{font-size:15px}
+.meter{height:6px;background:var(--rule);border-radius:3px;margin-top:6px;max-width:220px}
+.meter i{display:block;height:100%;border-radius:3px;background:currentColor}
+.drill-noun{font-family:var(--font-display);font-stretch:75%;font-weight:850;font-size:48px;margin:6px 0 12px}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button{font:700 16px var(--font-display);font-stretch:85%;text-transform:uppercase;letter-spacing:.04em;padding:10px 18px;border-radius:4px;border:2px solid currentColor;background:var(--sheet);cursor:pointer;color:var(--ink)}
+button.bm{color:var(--der)}button.bf{color:var(--die)}button.bn{color:var(--das)}
+button:hover{background:var(--paper)}
+button.ghost{border-color:var(--rule);color:var(--muted);font-size:14px;padding:8px 12px}
+.drill-fb{margin-top:12px;min-height:48px;font-size:15px}
+.score{font-family:var(--font-mono);font-size:13px;color:var(--muted)}
+
+/* case cards */
+.case-card{border-left:6px solid var(--ink)}
+.case-card .q{font-family:var(--font-mono);font-size:14px;background:var(--paper);padding:2px 8px;border-radius:4px}
+.case-card .role{font-family:var(--font-display);font-stretch:80%;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.chant{font-family:var(--font-display);font-stretch:78%;font-weight:800;font-size:22px;line-height:1.2;margin:8px 0;padding:10px 14px;background:var(--signal);color:var(--signal-ink);border-radius:4px;display:inline-block}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:560px){.split{grid-template-columns:1fr}}
+.wo{background:var(--das-bg);border-radius:6px;padding:12px 14px}
+.wohin{background:var(--der-bg);border-radius:6px;padding:12px 14px}
+.wo b,.wohin b{font-family:var(--font-display);font-stretch:80%;font-size:18px;display:block;margin-bottom:4px}
+
+/* sentence diagram */
+.slots{display:flex;flex-wrap:wrap;gap:4px;margin:10px 0 4px}
+.slot{flex:1 1 auto;border:1.5px solid var(--rule);border-radius:4px;padding:6px 10px;text-align:center;font-style:italic;min-width:60px}
+.slot small{display:block;font-family:var(--font-mono);font-style:normal;font-size:11px;color:var(--muted);text-transform:uppercase}
+.slot.v{border-color:var(--signal);background:var(--signal);color:var(--signal-ink)}
+.slot.v small{color:var(--signal-ink)}
+
+/* nuggets */
+.nuggets{columns:3 300px;column-gap:18px}
+.nug{break-inside:avoid;background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:16px 18px;margin-bottom:18px}
+.nug h3{font-size:19px}
+.nug p:last-child{margin-bottom:0}
+
+footer{padding:36px 0 60px;color:var(--muted);font-size:14px}
+footer a{color:var(--ink)}
+@media print{nav.toc,.tool{display:none}section{break-inside:avoid-page}}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap mast-grid">
+    <div>
+      <h1>German Grammar<br><span class="hl">Cheat Codes</span></h1>
+      <p class="sub">Genders, cases, pronouns, verbs and word order, condensed for a B1 learner who knows plenty of words but wants the grammar to finally click. Every noun on this page is colour-coded by gender.</p>
+    </div>
+    <div class="legend" aria-label="Colour key">
+      <span><i class="sw" style="background:var(--der)"></i><b class="m">der</b> masculine</span>
+      <span><i class="sw" style="background:var(--die)"></i><b class="f">die</b> feminine</span>
+      <span><i class="sw" style="background:var(--das)"></i><b class="n">das</b> neuter</span>
+      <span><i class="sw" style="background:var(--pl)"></i><b class="p">die</b> plural</span>
+      <span><i class="sw" style="background:var(--signal)"></i>the bit that changes</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="#codes">Top 12</a>
+    <a href="#gender">Gender</a>
+    <a href="#cases">Cases</a>
+    <a href="#prepositions">Prepositions</a>
+    <a href="#pronouns">Pronouns</a>
+    <a href="#adjectives">Adjectives</a>
+    <a href="#verbs">Verbs</a>
+    <a href="#verb-cases">Verbs &amp; cases</a>
+    <a href="#word-order">Word order</a>
+    <a href="#nuggets">Nuggets</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ============ TOP 12 ============ -->
+<section id="codes">
+  <div class="sec-head"><span class="sec-num">00</span><h2>The 12 cheat codes</h2>
+    <p>If you remember nothing else, remember these. Each one is expanded further down.</p></div>
+  <div class="codes">
+    <div class="code"><b>01 · gender</b><strong>Ends in -e? Bet on <span class="f">die</span>.</strong><span>Right about 90% of the time across some 15,000 nouns. Male people and animals are the main exceptions (<span class="m">der Junge</span>).</span></div>
+    <div class="code"><b>02 · gender</b><strong>-ung, -heit, -keit, -schaft, -ion, -tät = <span class="f">die</span>. Always.</strong><span>These suffixes are close to 100% reliable.</span></div>
+    <div class="code"><b>03 · gender</b><strong>-chen and -lein = <span class="n">das</span>. Always.</strong><span>Even when it's a girl: <span class="n">das Mädchen</span>.</span></div>
+    <div class="code"><b>04 · gender</b><strong>The last word of a compound decides.</strong><span><span class="n">das Haus</span> + <span class="f">die Tür</span> = <span class="f">die Haustür</span>.</span></div>
+    <div class="code"><b>05 · gender</b><strong>Every plural is <span class="p">die</span>.</strong><span>Gender stops mattering once there's more than one.</span></div>
+    <div class="code"><b>06 · cases</b><strong>Only <span class="m">masculine</span> changes in the accusative.</strong><span>der→<mark>den</mark>, ein→<mark>einen</mark>, er→<mark>ihn</mark>. Fem, neut and plural look identical to nominative.</span></div>
+    <div class="code"><b>07 · cases</b><strong>Dative's signature letters: <mark>m</mark> and <mark>r</mark>.</strong><span>dem, einem, ihm, mir · der, einer, ihr. Plural: den + an extra -n on the noun.</span></div>
+    <div class="code"><b>08 · pronouns</b><strong>ihn ↔ den, ihm ↔ dem</strong><span>The pronoun ends with the same letter as the article. n = accusative, m = dative.</span></div>
+    <div class="code"><b>09 · prepositions</b><strong>Wo? → dative. Wohin? → accusative.</strong><span>Location stays put (dative); movement towards a destination (accusative).</span></div>
+    <div class="code"><b>10 · verbs</b><strong>The conjugated verb is always in slot 2.</strong><span>Whatever comes first, the verb comes next: <span class="de">Morgen <mark>fahre</mark> ich…</span></span></div>
+    <div class="code"><b>11 · verbs</b><strong>weil, dass, wenn, ob… kick the verb to the end.</strong><span><span class="de">…weil ich keine Zeit <mark>habe</mark>.</span></span></div>
+    <div class="code"><b>12 · adjectives</b><strong>If the article already shows the case, the adjective relaxes to -e or -en.</strong><span>If there's no article, the adjective does the article's job.</span></div>
+  </div>
+</section>
+
+<!-- ============ GENDER ============ -->
+<section id="gender">
+  <div class="sec-head"><span class="sec-num">01</span><h2>Working out gender</h2>
+    <p>Gender isn't random. Endings and meaning predict most nouns. Check the ending first, then the meaning, then fall back on <span class="m">der</span>.</p></div>
+
+  <div class="grid g3">
+    <div class="panel col-f">
+      <h3>die · feminine</h3>
+      <h4>Rock-solid endings</h4>
+      <div class="endings"><span>-ung</span><span>-heit</span><span>-keit</span><span>-schaft</span><span>-ion</span><span>-tät</span><span>-ik</span><span>-ei</span><span>-ie</span><span>-ur</span><span>-enz</span><span>-anz</span><span>-in</span></div>
+      <p class="de"><span class="f">die Zeitung, Freiheit, Möglichkeit, Freundschaft, Station, Universität, Musik, Bäckerei, Energie, Kultur, Konferenz, Toleranz, Lehrerin</span></p>
+      <h4>Strong tendency</h4>
+      <div class="endings"><span>-e</span><span>-cke</span><span>-ade</span></div>
+      <p><span class="pct">≈ 90% of -e nouns</span> <span class="de f">die Lampe, Straße, Ecke, Schokolade</span></p>
+      <h4>By meaning</h4>
+      <ul>
+        <li>Female people and animals: <span class="f">die Frau, die Kuh</span></li>
+        <li>Numbers as nouns: <span class="f">die Eins, die Drei</span></li>
+        <li>Most trees and flowers: <span class="f">die Eiche, die Rose, die Tulpe</span></li>
+        <li>Motorbikes and aircraft (from <span class="f">die Maschine</span>): <span class="f">die BMW, die Boeing</span></li>
+        <li>Most German rivers: <span class="f">die Donau, die Elbe</span> (but <span class="m">der Rhein</span>)</li>
+      </ul>
+    </div>
+
+    <div class="panel col-m">
+      <h3>der · masculine</h3>
+      <h4>Rock-solid endings</h4>
+      <div class="endings"><span>-ling</span><span>-ismus</span><span>-ist</span><span>-ant</span><span>-ig</span><span>-eur</span><span>-or</span><span>-ich</span></div>
+      <p class="de"><span class="m">der Frühling, Tourismus, Polizist, Elefant, Honig, Ingenieur, Motor, Teppich</span></p>
+      <h4>Strong tendency</h4>
+      <div class="endings"><span>-en</span><span>-er</span><span>-el</span></div>
+      <p><span class="pct">-en ≈ 80% · -er, -el ≈ 60%</span> <span class="de m">der Garten, Computer, Löffel</span></p>
+      <h4>By meaning</h4>
+      <ul>
+        <li>Male people and animals: <span class="m">der Mann, der Löwe</span></li>
+        <li>Days, months, seasons: <span class="m">der Montag, der Mai, der Winter</span></li>
+        <li>Compass points and weather: <span class="m">der Norden, der Regen, der Schnee, der Wind</span></li>
+        <li>Car brands (from <span class="m">der Wagen</span>): <span class="m">der BMW, der Golf</span></li>
+        <li>Alcoholic drinks: <span class="m">der Wein, der Schnaps</span> (but <span class="n">das Bier</span>)</li>
+        <li>Most one-syllable nouns lean <span class="m">der</span>: <span class="m">der Tisch, der Stuhl, der Zug</span></li>
+        <li>Nouns made from a verb stem: <span class="m">der Lauf, der Sprung</span></li>
+      </ul>
+    </div>
+
+    <div class="panel col-n">
+      <h3>das · neuter</h3>
+      <h4>Rock-solid endings</h4>
+      <div class="endings"><span>-chen</span><span>-lein</span><span>-ment</span><span>-um</span><span>-ma</span><span>-tum</span></div>
+      <p class="de"><span class="n">das Mädchen, Fräulein, Instrument, Museum, Thema, Eigentum</span> <span class="pct">(but der Irrtum, der Reichtum)</span></p>
+      <h4>Strong tendency</h4>
+      <div class="endings"><span>Ge-</span><span>Ge-…-e</span><span>-nis</span><span>-sal</span><span>-tel</span></div>
+      <p><span class="pct">Ge- ≈ 90% · -nis ≈ ⅔</span> <span class="de n">das Geschenk, Gebäude, Ergebnis, Schicksal, Viertel</span></p>
+      <h4>By meaning</h4>
+      <ul>
+        <li>Verbs used as nouns, always: <span class="n">das Essen, das Schwimmen</span></li>
+        <li>Young beings: <span class="n">das Kind, das Baby, das Kalb</span></li>
+        <li>Colours and languages: <span class="n">das Blau, das Deutsch</span></li>
+        <li>Metals and chemical elements: <span class="n">das Gold, das Eisen</span> (but <span class="m">der Stahl</span>)</li>
+        <li>Hotels, cafés, cinemas: <span class="n">das Hotel, das Café, das Kino</span></li>
+        <li>Countries and towns (with no article in use): <span class="n">das schöne Berlin</span></li>
+        <li>Most loanwords from English with no clear German match: <span class="n">das Handy, das Internet</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-top:18px">
+    <div class="panel tool">
+      <h3>Gender guesser</h3>
+      <label for="guess-in">Type a German noun and see which rule fires</label>
+      <input type="text" id="guess-in" value="Wohnung" autocomplete="off" spellcheck="false">
+      <div class="guess-out" id="guess-out" aria-live="polite"></div>
+      <p class="pct" style="margin-top:8px">Rules of thumb, not a dictionary. Check compounds by their last part.</p>
+    </div>
+    <div class="panel tool">
+      <h3>Gender drill</h3>
+      <p class="score" id="drill-score">0 right · 0 tries · streak 0</p>
+      <div class="drill-noun" id="drill-noun">Zeitung</div>
+      <div class="btns">
+        <button class="bm" data-g="m" type="button">der</button>
+        <button class="bf" data-g="f" type="button">die</button>
+        <button class="bn" data-g="n" type="button">das</button>
+        <button class="ghost" id="drill-skip" type="button">Next noun</button>
+      </div>
+      <div class="drill-fb" id="drill-fb" aria-live="polite">Pick an article. You'll see the rule that gives it away.</div>
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-top:18px">
+    <div class="panel">
+      <h3>The masculine -e trap (and why it's predictable)</h3>
+      <p>Most masculine nouns ending in -e are male beings: <span class="m">der Junge, der Kollege, der Kunde, der Löwe, der Franzose</span>. A small set are abstract: <span class="m">der Name, der Gedanke, der Glaube, der Buchstabe, der Wille, der Friede</span>.</p>
+      <p>Both groups are <b>weak nouns</b> (n-declension): they add <mark>-n</mark> everywhere except the nominative singular. <span class="de">Ich kenne <span class="m">den Kunde<mark>n</mark></span>. Ich helfe <span class="m">dem Kollege<mark>n</mark></span>.</span> Learn the gender and the extra -n come as a package.</p>
+      <p>Neuter -e exceptions to memorise: <span class="n">das Auge, das Ende, das Erbe</span>, plus the <span class="n">Ge-…-e</span> family (<span class="n">das Gebäude, das Gemüse, das Gebirge</span>). And <span class="m">der Käse</span>, because cheese is special.</p>
+    </div>
+    <div class="panel">
+      <h3>When nothing fires</h3>
+      <p>Masculine is the biggest group of German nouns. If no ending or meaning rule applies, guess <span class="m">der</span>.</p>
+      <h4>How to stop forgetting genders</h4>
+      <ul>
+        <li>Never learn a noun without its article. Say <span class="de">„<span class="f">die</span> Wohnung"</span> as one word.</li>
+        <li>Learn the plural at the same time: <span class="de">das Buch, <span class="p">die Bücher</span></span>.</li>
+        <li>Colour-code your notes exactly like this page. Visual memory does the work.</li>
+        <li>Picture a scene: every <span class="m">der</span> noun is on fire, every <span class="f">die</span> noun is frozen, every <span class="n">das</span> noun is covered in grass. Weird pictures stick.</li>
+        <li>Use the rules above to retro-fit words you already know. You'll find you can now explain the gender of hundreds of them.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASES ============ -->
+<section id="cases">
+  <div class="sec-head"><span class="sec-num">02</span><h2>The four cases</h2>
+    <p>Case tells you what job a noun is doing in the sentence. German marks the job on the article, so word order can move around without losing the meaning.</p></div>
+
+  <div class="panel" style="margin-bottom:18px">
+    <h3>One sentence, all four cases</h3>
+    <p class="ex de" style="font-size:20px"><span class="m">Der Vater</span> gibt <span class="n">dem Kind</span> <span class="m">den Ball</span> <span class="m">des Nachbarn</span>.
+      <span class="en">The father gives the child the neighbour's ball.</span></p>
+    <div class="slots">
+      <div class="slot">Der Vater<small>Nom · doer</small></div>
+      <div class="slot v">gibt<small>verb</small></div>
+      <div class="slot">dem Kind<small>Dat · receiver</small></div>
+      <div class="slot">den Ball<small>Akk · thing</small></div>
+      <div class="slot">des Nachbarn<small>Gen · owner</small></div>
+    </div>
+    <p class="pct" style="margin-top:8px">Swap the order (<span class="de">Den Ball gibt der Vater dem Kind</span>) and it still means the same thing. The articles carry the meaning.</p>
+  </div>
+
+  <div class="grid g2">
+    <div class="panel flush">
+      <div style="padding:18px 20px 6px"><h3>Definite article · "the"</h3></div>
+      <div class="tbl-wrap"><table class="art">
+        <thead><tr><th>Case</th><th class="m">Masc</th><th class="f">Fem</th><th class="n">Neut</th><th class="p">Plural</th></tr></thead>
+        <tbody>
+          <tr><td class="case">Nom<small>wer / was?</small></td><td class="m">der</td><td class="f">die</td><td class="n">das</td><td class="p">die</td></tr>
+          <tr><td class="case">Akk<small>wen / was?</small></td><td class="m chg">den</td><td class="f">die</td><td class="n">das</td><td class="p">die</td></tr>
+          <tr><td class="case">Dat<small>wem?</small></td><td class="m chg">dem</td><td class="f chg">der</td><td class="n chg">dem</td><td class="p chg">den <small>+n</small></td></tr>
+          <tr><td class="case">Gen<small>wessen?</small></td><td class="m chg">des <small>+s</small></td><td class="f chg">der</td><td class="n chg">des <small>+s</small></td><td class="p chg">der</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="panel flush">
+      <div style="padding:18px 20px 6px"><h3>Indefinite · "a" (and kein, mein…)</h3></div>
+      <div class="tbl-wrap"><table class="art">
+        <thead><tr><th>Case</th><th class="m">Masc</th><th class="f">Fem</th><th class="n">Neut</th><th class="p">Pl (kein)</th></tr></thead>
+        <tbody>
+          <tr><td class="case">Nom</td><td class="m">ein</td><td class="f">eine</td><td class="n">ein</td><td class="p">keine</td></tr>
+          <tr><td class="case">Akk</td><td class="m chg">einen</td><td class="f">eine</td><td class="n">ein</td><td class="p">keine</td></tr>
+          <tr><td class="case">Dat</td><td class="m chg">einem</td><td class="f chg">einer</td><td class="n chg">einem</td><td class="p chg">keinen</td></tr>
+          <tr><td class="case">Gen</td><td class="m chg">eines</td><td class="f chg">einer</td><td class="n chg">eines</td><td class="p chg">keiner</td></tr>
+        </tbody>
+      </table></div>
+      <p style="padding:10px 20px 0" class="pct">mein, dein, sein, ihr, unser, euer and kein all take these exact endings.</p>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:18px">
+    <h3>Read the table as a pattern, not 16 words</h3>
+    <div class="grid g3" style="gap:12px">
+      <div><span class="chant">r · e · s · e</span><p>Nominative endings: de<b>r</b>, di<b>e</b>, da<b>s</b>, di<b>e</b>.</p></div>
+      <div><span class="chant">n · e · s · e</span><p>Accusative: only the first letter changes. de<b>n</b>, die, das, die.</p></div>
+      <div><span class="chant">m · r · m · n</span><p>Dative: de<b>m</b>, de<b>r</b>, de<b>m</b>, de<b>n</b>.</p></div>
+      <div><span class="chant">s · r · s · r</span><p>Genitive: de<b>s</b>, de<b>r</b>, de<b>s</b>, de<b>r</b>.</p></div>
+      <div><p style="margin-top:8px">Chant it as one line: <b>"res-e, nes-e, mrmn, srsr"</b>. These four letter-strings also give you the endings for <span class="de">dieser, jeder, welcher</span>, the pronouns, and strong adjectives.</p></div>
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-top:18px">
+    <div class="panel case-card" style="border-left-color:var(--ink)">
+      <span class="role">Nominativ · the doer</span>
+      <h3 style="margin-top:4px">Who is doing it? <span class="q">Wer oder was?</span></h3>
+      <ul>
+        <li>The subject of the verb: <span class="de"><span class="m">Der Hund</span> bellt.</span></li>
+        <li>After <b>sein, werden, bleiben, heißen</b>, both sides are nominative (they're "equals" signs): <span class="de"><span class="m">Er</span> ist <span class="m">ein guter Lehrer</span>.</span></li>
+        <li>The dictionary form. If you're just naming a thing, it's nominative.</li>
+      </ul>
+      <p class="pct">Test: replace it with <i>er / sie / es</i>. If that works, it's nominative.</p>
+    </div>
+    <div class="panel case-card" style="border-left-color:var(--der)">
+      <span class="role">Akkusativ · the target</span>
+      <h3 style="margin-top:4px">What is directly affected? <span class="q">Wen oder was?</span></h3>
+      <ul>
+        <li>The direct object: <span class="de">Ich sehe <span class="m">den Mann</span>. Ich kaufe <span class="m">einen Tisch</span>.</span></li>
+        <li><b>Es gibt</b> always takes accusative: <span class="de">Es gibt <span class="m">keinen Zucker</span>.</span></li>
+        <li>After <b>durch, für, gegen, ohne, um</b> and with movement after two-way prepositions.</li>
+        <li>Time with no preposition: <span class="de"><span class="m">jeden Tag</span>, <span class="m">nächsten Monat</span>, <span class="f">die ganze Woche</span></span>.</li>
+        <li>Greetings and wishes (there's a hidden "I wish you"): <span class="de">Guten Morgen! Einen schönen Tag!</span></li>
+      </ul>
+      <p class="pct">Test: would English use "him"? Then German probably wants accusative.</p>
+    </div>
+    <div class="panel case-card" style="border-left-color:var(--das)">
+      <span class="role">Dativ · the receiver</span>
+      <h3 style="margin-top:4px">To or for whom? <span class="q">Wem?</span></h3>
+      <ul>
+        <li>The indirect object, usually a person who receives or benefits: <span class="de">Ich gebe <span class="f">der Frau</span> <span class="n">das Geld</span>.</span></li>
+        <li>After <b>aus, außer, bei, mit, nach, seit, von, zu, gegenüber</b> and for location after two-way prepositions.</li>
+        <li>With dative verbs: <span class="de">helfen, danken, gefallen, gehören…</span> (see Verbs &amp; cases).</li>
+        <li>Feelings and states, where English uses "I am": <span class="de">Mir ist kalt. Mir ist langweilig. Es tut mir leid.</span></li>
+        <li>Body parts and clothes, instead of "my": <span class="de">Ich wasche <span class="m">mir</span> die Hände.</span></li>
+      </ul>
+      <p class="pct">Plural reminder: add -n to the noun if it doesn't already end in -n or -s. <span class="de">mit den Kinder<mark>n</mark></span>.</p>
+    </div>
+    <div class="panel case-card" style="border-left-color:var(--die)">
+      <span class="role">Genitiv · the owner</span>
+      <h3 style="margin-top:4px">Whose? <span class="q">Wessen?</span></h3>
+      <ul>
+        <li>Possession: <span class="de"><span class="n">das Auto</span> <span class="m">meines Vaters</span>, <span class="n">das Ende</span> <span class="m">des Films</span></span>.</li>
+        <li>Masculine and neuter nouns add <mark>-s</mark> or <mark>-es</mark> (one-syllable nouns usually take -es): <span class="de">des Mann<mark>es</mark>, des Kind<mark>es</mark>, des Computer<mark>s</mark></span>.</li>
+        <li>After <b>wegen, trotz, während, statt (anstatt), innerhalb, außerhalb</b>.</li>
+        <li>Names: just add -s, no apostrophe. <span class="de">Peters Wohnung, Annas Bruder</span>.</li>
+      </ul>
+      <p class="pct">In speech, <span class="de">von + dative</span> often replaces it: <span class="de">das Auto von meinem Vater</span>. Recognise genitive; use it in writing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREPOSITIONS ============ -->
+<section id="prepositions">
+  <div class="sec-head"><span class="sec-num">03</span><h2>Prepositions decide the case</h2>
+    <p>Learn these four lists and most case decisions make themselves.</p></div>
+
+  <div class="grid g2">
+    <div class="panel">
+      <h3>Always accusative</h3>
+      <span class="chant">durch · für · gegen · ohne · um</span>
+      <p>Rhyme: <b>„Durch, für, gegen, ohne, um – Deutsch zu lernen ist nicht dumm."</b> Or the acronym <b>DOGFU</b>.</p>
+      <p class="ex de">Ich gehe <b>durch</b> <span class="m">den Park</span>. Das ist <b>für</b> <span class="m">dich</span>. Wir sitzen <b>um</b> <span class="m">den Tisch</span>.</p>
+      <p class="pct">Also: <span class="de">bis</span> (<span class="de">bis nächsten Montag</span>) and <span class="de">entlang</span> when placed after the noun.</p>
+    </div>
+    <div class="panel">
+      <h3>Always dative</h3>
+      <span class="chant">aus · außer · bei · mit · nach · seit · von · zu</span>
+      <p>Sing it to the tune of the <b>Blue Danube</b> waltz ("da-da-da-daa, dum-dum, dum-dum"). Add <span class="de">gegenüber</span> on the end.</p>
+      <p class="ex de">Ich komme <b>aus</b> <span class="m">dem Büro</span>. Ich fahre <b>mit</b> <span class="m">dem Zug</span>. <b>Seit</b> <span class="n">einem Jahr</span> wohne ich hier.</p>
+      <p class="pct">Dative wins even when there's movement: <span class="de">Ich gehe zu<b>m</b> Arzt.</span> The preposition's rule overrides any "motion" instinct.</p>
+    </div>
+    <div class="panel">
+      <h3>Two-way (Wechselpräpositionen)</h3>
+      <span class="chant">an · auf · hinter · in · neben · über · unter · vor · zwischen</span>
+      <p>Nine words. Sing them to <b>Ode to Joy</b>. Then ask one question:</p>
+      <div class="split">
+        <div class="wo"><b>Wo? → Dativ</b>Position. Something is somewhere.<p class="de" style="margin:6px 0 0">Das Buch liegt auf <span class="m">dem Tisch</span>.</p></div>
+        <div class="wohin"><b>Wohin? → Akkusativ</b>Movement to a new place.<p class="de" style="margin:6px 0 0">Ich lege das Buch auf <span class="m">den Tisch</span>.</p></div>
+      </div>
+      <h4>The verb pairs that make it automatic</h4>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Wohin? (Akk) · you do it</th><th>Wo? (Dat) · result</th></tr></thead>
+        <tbody>
+          <tr><td class="de">legen · lay down flat</td><td class="de">liegen · lie</td></tr>
+          <tr><td class="de">stellen · stand upright</td><td class="de">stehen · stand</td></tr>
+          <tr><td class="de">setzen · sit someone down</td><td class="de">sitzen · sit</td></tr>
+          <tr><td class="de">hängen (hängte) · hang up</td><td class="de">hängen (hing) · be hanging</td></tr>
+        </tbody>
+      </table></div>
+      <p class="pct" style="margin-top:8px">Action verbs are regular and take accusative; the resting verbs are irregular and take dative. In time expressions, two-way prepositions take dative: <span class="de">am Montag, in der Nacht, vor einer Woche</span> (vor + time = "ago").</p>
+    </div>
+    <div class="panel">
+      <h3>Genitive</h3>
+      <span class="chant">wegen · trotz · während · statt</span>
+      <p class="ex de"><b>Wegen</b> <span class="m">des Regens</span> bleiben wir zu Hause. <b>Trotz</b> <span class="f">der Kälte</span> gehen wir spazieren.</p>
+      <p class="pct">In everyday speech you'll hear <span class="de">wegen dem Regen</span>. It's common and understood, though written German keeps the genitive.</p>
+
+      <h4>Contractions to recognise instantly</h4>
+      <div class="tbl-wrap"><table>
+        <tbody>
+          <tr><td class="mono">an + dem</td><td class="mono"><b>am</b></td><td class="mono">in + dem</td><td class="mono"><b>im</b></td></tr>
+          <tr><td class="mono">an + das</td><td class="mono"><b>ans</b></td><td class="mono">in + das</td><td class="mono"><b>ins</b></td></tr>
+          <tr><td class="mono">bei + dem</td><td class="mono"><b>beim</b></td><td class="mono">von + dem</td><td class="mono"><b>vom</b></td></tr>
+          <tr><td class="mono">zu + dem</td><td class="mono"><b>zum</b></td><td class="mono">zu + der</td><td class="mono"><b>zur</b></td></tr>
+        </tbody>
+      </table></div>
+      <p class="pct" style="margin-top:8px"><b>im</b> = dative (wo?), <b>ins</b> = accusative (wohin?). <span class="de">Ich bin im Kino. Ich gehe ins Kino.</span> The contraction tells you the case.</p>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:18px">
+    <h3>"To" has five translations</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Use</th><th>When</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td class="mono"><b>nach</b> + Dat</td><td>Cities, countries without article, and home</td><td class="de">nach Berlin, nach Spanien, nach Hause</td></tr>
+        <tr><td class="mono"><b>in</b> + Akk</td><td>Countries with article; going inside a building</td><td class="de">in die Schweiz, in die USA, ins Kino</td></tr>
+        <tr><td class="mono"><b>zu</b> + Dat</td><td>People, shops, events, and places you won't enter</td><td class="de">zum Arzt, zu Lidl, zur Party, zu meiner Mutter</td></tr>
+        <tr><td class="mono"><b>an</b> + Akk</td><td>Edges and water</td><td class="de">ans Meer, an den See, an die Wand</td></tr>
+        <tr><td class="mono"><b>auf</b> + Akk</td><td>Open surfaces and some public places</td><td class="de">auf den Markt, auf die Insel, auf die Toilette</td></tr>
+      </tbody>
+    </table></div>
+    <p class="pct" style="margin-top:8px">And to say where you <em>are</em>: <span class="de">in Berlin</span>, <span class="de">zu Hause</span>, <span class="de">beim Arzt</span>, <span class="de">am Meer</span>, <span class="de">auf dem Markt</span>.</p>
+  </div>
+</section>
+
+<!-- ============ PRONOUNS ============ -->
+<section id="pronouns">
+  <div class="sec-head"><span class="sec-num">04</span><h2>Personal pronouns</h2>
+    <p>Same four cases, but every person gets its own word. The tricks below cut the learning load in half.</p></div>
+  <div class="grid g2">
+    <div class="panel flush">
+      <div class="tbl-wrap"><table class="art">
+        <thead><tr><th>English</th><th>Nom</th><th>Akk</th><th>Dat</th><th>Possessive</th></tr></thead>
+        <tbody>
+          <tr><td class="case">I / me</td><td>ich</td><td class="chg">mich</td><td class="chg">mir</td><td>mein</td></tr>
+          <tr><td class="case">you (informal)</td><td>du</td><td class="chg">dich</td><td class="chg">dir</td><td>dein</td></tr>
+          <tr><td class="case">he / him</td><td class="m">er</td><td class="m chg">ihn</td><td class="m chg">ihm</td><td class="m">sein</td></tr>
+          <tr><td class="case">she / her</td><td class="f">sie</td><td class="f">sie</td><td class="f chg">ihr</td><td class="f">ihr</td></tr>
+          <tr><td class="case">it</td><td class="n">es</td><td class="n">es</td><td class="n chg">ihm</td><td class="n">sein</td></tr>
+          <tr><td class="case">we / us</td><td>wir</td><td class="chg">uns</td><td class="chg">uns</td><td>unser</td></tr>
+          <tr><td class="case">you (plural)</td><td>ihr</td><td class="chg">euch</td><td class="chg">euch</td><td>euer</td></tr>
+          <tr><td class="case">they / them</td><td class="p">sie</td><td class="p">sie</td><td class="p chg">ihnen</td><td class="p">ihr</td></tr>
+          <tr><td class="case">you (formal)</td><td>Sie</td><td>Sie</td><td class="chg">Ihnen</td><td>Ihr</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="panel">
+      <h3>Memory tricks</h3>
+      <ul>
+        <li><b>The pronoun copies the article's last letter.</b> den → ih<mark>n</mark>, dem → ih<mark>m</mark>, der → ih<mark>r</mark>, den (pl) → ihne<mark>n</mark>. If you know the article, you know the pronoun.</li>
+        <li><b>-ch is accusative, -r is dative.</b> mi<mark>ch</mark>/di<mark>ch</mark> vs mi<mark>r</mark>/di<mark>r</mark>. English helps: "mi<b>ch</b>" ≈ "me" as object, "mi<b>r</b>" ≈ "to me".</li>
+        <li><b>wir and ihr don't care</b> about accusative vs dative: uns/uns, euch/euch.</li>
+        <li><b>Neuter is masculine in disguise</b> everywhere except nominative and accusative (es/es vs er/ihn).</li>
+        <li><b>"ihr" has three jobs</b>: <i>you all</i> (nom), <i>to her</i> (dat), <i>her/their</i> (possessive). Context sorts it.</li>
+        <li><b>Formal Sie = they, capitalised.</b> Conjugate with the plural: <span class="de">Sie sind, Sie haben</span>.</li>
+        <li><b>Pronouns follow grammatical gender.</b> A table is "he": <span class="de">Wo ist <span class="m">der Tisch</span>? – <span class="m">Er</span> ist dort.</span></li>
+      </ul>
+      <h4>Reflexive pronouns (sich…)</h4>
+      <p>Identical to the table except every third person (er, sie, es, sie, Sie) becomes <b>sich</b>. Use dative (mir, dir) when there's already an accusative object:</p>
+      <p class="ex de">Ich wasche <b>mich</b>. → Ich wasche <b>mir</b> die Hände.<span class="en">I wash myself. → I wash my hands.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ADJECTIVES ============ -->
+<section id="adjectives">
+  <div class="sec-head"><span class="sec-num">05</span><h2>Adjective endings</h2>
+    <p>Only adjectives <em>before</em> a noun take endings. After sein they're bare: <span class="de">Der Wein ist rot</span>.</p></div>
+
+  <div class="panel" style="margin-bottom:18px">
+    <h3>The one idea behind all three tables</h3>
+    <p style="max-width:none">Someone has to signal gender and case. <b>If the article has already done it, the adjective takes a lazy -e or -en. If the article hasn't (or there's no article), the adjective takes the signal itself</b>, using the same r/e/s/n/m letters as der/die/das.</p>
+    <div class="grid g3" style="gap:12px">
+      <p class="ex de"><span class="m">der</span> rot<b>e</b> Wein<span class="en">"der" already says masculine → lazy -e</span></p>
+      <p class="ex de"><span class="m">ein</span> rot<b class="m">er</b> Wein<span class="en">"ein" is ambiguous → adjective adds -er</span></p>
+      <p class="ex de">rot<b class="m">er</b> Wein<span class="en">no article → adjective carries it all</span></p>
+    </div>
+  </div>
+
+  <div class="grid g3">
+    <div class="panel flush">
+      <div style="padding:16px 18px 4px"><h3>After der / dieser / jeder</h3><p class="pct">weak</p></div>
+      <div class="tbl-wrap"><table class="art">
+        <thead><tr><th></th><th class="m">M</th><th class="f">F</th><th class="n">N</th><th class="p">Pl</th></tr></thead>
+        <tbody>
+          <tr><td class="case">Nom</td><td>-e</td><td>-e</td><td>-e</td><td>-en</td></tr>
+          <tr><td class="case">Akk</td><td>-en</td><td>-e</td><td>-e</td><td>-en</td></tr>
+          <tr><td class="case">Dat</td><td>-en</td><td>-en</td><td>-en</td><td>-en</td></tr>
+          <tr><td class="case">Gen</td><td>-en</td><td>-en</td><td>-en</td><td>-en</td></tr>
+        </tbody>
+      </table></div>
+      <p style="padding:10px 18px" class="pct">Five -e's in the top-left "L shape", -en everywhere else.</p>
+    </div>
+    <div class="panel flush">
+      <div style="padding:16px 18px 4px"><h3>After ein / kein / mein</h3><p class="pct">mixed</p></div>
+      <div class="tbl-wrap"><table class="art">
+        <thead><tr><th></th><th class="m">M</th><th class="f">F</th><th class="n">N</th><th class="p">Pl</th></tr></thead>
+        <tbody>
+          <tr><td class="case">Nom</td><td class="chg">-er</td><td>-e</td><td class="chg">-es</td><td>-en</td></tr>
+          <tr><td class="case">Akk</td><td>-en</td><td>-e</td><td class="chg">-es</td><td>-en</td></tr>
+          <tr><td class="case">Dat</td><td>-en</td><td>-en</td><td>-en</td><td>-en</td></tr>
+          <tr><td class="case">Gen</td><td>-en</td><td>-en</td><td>-en</td><td>-en</td></tr>
+        </tbody>
+      </table></div>
+      <p style="padding:10px 18px" class="pct">Same as weak, except the three spots where "ein" has no ending. There, the adjective borrows der/das: -er, -es.</p>
+    </div>
+    <div class="panel flush">
+      <div style="padding:16px 18px 4px"><h3>No article</h3><p class="pct">strong</p></div>
+      <div class="tbl-wrap"><table class="art">
+        <thead><tr><th></th><th class="m">M</th><th class="f">F</th><th class="n">N</th><th class="p">Pl</th></tr></thead>
+        <tbody>
+          <tr><td class="case">Nom</td><td>-er</td><td>-e</td><td>-es</td><td>-e</td></tr>
+          <tr><td class="case">Akk</td><td>-en</td><td>-e</td><td>-es</td><td>-e</td></tr>
+          <tr><td class="case">Dat</td><td>-em</td><td>-er</td><td>-em</td><td>-en</td></tr>
+          <tr><td class="case">Gen</td><td class="chg">-en</td><td>-er</td><td class="chg">-en</td><td>-er</td></tr>
+        </tbody>
+      </table></div>
+      <p style="padding:10px 18px" class="pct">It's just the der-word endings (res-e, nes-e, mrmn, srsr), except masc/neut genitive: the noun's -s already signals it.</p>
+    </div>
+  </div>
+  <p class="ex de" style="margin-top:14px">Mit <b>frisch<span class="m">em</span></b> Kaffee · bei <b>schön<span class="n">em</span></b> Wetter · <b>Lieb<span class="f">e</span></b> Anna, <b>Lieb<span class="m">er</span></b> Thomas · <b>Viel<span class="m">en</span></b> Dank (accusative, hidden "I wish you")</p>
+</section>
+
+<!-- ============ VERBS ============ -->
+<section id="verbs">
+  <div class="sec-head"><span class="sec-num">06</span><h2>Verb conjugation</h2>
+    <p>Take the infinitive, chop off -en, add the ending for the person.</p></div>
+
+  <div class="grid g3">
+    <div class="panel flush">
+      <div style="padding:16px 18px 4px"><h3>Present tense pattern</h3></div>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Person</th><th>Ending</th><th>machen</th><th>arbeiten</th></tr></thead>
+        <tbody class="mono">
+          <tr><td>ich</td><td><b>-e</b></td><td>mach<b>e</b></td><td>arbeit<b>e</b></td></tr>
+          <tr><td>du</td><td><b>-st</b></td><td>mach<b>st</b></td><td>arbeit<mark>e</mark><b>st</b></td></tr>
+          <tr><td>er/sie/es</td><td><b>-t</b></td><td>mach<b>t</b></td><td>arbeit<mark>e</mark><b>t</b></td></tr>
+          <tr><td>wir</td><td><b>-en</b></td><td>mach<b>en</b></td><td>arbeit<b>en</b></td></tr>
+          <tr><td>ihr</td><td><b>-t</b></td><td>mach<b>t</b></td><td>arbeit<mark>e</mark><b>t</b></td></tr>
+          <tr><td>sie/Sie</td><td><b>-en</b></td><td>mach<b>en</b></td><td>arbeit<b>en</b></td></tr>
+        </tbody>
+      </table></div>
+      <p style="padding:10px 18px" class="pct">wir = sie = Sie = infinitive. Always. Stems ending in -t/-d slip in an -e for pronunciation (arbeitest, findet). Stems ending in -s/-ß/-z just add -t for du: <span class="de">du heißt, du tanzt</span>.</p>
+    </div>
+    <div class="panel">
+      <h3>Stem-changers: only du and er</h3>
+      <p>Strong verbs change their vowel <b>only</b> in the du and er/sie/es forms. Everything else is regular.</p>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Change</th><th>Infinitive</th><th>du / er</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">a → ä</td><td class="de">fahren, schlafen, tragen</td><td class="de">fährst, fährt</td></tr>
+          <tr><td class="mono">au → äu</td><td class="de">laufen</td><td class="de">läufst, läuft</td></tr>
+          <tr><td class="mono">e → i</td><td class="de">sprechen, helfen, nehmen, essen, geben</td><td class="de">sprichst, nimmt, isst, gibt</td></tr>
+          <tr><td class="mono">e → ie</td><td class="de">sehen, lesen, empfehlen</td><td class="de">siehst, liest, empfiehlt</td></tr>
+        </tbody>
+      </table></div>
+      <p class="pct" style="margin-top:8px">Picture the change as a "promotion" for the two people closest to the action: you and him.</p>
+    </div>
+    <div class="panel flush">
+      <div style="padding:16px 18px 4px"><h3>The big three</h3></div>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th></th><th>sein</th><th>haben</th><th>werden</th></tr></thead>
+        <tbody class="mono">
+          <tr><td>ich</td><td>bin</td><td>habe</td><td>werde</td></tr>
+          <tr><td>du</td><td>bist</td><td>ha<mark>st</mark></td><td>wir<mark>st</mark></td></tr>
+          <tr><td>er</td><td>ist</td><td>ha<mark>t</mark></td><td>wir<mark>d</mark></td></tr>
+          <tr><td>wir</td><td>sind</td><td>haben</td><td>werden</td></tr>
+          <tr><td>ihr</td><td>seid</td><td>habt</td><td>werdet</td></tr>
+          <tr><td>sie</td><td>sind</td><td>haben</td><td>werden</td></tr>
+        </tbody>
+      </table></div>
+      <p style="padding:10px 18px" class="pct"><b>seid</b> (you all are) vs <b>seit</b> (since): one letter, totally different words.</p>
+    </div>
+  </div>
+
+  <div class="grid g3" style="margin-top:18px">
+    <div class="panel">
+      <h3>Modal verbs</h3>
+      <p><span class="de">können, müssen, dürfen, wollen, sollen, mögen</span> (and <span class="de">wissen</span>):</p>
+      <ul>
+        <li>Vowel changes in the singular: <span class="de">ich kann, ich muss, ich darf, ich will</span>.</li>
+        <li><b>ich and er are identical, with no ending</b>: <span class="de">ich kann / er kann</span>, <span class="de">ich weiß / er weiß</span>.</li>
+        <li>The second verb goes to the end as an infinitive: <span class="de">Ich <b>muss</b> heute <b>arbeiten</b>.</span></li>
+        <li><span class="de">möchte</span> is a polite "would like": <span class="de">ich möchte, du möchtest, er möchte</span>.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Perfekt: haben or sein?</h3>
+      <p>Default is <b>haben</b>. Use <b>sein</b> when the verb has no accusative object and shows:</p>
+      <ul>
+        <li><b>Movement from A to B</b>: <span class="de">Ich bin nach Köln gefahren.</span></li>
+        <li><b>Change of state</b>: <span class="de">Er ist eingeschlafen. Sie ist gestorben. Es ist kalt geworden.</span></li>
+        <li><b>The rebels</b>: <span class="de">sein, bleiben, passieren</span>. <span class="de">Ich bin zu Hause geblieben.</span></li>
+      </ul>
+      <p class="pct">Spoken German uses Perfekt for the past, but Präteritum for <span class="de">war, hatte</span> and the modals (<span class="de">konnte, musste, wollte</span>).</p>
+    </div>
+    <div class="panel">
+      <h3>Building the participle</h3>
+      <ul>
+        <li>Weak: <b>ge-</b>stem<b>-t</b> → <span class="de">gemacht, gekauft, gearbeitet</span></li>
+        <li>Strong: <b>ge-</b>stem<b>-en</b>, often new vowel → <span class="de">gefahren, gesprochen, getrunken</span></li>
+        <li>Separable: ge goes inside → <span class="de">ein<b>ge</b>kauft, an<b>ge</b>rufen</span></li>
+        <li><b>No ge-</b> for -ieren verbs (<span class="de">studiert, telefoniert</span>) and inseparable prefixes <b>be-, emp-, ent-, er-, ge-, miss-, ver-, zer-</b> (<span class="de">bekommen, verstanden, erzählt</span>)</li>
+      </ul>
+      <p class="pct">Inseparable prefixes are never stressed: <span class="de">ver<b>STEH</b>en</span>. Separable ones always are: <span class="de"><b>AN</b>rufen</span>.</p>
+    </div>
+    <div class="panel">
+      <h3>Separable verbs</h3>
+      <p>The prefix flies to the end of the clause:</p>
+      <p class="ex de">aufstehen → Ich <b>stehe</b> um sieben <b>auf</b>.</p>
+      <p class="ex de">anrufen → <b>Rufst</b> du mich morgen <b>an</b>?</p>
+      <p>In a weil/dass clause it glues back together: <span class="de">…weil ich früh <b>aufstehe</b>.</span> With zu: <span class="de">auf<b>zu</b>stehen</span>.</p>
+    </div>
+    <div class="panel">
+      <h3>Konjunktiv II: the polite and the "if"</h3>
+      <p>For most verbs: <b>würde + infinitive</b>. <span class="de">Ich würde gern kommen.</span></p>
+      <p>Learn these six as single words:</p>
+      <p class="mono">wäre · hätte · könnte · müsste · sollte · dürfte</p>
+      <p class="ex de">Wenn ich Zeit <b>hätte</b>, <b>würde</b> ich mehr lesen.<span class="en">If I had time, I would read more.</span></p>
+      <p class="ex de"><b>Könnten</b> Sie mir helfen?<span class="en">Could you help me?</span></p>
+    </div>
+    <div class="panel">
+      <h3>werden: one verb, three jobs</h3>
+      <ul>
+        <li><b>become</b>: <span class="de">Es <b>wird</b> dunkel.</span></li>
+        <li><b>future</b> (+ infinitive): <span class="de">Ich <b>werde</b> morgen <b>anrufen</b>.</span></li>
+        <li><b>passive</b> (+ participle): <span class="de">Das Haus <b>wird</b> 2027 <b>gebaut</b>.</span></li>
+      </ul>
+      <p class="pct">Look at what sits at the end of the clause: infinitive = future, participle = passive, adjective or noun = become.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VERBS & CASES ============ -->
+<section id="verb-cases">
+  <div class="sec-head"><span class="sec-num">07</span><h2>Verbs choose cases too</h2>
+    <p>Most verbs take an accusative object. These are the ones that don't, or that take two.</p></div>
+  <div class="grid g3">
+    <div class="panel">
+      <h3>Dative-only verbs</h3>
+      <p>Think of the person as "receiving" help, thanks, pleasure. Learn them with <b>mir</b> attached:</p>
+      <div class="tbl-wrap"><table>
+        <tbody>
+          <tr><td class="de">helfen</td><td class="de">Ich helfe <b>dir</b>.</td></tr>
+          <tr><td class="de">danken</td><td class="de">Ich danke <b>Ihnen</b>.</td></tr>
+          <tr><td class="de">gefallen</td><td class="de">Das gefällt <b>mir</b>.</td></tr>
+          <tr><td class="de">gehören</td><td class="de">Das gehört <b>mir</b>.</td></tr>
+          <tr><td class="de">schmecken</td><td class="de">Schmeckt es <b>dir</b>?</td></tr>
+          <tr><td class="de">passen / stehen</td><td class="de">Das steht <b>dir</b> gut.</td></tr>
+          <tr><td class="de">antworten</td><td class="de">Antworte <b>mir</b>!</td></tr>
+          <tr><td class="de">glauben</td><td class="de">Ich glaube <b>dir</b>.</td></tr>
+          <tr><td class="de">folgen</td><td class="de">Folgen Sie <b>mir</b>.</td></tr>
+          <tr><td class="de">gratulieren</td><td class="de">Ich gratuliere <b>dir</b>!</td></tr>
+          <tr><td class="de">fehlen</td><td class="de">Du fehlst <b>mir</b>.</td></tr>
+          <tr><td class="de">wehtun</td><td class="de">Der Kopf tut <b>mir</b> weh.</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="panel">
+      <h3>Give-something-to-someone verbs</h3>
+      <p><b>Person = dative, thing = accusative.</b></p>
+      <p class="de">geben, schenken, zeigen, schicken, bringen, erklären, empfehlen, leihen, sagen, kaufen</p>
+      <p class="ex de">Ich schenke <span class="f">meiner Mutter</span> <span class="m">einen Schal</span>.</p>
+      <h4>Which object goes first?</h4>
+      <ul>
+        <li>Two nouns: <b>dative before accusative</b>. <span class="de">Ich gebe dem Mann das Buch.</span></li>
+        <li>Accusative pronoun: <b>it jumps ahead</b>. <span class="de">Ich gebe <b>es</b> dem Mann.</span></li>
+        <li>Two pronouns: <b>accusative first</b>. <span class="de">Ich gebe <b>es ihm</b>.</span></li>
+      </ul>
+      <p class="pct">Short rule: pronouns before nouns; between two pronouns, accusative first.</p>
+    </div>
+    <div class="panel">
+      <h3>Verbs with fixed prepositions</h3>
+      <p>Learn the preposition and its case as part of the verb.</p>
+      <div class="tbl-wrap"><table>
+        <tbody>
+          <tr><td class="de">warten auf</td><td class="mono">Akk</td></tr>
+          <tr><td class="de">sich freuen auf (future)</td><td class="mono">Akk</td></tr>
+          <tr><td class="de">sich freuen über (now/past)</td><td class="mono">Akk</td></tr>
+          <tr><td class="de">denken an / sich erinnern an</td><td class="mono">Akk</td></tr>
+          <tr><td class="de">sich interessieren für</td><td class="mono">Akk</td></tr>
+          <tr><td class="de">sich kümmern um</td><td class="mono">Akk</td></tr>
+          <tr><td class="de">sprechen über</td><td class="mono">Akk</td></tr>
+          <tr><td class="de">sprechen mit</td><td class="mono">Dat</td></tr>
+          <tr><td class="de">Angst haben vor</td><td class="mono">Dat</td></tr>
+          <tr><td class="de">teilnehmen an</td><td class="mono">Dat</td></tr>
+          <tr><td class="de">träumen von / abhängen von</td><td class="mono">Dat</td></tr>
+          <tr><td class="de">fragen nach</td><td class="mono">Dat</td></tr>
+        </tbody>
+      </table></div>
+      <p class="pct" style="margin-top:8px">Rule of thumb: in fixed phrases, <b>auf</b> and <b>über</b> are almost always accusative. Ask about things with <span class="de">wo(r)- + preposition</span>: <span class="de">Worauf wartest du? – Darauf!</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORD ORDER ============ -->
+<section id="word-order">
+  <div class="sec-head"><span class="sec-num">08</span><h2>Word order</h2>
+    <p>German sentences are built around fixed verb slots. Get the verbs in the right place and everything else is flexible.</p></div>
+  <div class="grid g2">
+    <div class="panel">
+      <h3>Main clause: verb second</h3>
+      <div class="slots"><div class="slot">Ich<small>1</small></div><div class="slot v">fahre<small>2 · verb</small></div><div class="slot">morgen nach Berlin<small>middle</small></div></div>
+      <div class="slots"><div class="slot">Morgen<small>1</small></div><div class="slot v">fahre<small>2 · verb</small></div><div class="slot">ich nach Berlin<small>middle</small></div></div>
+      <p style="margin-top:10px">Position 1 can be anything (time, object, a whole clause). The subject then moves behind the verb. Inversion isn't a special rule; it's just verb-second doing its job.</p>
+    </div>
+    <div class="panel">
+      <h3>The verb bracket (Satzklammer)</h3>
+      <div class="slots"><div class="slot">Ich<small>1</small></div><div class="slot v">habe<small>2</small></div><div class="slot">gestern das Buch<small>middle</small></div><div class="slot v">gelesen<small>end</small></div></div>
+      <div class="slots"><div class="slot">Ich<small>1</small></div><div class="slot v">rufe<small>2</small></div><div class="slot">dich morgen<small>middle</small></div><div class="slot v">an<small>end</small></div></div>
+      <p style="margin-top:10px">Conjugated part in slot 2, the rest (participle, infinitive, separable prefix) clamps the sentence shut at the end.</p>
+    </div>
+    <div class="panel">
+      <h3>Subordinate clause: verb last</h3>
+      <div class="slots"><div class="slot">…, weil<small>conj</small></div><div class="slot">ich heute keine Zeit<small>middle</small></div><div class="slot v">habe<small>end</small></div></div>
+      <div class="slots"><div class="slot">…, dass<small>conj</small></div><div class="slot">er nicht<small>middle</small></div><div class="slot v">kommen kann<small>end</small></div></div>
+      <p style="margin-top:10px"><b>Verb-kickers:</b> <span class="de">weil, dass, wenn, ob, als, obwohl, damit, bevor, nachdem, während, bis, seit(dem)</span>, and question words used inside a sentence (<span class="de">Ich weiß nicht, wo er <b>wohnt</b>.</span>)</p>
+      <p>Start with the subordinate clause and the main verb comes straight after the comma: <span class="de">Weil ich krank bin, <b>bleibe</b> ich zu Hause.</span> (The whole weil-clause counts as slot 1.)</p>
+    </div>
+    <div class="panel">
+      <h3>Connectors that change nothing</h3>
+      <span class="chant">aber · denn · und · sondern · oder</span>
+      <p>Mnemonic <b>ADUSO</b>. They sit in "position zero" and normal word order follows: <span class="de">…, denn ich <b>habe</b> keine Zeit.</span></p>
+      <p><span class="de">denn</span> and <span class="de">weil</span> both mean "because", but only <span class="de">weil</span> kicks the verb to the end. When in doubt, use <span class="de">denn</span>.</p>
+      <p>Adverbs like <span class="de">deshalb, trotzdem, dann, also</span> take slot 1, so the verb comes next: <span class="de">Deshalb <b>bleibe</b> ich zu Hause.</span></p>
+    </div>
+    <div class="panel">
+      <h3>The middle field: TeKaMoLo</h3>
+      <p><b>Te</b>mporal (when) → <b>Ka</b>usal (why) → <b>Mo</b>dal (how) → <b>Lo</b>kal (where).</p>
+      <div class="slots">
+        <div class="slot">Ich fahre<small>start</small></div><div class="slot">morgen<small>Te</small></div><div class="slot">wegen der Arbeit<small>Ka</small></div><div class="slot">mit dem Zug<small>Mo</small></div><div class="slot">nach Hamburg<small>Lo</small></div>
+      </div>
+      <p class="pct" style="margin-top:8px">It's a default, not a law. Time early, place late is the part that matters most.</p>
+    </div>
+    <div class="panel">
+      <h3>Where does nicht go?</h3>
+      <ul>
+        <li>Negating the whole sentence: near the end, but before the final verb part. <span class="de">Ich habe das Buch <b>nicht</b> gelesen.</span></li>
+        <li>Before adjectives, adverbs of manner and prepositional phrases: <span class="de">Das ist <b>nicht</b> teuer. Ich wohne <b>nicht</b> in Berlin.</span></li>
+        <li>Directly before the word you're contrasting: <span class="de">Ich habe <b>nicht</b> das Buch gelesen, sondern den Artikel.</span></li>
+        <li>Nouns with <i>ein</i> or no article use <b>kein</b> instead: <span class="de">Ich habe <b>keine</b> Zeit.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NUGGETS ============ -->
+<section id="nuggets">
+  <div class="sec-head"><span class="sec-num">09</span><h2>Nuggets worth knowing</h2>
+    <p>Odd facts that make the system easier to remember.</p></div>
+  <div class="nuggets">
+    <div class="nug"><h3>Mark Twain's complaint</h3><p>In his 1880 essay <i>The Awful German Language</i>, Twain grumbled that in German a young lady has no sex but a turnip does. He was right about the grammar: <span class="n">das Mädchen</span> is neuter because <b>-chen</b> always wins, and <span class="f">die Rübe</span> is feminine because of its <b>-e</b>. The endings were behaving perfectly.</p></div>
+    <div class="nug"><h3>Same word, different gender, different meaning</h3>
+      <ul>
+        <li><span class="m">der See</span> lake · <span class="f">die See</span> sea</li>
+        <li><span class="m">der Leiter</span> manager · <span class="f">die Leiter</span> ladder</li>
+        <li><span class="m">der Band</span> volume · <span class="f">die Band</span> group · <span class="n">das Band</span> ribbon</li>
+        <li><span class="f">die Steuer</span> tax · <span class="n">das Steuer</span> steering wheel</li>
+        <li><span class="m">der Kiefer</span> jaw · <span class="f">die Kiefer</span> pine tree</li>
+        <li><span class="n">das Gehalt</span> salary · <span class="m">der Gehalt</span> content</li>
+      </ul></div>
+    <div class="nug"><h3>-ck vs -cke</h3><p>Nouns ending in <b>-ck</b> are almost never feminine, yet <b>-cke</b> nouns are virtually always feminine. Compare <span class="n">das Eck</span> (southern German) and <span class="f">die Ecke</span>: same corner, one letter apart.</p></div>
+    <div class="nug"><h3>Abbreviations keep the gender of their last word</h3><p><span class="f">die EU</span> (Union), <span class="m">der ICE</span> (Zug), <span class="n">das Kfz</span> (Fahrzeug), <span class="f">die AG</span> (Gesellschaft), <span class="m">der PC</span> (Computer).</p></div>
+    <div class="nug"><h3>English loanwords borrow a German twin's gender</h3><p><span class="f">die E-Mail</span> (die Post), <span class="m">der Laptop</span> (der Rechner), <span class="f">die Party</span> (die Feier), <span class="m">der Job</span> (der Beruf). When you meet a new loanword, ask what the German word for it would be.</p></div>
+    <div class="nug"><h3>The sun is she, the moon is he</h3><p><span class="f">die Sonne</span>, <span class="m">der Mond</span>: the reverse of French, Italian and Spanish. Handy as a reminder that you can't import genders from other languages.</p></div>
+    <div class="nug"><h3>Nationalities flip with -in</h3><p><span class="m">der Engländer</span> → <span class="f">die Engländerin</span>. But -e nationalities are weak nouns: <span class="m">der Franzose</span>, <span class="m">den Franzosen</span>, <span class="f">die Französin</span>. Adjectival ones change ending: <span class="m">ein Deutscher</span>, <span class="m">der Deutsche</span>, <span class="f">eine Deutsche</span>.</p></div>
+    <div class="nug"><h3>Anything can become a neuter noun</h3><p>Capitalise an infinitive and it's <span class="n">das</span>: <span class="n">das Lesen, das Autofahren</span>. Very useful after <span class="de">beim</span>: <span class="de">beim Kochen</span> = "while cooking".</p></div>
+    <div class="nug"><h3>Herr is irregular</h3><p><span class="m">der Herr</span>, but <span class="de">sehr geehrter Herr Schmidt</span> becomes <span class="de">Ich spreche mit Herr<b>n</b> Schmidt</span>. Plural <span class="p">die Herren</span>. Every formal email you write will need this.</p></div>
+    <div class="nug"><h3>Some nouns double their gender</h3><p>A few common nouns have two acceptable genders, often regional: <span class="m">der</span>/<span class="n">das</span> Joghurt, <span class="m">der</span>/<span class="n">das</span> Teil, <span class="n">das</span>/<span class="m">der</span> Virus, <span class="f">die</span>/<span class="n">das</span> Cola (south). Native speakers argue about these too.</p></div>
+    <div class="nug"><h3>Dative is how German says "I feel"</h3><p>German turns many feelings into something that happens <i>to</i> you: <span class="de">Mir ist schlecht</span> (I feel sick), <span class="de">Mir ist warm</span>, <span class="de">Mir fällt ein…</span> (it occurs to me). Saying <span class="de">Ich bin warm</span> has a different, rather personal meaning.</p></div>
+    <div class="nug"><h3>Compound nouns build from right to left</h3><p>Read long words backwards to find the head: <span class="de">Donau|dampf|schiff|fahrt</span> is a <span class="f">trip</span> (die Fahrt) by steamship on the Danube. The last part gives the meaning and the gender; the rest just describes it. Linking letters (-s-, -n-, -es-) are glue: <span class="de">Arbeit<b>s</b>platz</span>.</p></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Gender percentages are tendencies from corpus studies, not guarantees: <a href="https://en.wikipedia.org/wiki/Grammatical_gender_in_German">Wikipedia: Grammatical gender in German</a> (after Durrell's <i>Hammer's German Grammar</i>), <a href="https://foreignlanguages.camden.rutgers.edu/?p=885">Rutgers–Camden on gender rules</a>, <a href="https://medium.com/wugs/how-to-guess-the-gender-in-german-2-ba31e9ea780b">David Rosson on predictive endings</a>. Preposition songs via <a href="https://resources.german.lsa.umich.edu/grammatik/prepositions">University of Michigan German</a>.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var ART={m:'der',f:'die',n:'das'};
+  var CLS={m:'m',f:'f',n:'n'};
+
+  // ---------- Gender guesser ----------
+  var EXC={
+    'käse':['m','Exception: der Käse.'],'name':['m','Abstract masculine -e noun (weak noun: des Namens).'],
+    'gedanke':['m','Abstract masculine -e noun (weak noun).'],'glaube':['m','Abstract masculine -e noun.'],
+    'buchstabe':['m','Abstract masculine -e noun.'],'wille':['m','Abstract masculine -e noun.'],'friede':['m','Abstract masculine -e noun.'],
+    'junge':['m','Male person beats the -e rule.'],'löwe':['m','Male animal beats the -e rule.'],'kollege':['m','Male person beats the -e rule.'],
+    'kunde':['m','Male person beats the -e rule.'],'affe':['m','Masculine animal, weak noun.'],'hase':['m','Masculine animal, weak noun.'],
+    'auge':['n','Neuter exception: das Auge.'],'ende':['n','Neuter exception: das Ende.'],'erbe':['n','Neuter (das Erbe = inheritance; der Erbe = heir).'],
+    'sofa':['n','Exception to -a: das Sofa.'],'genie':['n','Exception to -ie: das Genie.'],'knie':['n','Exception to -ie: das Knie.'],
+    'irrtum':['m','Exception to -tum: der Irrtum.'],'reichtum':['m','Exception to -tum: der Reichtum.'],
+    'mädchen':['n','-chen always makes a noun neuter, even a girl.'],'bier':['n','The odd one out among drinks: das Bier.'],
+    'mutter':['f','Female person.'],'tochter':['f','Female person.'],'schwester':['f','Female person.'],'frau':['f','Female person.'],
+    'mann':['m','Male person.'],'vater':['m','Male person.'],'bruder':['m','Male person.'],'sohn':['m','Male person.'],
+    'kind':['n','Young being: das Kind.'],'baby':['n','Young being: das Baby.'],'termin':['m','Exception to -in: der Termin.'],
+    'benzin':['n','Chemical substance in -in: neuter.'],'hotel':['n','Hotels are neuter.'],'kino':['n','Cinemas are neuter.'],
+    'café':['n','Cafés are neuter.'],'handy':['n','Neuter loanword.'],'auto':['n','das Auto.'],'haus':['n','das Haus.'],
+    'gefahr':['f','Ge- exception: die Gefahr.'],'geduld':['f','Ge- exception: die Geduld.'],'geschichte':['f','Ge- exception: die Geschichte.'],
+    'geschwindigkeit':['f','-keit beats Ge-.'],'gesellschaft':['f','-schaft beats Ge-.'],'gedanken':['m','der Gedanke.'],
+    'montag':['m','Days of the week are masculine.'],'dienstag':['m','Days are masculine.'],'mittwoch':['m','Days are masculine.'],
+    'donnerstag':['m','Days are masculine.'],'freitag':['m','Days are masculine.'],'samstag':['m','Days are masculine.'],'sonntag':['m','Days are masculine.'],
+    'januar':['m','Months are masculine.'],'mai':['m','Months are masculine.'],'winter':['m','Seasons are masculine.'],'sommer':['m','Seasons are masculine.'],
+    'herbst':['m','Seasons are masculine.'],'frühling':['m','Seasons are masculine (and -ling).'],'norden':['m','Compass points are masculine.'],
+    'süden':['m','Compass points are masculine.'],'regen':['m','Weather is masculine.'],'schnee':['m','Weather is masculine.'],
+    'wind':['m','Weather is masculine.'],'sonne':['f','-e → feminine.'],'mond':['m','der Mond.'],'gold':['n','Metals are neuter.'],
+    'eisen':['n','Metals are neuter.'],'silber':['n','Metals are neuter.'],'stahl':['m','Exception among metals: der Stahl.'],
+    'wein':['m','Alcoholic drinks are masculine.'],'deutsch':['n','Languages as nouns are neuter.'],'blau':['n','Colours as nouns are neuter.'],
+    'rot':['n','Colours as nouns are neuter.'],'grün':['n','Colours as nouns are neuter.'],'essen':['n','Infinitive used as a noun: neuter.'],
+    'leben':['n','Infinitive used as a noun: neuter.'],'wissen':['n','Infinitive used as a noun: neuter.'],'schwimmen':['n','Infinitive used as a noun: neuter.']
+  };
+  var HEADS={haus:'n',tür:'f',essen:'n',name:'m',schuh:'m',mann:'m',frau:'f',kind:'n',auto:'n',tag:'m',wein:'m',bier:'n',hotel:'n',
+    zimmer:'n',stadt:'f',zeit:'f',arbeit:'f',platz:'m',weg:'m',buch:'n',geld:'n',land:'n',wort:'n',bahn:'f',zug:'m',stuhl:'m',tisch:'m',
+    fenster:'n',karte:'f',tasche:'f',schrank:'m',zeug:'n',spiel:'n',bild:'n',brot:'n',hof:'m',raum:'m',see:'m',berg:'m',stück:'n'};
+  // [suffix, gender, confidence 0-100, explanation]
+  var RULES=[
+    ['schaft','f',99,'-schaft is always feminine.'],['keit','f',99,'-keit is always feminine.'],['heit','f',99,'-heit is always feminine.'],
+    ['ung','f',99,'-ung is always feminine (die Bildung, from bilden).'],['chen','n',99,'-chen (diminutive) is always neuter.'],
+    ['lein','n',99,'-lein (diminutive) is always neuter.'],['ismus','m',99,'-ismus is always masculine.'],['ling','m',97,'-ling is masculine.'],
+    ['ment','n',95,'-ment is usually neuter.'],['tion','f',99,'-tion is always feminine.'],['sion','f',99,'-sion is always feminine.'],
+    ['ion','f',95,'-ion is feminine.'],['tät','f',99,'-tät is always feminine.'],['ade','f',95,'-ade is feminine.'],['cke','f',97,'-cke is feminine.'],
+    ['enz','f',95,'-enz is feminine.'],['anz','f',95,'-anz is feminine.'],['eur','m',95,'-eur is masculine (often a person).'],
+    ['tum','n',90,'-tum is usually neuter (except der Irrtum, der Reichtum).'],['ist','m',95,'-ist is masculine (a person).'],
+    ['ant','m',85,'-ant is usually masculine (often a person).'],['ent','m',75,'-ent people are masculine (der Student), but -ment is neuter.'],
+    ['ei','f',95,'-ei is feminine.'],['ie','f',90,'-ie is feminine.'],['ik','f',90,'-ik is feminine (except der Atlantik, der Pazifik).'],
+    ['ur','f',85,'-ur is feminine (die Kultur, die Natur).'],['um','n',90,'-um is neuter (Latin loanwords).'],['ma','n',90,'-ma is neuter (das Thema, das Klima).'],
+    ['nis','n',67,'-nis is mostly neuter (about two-thirds); some are feminine (die Erlaubnis).'],['sal','n',70,'-sal is mostly neuter.'],
+    ['ig','m',95,'-ig is masculine.'],['ich','m',90,'-ich is masculine.'],['or','m',90,'-or is masculine.'],
+    ['erin','f',99,'-in on a person makes it female.'],['in','f',85,'-in on a person is feminine (but der Termin, das Benzin).'],
+    ['en','m',80,'About 80% of -en nouns are masculine. But if it is a verb used as a noun, it is neuter.'],
+    ['e','f',90,'About 90% of nouns ending in -e are feminine. Watch for male beings.'],
+    ['er','m',60,'About 60% of -er nouns are masculine (more if it is a person or tool).'],['el','m',60,'About 60% of -el nouns are masculine.'],
+    ['a','f',70,'Most -a nouns are feminine (die Pizza, die Kamera), but -ma is neuter.']
+  ];
+  RULES.sort(function(a,b){return b[0].length-a[0].length;});
+
+  function guess(word){
+    var w=word.trim().toLowerCase();
+    if(!w) return null;
+    if(EXC[w]) return {g:EXC[w][0],c:100,why:EXC[w][1],known:true};
+    // compound: try exceptions on trailing part
+    for(var k in HEADS){ if(w.length>k.length+2 && w.slice(-k.length)===k){ return {g:HEADS[k],c:90,why:'Looks like a compound ending in “'+k+'”: the last part decides ('+ART[HEADS[k]]+' '+k.charAt(0).toUpperCase()+k.slice(1)+').'}; } }
+    if(/^ge.+e$/.test(w) && !/(ung|heit|keit|schaft|ion)$/.test(w)) return {g:'n',c:85,why:'Ge-…-e is usually neuter (das Gebäude, das Gemüse).'};
+    for(var i=0;i<RULES.length;i++){
+      var r=RULES[i];
+      if(w.length>r[0].length && w.slice(-r[0].length)===r[0]) return {g:r[1],c:r[2],why:r[3]};
+    }
+    if(/^ge/.test(w)) return {g:'n',c:80,why:'Nouns beginning with Ge- are about 90% neuter.'};
+    var vowels=(w.match(/[aeiouäöü]+/g)||[]).length;
+    if(vowels<=1) return {g:'m',c:55,why:'One-syllable nouns lean masculine (about two-thirds).'};
+    return {g:'m',c:40,why:'No rule fires. Masculine is the largest group, so der is the best guess.'};
+  }
+  var gin=document.getElementById('guess-in'), gout=document.getElementById('guess-out');
+  function renderGuess(){
+    var r=guess(gin.value);
+    if(!r){gout.innerHTML='<p class="pct">Start typing a noun.</p>';return;}
+    var noun=gin.value.trim(); noun=noun.charAt(0).toUpperCase()+noun.slice(1);
+    gout.innerHTML='<div class="big-art '+CLS[r.g]+'">'+ART[r.g]+'</div><div class="why"><b class="'+CLS[r.g]+'">'+ART[r.g]+' '+escapeHtml(noun)+'</b><br>'+r.why+
+      '<div class="'+CLS[r.g]+'"><div class="meter" title="Confidence"><i style="width:'+r.c+'%"></i></div></div><span class="pct">'+(r.known?'known word':'rule confidence ≈ '+r.c+'%')+'</span></div>';
+  }
+  function escapeHtml(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  gin.addEventListener('input',renderGuess); renderGuess();
+
+  // ---------- Drill ----------
+  var NOUNS=[
+    ['Zeitung','f','-ung is always feminine.'],['Freiheit','f','-heit is always feminine.'],['Möglichkeit','f','-keit is always feminine.'],
+    ['Freundschaft','f','-schaft is always feminine.'],['Information','f','-tion is always feminine.'],['Universität','f','-tät is always feminine.'],
+    ['Musik','f','-ik is feminine.'],['Bäckerei','f','-ei is feminine.'],['Energie','f','-ie is feminine.'],['Kultur','f','-ur is feminine.'],
+    ['Lampe','f','-e → feminine (≈90%).'],['Lehrerin','f','-in on a person makes it female.'],['Ecke','f','-cke is feminine.'],['Schokolade','f','-ade is feminine.'],
+    ['Frühling','m','-ling is masculine (and seasons are too).'],['Tourismus','m','-ismus is masculine.'],['Optimist','m','-ist is masculine.'],
+    ['Montag','m','Days of the week are masculine.'],['Winter','m','Seasons are masculine.'],['Norden','m','Compass points are masculine.'],
+    ['Regen','m','Weather is masculine.'],['Motor','m','-or is masculine.'],['Honig','m','-ig is masculine.'],['Teppich','m','-ich is masculine.'],
+    ['Name','m','Abstract masculine -e noun (weak: des Namens).'],['Käse','m','Famous -e exception.'],['Junge','m','Male person beats the -e rule.'],
+    ['Handschuh','m','Compound: der Schuh decides.'],['Wein','m','Alcoholic drinks are masculine.'],['Garten','m','-en → masculine (≈80%).'],
+    ['Mädchen','n','-chen is always neuter.'],['Instrument','n','-ment is neuter.'],['Museum','n','-um is neuter.'],['Thema','n','-ma is neuter.'],
+    ['Eigentum','n','-tum is neuter.'],['Gebirge','n','Ge-…-e is neuter.'],['Geschenk','n','Ge- nouns are about 90% neuter.'],['Ergebnis','n','-nis is mostly neuter.'],
+    ['Schwimmen','n','Verb used as a noun: always neuter.'],['Gold','n','Metals are neuter.'],['Auge','n','Neuter -e exception.'],['Krankenhaus','n','Compound: das Haus decides.'],
+    ['Hotel','n','Hotels are neuter.'],['Bier','n','The one neuter drink.'],['Haustür','f','Compound: die Tür decides.'],['Kalb','n','Young animals are neuter.']
+  ];
+  var cur=null,right=0,tries=0,streak=0,answered=false;
+  var elNoun=document.getElementById('drill-noun'),elFb=document.getElementById('drill-fb'),elScore=document.getElementById('drill-score');
+  function next(){
+    var pick; do{pick=NOUNS[Math.floor(Math.random()*NOUNS.length)];}while(cur&&pick[0]===cur[0]);
+    cur=pick; answered=false; elNoun.textContent=cur[0]; elNoun.className='drill-noun';
+    elFb.textContent='Pick an article. You’ll see the rule that gives it away.';
+  }
+  function score(){elScore.textContent=right+' right · '+tries+' tries · streak '+streak;}
+  document.querySelectorAll('button[data-g]').forEach(function(b){
+    b.addEventListener('click',function(){
+      if(answered){next();return;}
+      answered=true; tries++;
+      var ok=b.getAttribute('data-g')===cur[1];
+      if(ok){right++;streak++;}else{streak=0;}
+      elNoun.className='drill-noun '+CLS[cur[1]];
+      elNoun.textContent=ART[cur[1]]+' '+cur[0];
+      elFb.innerHTML=(ok?'<b>Richtig!</b> ':'<b>Not quite.</b> It’s <b class="'+CLS[cur[1]]+'">'+ART[cur[1]]+'</b>. ')+cur[2]+' <span class="pct">Press any article for the next noun.</span>';
+      score();
+    });
+  });
+  document.getElementById('drill-skip').addEventListener('click',next);
+  cur=NOUNS[0]; score();
+})();
+</script>
+</body>
+</html>
