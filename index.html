@@ -1,220 +1,511 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>German Grammar Cheat Codes</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 3'%3E%3Crect width='5' height='1' fill='%23000'/%3E%3Crect y='1' width='5' height='1' fill='%23DD0000'/%3E%3Crect y='2' width='5' height='1' fill='%23FFCE00'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mein Deutsch – Lektionen</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 3'%3E%3Crect width='5' height='1' fill='%23000'/%3E%3Crect y='1' width='5' height='1' fill='%23DD0000'/%3E%3Crect y='2' width='5' height='1' fill='%23FFCE00'/%3E%3C/svg%3E">
 <style>
-/* Layout idea: a field manual. Condensed signage headings, gender colour-coding everywhere (der blue, die red, das green, plural grey), a signal-yellow highlighter for the cheat codes themselves. */
-:root{
-  --paper:#f3f4f1;
-  --sheet:#ffffff;
-  --ink:#16191d;
-  --muted:#5b616b;
-  --rule:#d9dcd6;
-  --signal:#f5c400;
-  --signal-ink:#1a1600;
-  --der:#2457c5; --der-bg:#e6edfb;
-  --die:#c8322f; --die-bg:#fbe8e7;
-  --das:#1a7d45; --das-bg:#e3f3e9;
-  --pl:#6a6f78;  --pl-bg:#eceef1;
-  --font-display:"Archivo","Arial Narrow",Arial,sans-serif;
-  --font-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --font-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
-  color-scheme:light;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --paper:#111418; --sheet:#181c21; --ink:#e9ebee; --muted:#9aa1ab; --rule:#2b3138;
-    --signal:#ffd23f; --signal-ink:#1a1600;
-    --der:#7ea6ff; --der-bg:#18233b;
-    --die:#ff8a80; --die-bg:#3a1c1c;
-    --das:#6fd39b; --das-bg:#15301f;
-    --pl:#aab0b9; --pl-bg:#23282f;
-    color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --paper:#111418; --sheet:#181c21; --ink:#e9ebee; --muted:#9aa1ab; --rule:#2b3138;
-  --signal:#ffd23f; --signal-ink:#1a1600;
-  --der:#7ea6ff; --der-bg:#18233b;
-  --die:#ff8a80; --die-bg:#3a1c1c;
-  --das:#6fd39b; --das-bg:#15301f;
-  --pl:#aab0b9; --pl-bg:#23282f;
-  color-scheme:dark;
-}
+:root{--bg:#f4f7fb;--card:#fff;--ink:#1b2430;--muted:#5d6878;--line:#e2e8f0;--accent:#0a66c2;--accent-soft:#e7f0fb;
+--der:#1f5fd8;--die:#d0353a;--das:#14894a;--pl:#7b4cc6;--gold:#e3a008;--ok:#14894a;--shadow:0 1px 2px rgba(16,24,40,.06),0 4px 14px rgba(16,24,40,.06)}
+@media (prefers-color-scheme:dark){:root{--bg:#0e131a;--card:#161d27;--ink:#e6ebf2;--muted:#9aa6b6;--line:#253041;--accent:#5aa6f2;--accent-soft:#18283b;
+--der:#79a6ff;--die:#ff7d82;--das:#4cd389;--pl:#b98fff;--shadow:0 1px 2px rgba(0,0,0,.3)}}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:64px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.55}
-h1,h2,h3,h4{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.05}
-h2{font-size:clamp(30px,5vw,46px);font-weight:850;font-stretch:72%;letter-spacing:.005em;text-transform:uppercase}
-h3{font-size:22px;font-weight:750;font-stretch:85%;margin-bottom:8px}
-h4{font-size:16px;font-weight:700;font-stretch:90%;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:18px 0 6px}
-p{margin:0 0 10px;max-width:68ch}
-ul{margin:0 0 10px;padding-left:20px}
-li{margin-bottom:4px}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--signal);outline-offset:2px}
-.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+button,select,input{font:inherit;color:inherit}
+button{cursor:pointer}
+/* Header with Bavarian Rauten */
+.hero{position:relative;color:#fff;background:#0a5fb4;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;opacity:.18;
+background-image:linear-gradient(60deg,#fff 25%,transparent 25.5%,transparent 75%,#fff 75%),linear-gradient(120deg,#fff 25%,transparent 25.5%,transparent 75%,#fff 75%);
+background-size:46px 80px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,52,104,.95) 0%,rgba(10,95,180,.75) 60%,rgba(10,95,180,.35) 100%)}
+.hero-in{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:28px 20px 22px}
+.kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
+h1{margin:4px 0 4px;font-size:clamp(26px,4vw,36px);line-height:1.15}
+h1 span{font-weight:400;opacity:.9}
+.sub{margin:0 0 16px;opacity:.9;font-size:15px}
+.stats{display:flex;gap:14px;flex-wrap:wrap}
+.stat{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);padding:8px 14px 8px 8px;border-radius:999px}
+.stat b{display:block;font-size:16px;line-height:1.1}
+.stat span{font-size:12px;opacity:.85}
+.ring{--p:0;width:40px;height:40px;border-radius:50%;background:conic-gradient(#fff calc(var(--p)*1%),rgba(255,255,255,.22) 0);position:relative;flex:none;transition:--p .4s}
+.ring::after{content:"";position:absolute;inset:6px;border-radius:50%;background:#0b5aa9}
+.ring.trophy{display:grid;place-items:center;background:rgba(255,255,255,.2);font-size:19px}
+.ring.trophy::after{display:none}
+/* Sticky nav */
+.sticky{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.tabs{max-width:1040px;margin:0 auto;display:flex;gap:4px;padding:8px 14px 0;overflow-x:auto;align-items:flex-end}
+.tab-btn{border:0;background:none;padding:10px 14px;border-radius:10px 10px 0 0;color:var(--muted);font-weight:600;white-space:nowrap;border-bottom:3px solid transparent}
+.tab-btn:hover{color:var(--ink)}
+.tab-btn.active{color:var(--accent);border-bottom-color:var(--accent)}
+.tempo{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);padding:0 4px 10px;white-space:nowrap}
+.tempo input{width:90px;accent-color:var(--accent)}
+.toolbar{max-width:1040px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:10px 14px}
+.toolbar[hidden]{display:none}
+.search{flex:1 1 200px;min-width:160px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+.seg button{border:0;background:none;padding:7px 10px;font-size:14px;color:var(--muted)}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button.on{background:var(--accent);color:#fff}
+.sel{padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.btn{border:1px solid var(--line);background:var(--card);padding:8px 14px;border-radius:10px;font-weight:600;box-shadow:var(--shadow)}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn.ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.btn.on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+kbd{font:12px ui-monospace,Menlo,monospace;border:1px solid currentColor;border-radius:4px;padding:0 4px;opacity:.6;margin-left:4px}
+main{max-width:1040px;margin:0 auto;padding:16px 14px 40px}
+.tab{display:none}.tab.active{display:block;animation:fade .25s}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin:0 0 14px}
+.legend i{font-style:normal;font-weight:700}
+.g-der,.legend .der{color:var(--der)} .g-die,.legend .die{color:var(--die)} .g-das,.legend .das{color:var(--das)} .g-pl,.legend .pl{color:var(--pl)}
+/* Levels */
+.level{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:0 0 14px;box-shadow:var(--shadow);overflow:hidden}
+.level>summary{list-style:none;display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;user-select:none}
+.level>summary::-webkit-details-marker{display:none}
+.lvnum{flex:none;width:34px;height:34px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:800}
+.level.done .lvnum{background:var(--ok);color:#fff}
+.lvtitle{flex:1;min-width:0}
+.lvtitle b{display:block;font-size:17px}
+.lvtitle small{color:var(--muted)}
+.lvprog{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);white-space:nowrap}
+.bar{width:90px;height:7px;border-radius:9px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--ok));transition:width .4s}
+.chev{transition:transform .2s;color:var(--muted)}
+.level[open] .chev{transform:rotate(90deg)}
+.rows{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:40px minmax(0,1.25fr) minmax(0,1fr) 82px 40px;align-items:center;gap:8px;padding:9px 12px;border-bottom:1px solid var(--line);transition:opacity .35s,transform .35s,background .2s}
+.row:last-child{border-bottom:0}
+.row:hover{background:color-mix(in srgb,var(--accent-soft) 45%,transparent)}
+.rows.chunkrows .row{grid-template-columns:40px minmax(0,1.3fr) minmax(0,1fr) 40px}
+.row[hidden]{display:none}
+.row.leaving{opacity:0;transform:translateX(24px)}
+.de{font-weight:600}
+.en{color:var(--muted)}
+.row.known .de,.row.known .en{opacity:.5}
+.art{font-weight:800}
+.plu,.paren{font-weight:400;color:var(--muted);font-size:.9em}
+.sep{color:var(--muted);font-weight:400}
+.cnote{display:block;font-weight:400;font-size:13px;color:var(--muted);font-style:italic}
+.st{color:var(--gold);letter-spacing:1px;font-size:13px;white-space:nowrap}
+.st-off{color:var(--line)}
+.tick{display:grid;place-items:center}
+.tick input{appearance:none;-webkit-appearance:none;width:24px;height:24px;border:2px solid var(--line);border-radius:50%;margin:0;cursor:pointer;display:grid;place-items:center;transition:.15s;background:var(--card)}
+.tick input:hover{border-color:var(--ok)}
+.tick input::after{content:"✓";color:#fff;font-size:14px;font-weight:900;transform:scale(0);transition:transform .15s}
+.tick input:checked{background:var(--ok);border-color:var(--ok);animation:pop .3s}
+.tick input:checked::after{transform:scale(1)}
+@keyframes pop{50%{transform:scale(1.25)}}
+.speak{border:0;background:none;font-size:17px;width:34px;height:34px;border-radius:50%;opacity:.55}
+.speak:hover{opacity:1;background:var(--accent-soft)}
+.no-speech .speak,.no-speech .p-say,.no-speech #st-read,.no-speech .tempo{display:none!important}
+.empty{padding:14px 16px;color:var(--muted);font-style:italic}
+.empty[hidden]{display:none}
+.note{margin:0;padding:12px 16px 14px 60px;font-size:14px;color:var(--muted);background:color-mix(in srgb,var(--gold) 9%,transparent);border-top:1px solid var(--line)}
+/* Test modes */
+body[data-test="hide-en"] .row .en:not(.revealed),
+body[data-test="hide-de"] .row .de:not(.revealed){filter:blur(7px);cursor:pointer;user-select:none;opacity:.8}
+.row .cell.revealed{animation:fade .25s}
+.tips{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 18px;box-shadow:var(--shadow)}
+.tips h3{margin:12px 0 4px}
+.tips li{margin:6px 0}
+/* Story */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);margin-bottom:14px}
+.story-ctrl{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.story-ctrl .hint{flex-basis:100%;margin:6px 0 0}
+.hint{color:var(--muted);font-size:14px}
+.story{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 26px 20px;box-shadow:var(--shadow)}
+.story-title{font-family:Georgia,"Times New Roman",serif;font-size:28px;margin:14px 0 0}
+.story-sub{color:var(--muted);margin:0 0 10px;font-style:italic}
+.para{position:relative;padding:8px 52px 8px 12px;margin:0 -12px;border-radius:10px;transition:background .3s}
+.para.reading{background:var(--accent-soft)}
+.para .de-text{font-family:Georgia,"Times New Roman",serif;font-size:18.5px;line-height:1.75;margin:0}
+.para .en-text{margin:8px 0 4px;padding:8px 12px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0;color:var(--muted);font-size:15px}
+.para-tools{position:absolute;right:4px;top:8px;display:flex;flex-direction:column;gap:4px}
+.pbtn{border:1px solid var(--line);background:var(--card);border-radius:8px;width:38px;height:30px;font-size:13px;font-weight:700;color:var(--muted)}
+.pbtn:hover,.pbtn.on{color:var(--accent);border-color:var(--accent)}
+.g{position:relative;border-bottom:2px dotted var(--accent);cursor:pointer;outline:none}
+.g::after{content:attr(data-en);position:absolute;left:50%;bottom:calc(100% + 6px);transform:translateX(-50%) translateY(4px);background:var(--ink);color:var(--bg);font:600 13px/1.3 system-ui,sans-serif;padding:5px 9px;border-radius:7px;white-space:nowrap;opacity:0;pointer-events:none;transition:.15s;z-index:5}
+.g:hover::after,.g.show::after,.g:focus-visible::after{opacity:1;transform:translateX(-50%)}
+.story.cloze .g:not(.revealed){color:transparent;background:var(--accent-soft);border-radius:5px;border-bottom:2px solid var(--accent)}
+.story.cloze .g:not(.revealed)::after{display:none}
+.story.cloze .g.revealed{background:color-mix(in srgb,var(--ok) 15%,transparent);border-radius:5px}
+/* Flashcards */
+.fc-setup{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end}
+.fc-setup label{display:flex;flex-direction:column;font-size:13px;color:var(--muted);gap:4px}
+.fc-setup label.chk{flex-direction:row;align-items:center;gap:6px;padding-bottom:8px;color:var(--ink);font-size:14px}
+.fc-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;color:var(--muted);font-size:14px}
+.fc-prog{flex:1;margin:0 14px;height:6px;background:var(--line);border-radius:9px;overflow:hidden}
+.fc-prog i{display:block;height:100%;background:var(--ok);width:0;transition:width .3s}
+.link{border:0;background:none;color:var(--accent);text-decoration:underline}
+.card3d{perspective:1200px;height:260px;margin:0 auto 16px;max-width:640px;cursor:pointer;outline:none}
+.card3d .inner{position:relative;width:100%;height:100%;transition:transform .5s cubic-bezier(.2,.8,.2,1);transform-style:preserve-3d}
+.card3d.flipped .inner{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:18px;background:var(--card);border:1px solid var(--line);box-shadow:0 10px 30px rgba(16,24,40,.12);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px 28px}
+.face.back{transform:rotateY(180deg);background:linear-gradient(160deg,var(--card),var(--accent-soft))}
+.face .big{font-size:clamp(20px,3.4vw,28px);font-weight:700;line-height:1.3}
+.face .small{margin-top:10px;color:var(--muted);font-size:15px}
+.face .tag{position:absolute;top:12px;left:16px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.face .speak{position:absolute;top:8px;right:10px}
+.fc-btns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.done-box{text-align:center;padding:30px}
+.done-box .em{font-size:52px}
+/* Gender game */
+.gg{text-align:center;padding:26px 18px}
+.gg-score{display:flex;justify-content:center;gap:22px;color:var(--muted);font-size:14px;flex-wrap:wrap}
+.gg-score b{color:var(--ink)}
+.gg-word{font-size:clamp(28px,5vw,42px);font-weight:800;margin:26px 0 2px;min-height:1.3em}
+.gg-word .art{margin-right:.25em}
+.gg-en{color:var(--muted);min-height:1.5em}
+.gg-btns{display:flex;justify-content:center;gap:12px;margin:22px 0 12px}
+.art-btn{width:110px;padding:14px 0;border-radius:14px;border:2px solid currentColor;background:var(--card);font-size:22px;font-weight:800;transition:transform .1s}
+.art-btn:hover{transform:translateY(-2px)}
+.art-btn.der{color:var(--der)}.art-btn.die{color:var(--die)}.art-btn.das{color:var(--das)}
+.art-btn:disabled{opacity:.35;cursor:default;transform:none}
+.art-btn.right{opacity:1;background:currentColor}
+.art-btn.right span{color:#fff}
+.gg-fb{min-height:1.6em;font-weight:700}
+.gg-fb.good{color:var(--ok)}.gg-fb.bad{color:var(--die)}
+.shake{animation:shake .4s}
+@keyframes shake{20%,60%{transform:translateX(-7px)}40%,80%{transform:translateX(7px)}}
+.rules h3{margin:0 0 8px}
+.rules table{border-collapse:collapse;width:100%;font-size:15px}
+.rules td{padding:8px 6px;border-top:1px solid var(--line);vertical-align:top}
+.rules td:first-child{font-weight:700;white-space:nowrap}
+footer{max-width:1040px;margin:0 auto;padding:0 14px 40px;color:var(--muted);font-size:13px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+@media (max-width:680px){
+ .row,.rows.chunkrows .row{grid-template-columns:36px minmax(0,1fr) 36px;grid-template-areas:"t de s" "t en s";row-gap:0}
+ .row .tick{grid-area:t}.row .de{grid-area:de}.row .en{grid-area:en;font-size:14px}.row .speak{grid-area:s}
+ .row .stc{display:none}
+ .lvprog .bar{display:none}
+ .note{padding-left:16px}
+ .story{padding:6px 16px 14px}
+ .tempo{display:none}
+ .art-btn{width:90px}
+ .sticky{position:static}
+ .toolbar .sel,.toolbar .btn{flex:1 1 auto}
+}
 
-/* masthead */
-header.mast{border-bottom:3px solid var(--ink);padding:36px 0 24px}
-.mast-grid{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}
-.mast h1{font-size:clamp(46px,9vw,104px);font-weight:900;font-stretch:62%;text-transform:uppercase;letter-spacing:-.005em}
-.mast h1 .hl{background:var(--signal);color:var(--signal-ink);padding:0 .12em}
-.mast .sub{font-size:18px;color:var(--muted);margin-top:12px;max-width:60ch}
-.legend{display:flex;flex-direction:column;gap:6px;font-family:var(--font-mono);font-size:14px}
-.legend span{display:flex;align-items:center;gap:8px}
-.sw{width:14px;height:14px;border-radius:3px;display:inline-block}
-@media (max-width:700px){.mast-grid{grid-template-columns:1fr}.legend{flex-direction:row;flex-wrap:wrap}}
+/* ===== Collection: lesson switcher + home ===== */
+:root{--der-bg:#e8effc;--die-bg:#fbe9e9;--das-bg:#e3f4ea;--pl-bg:#f0eafb;--hl:#fff0a6;--hl-line:#f0c000}
+@media (prefers-color-scheme:dark){:root{--der-bg:#18233b;--die-bg:#3a1c1e;--das-bg:#15301f;--pl-bg:#2a2140;--hl:#4b3f0c;--hl-line:#e0b000}}
+.lesson{display:none}.lesson.active{display:block;animation:fade .25s}
+.lessons{max-width:1040px;margin:0 auto;display:flex;gap:6px;padding:10px 14px 2px;align-items:center;overflow-x:auto}
+.lesson-btn{border:1px solid var(--line);background:var(--card);padding:6px 14px 6px 8px;border-radius:999px;font-weight:700;font-size:14px;white-space:nowrap;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+.lesson-btn:hover{color:var(--ink);border-color:var(--accent)}
+.lesson-btn small{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-size:12px}
+.lesson-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.lesson-btn.active small{background:#fff;color:var(--accent)}
+.voice-ctrl{margin-left:auto;display:flex;align-items:center;gap:4px;flex:none}
+.voice-sel{padding:5px 8px;font-size:13px;max-width:210px;border-radius:999px}
+.lessons .tempo{padding:0 4px;margin-left:4px}
+.no-speech .voice-ctrl{display:none}
+.tabs{padding-top:4px}
+.tab-btn.done::after{content:" ✓";color:var(--ok)}
+.home-h{font-size:22px;margin:8px 0 4px}
+.home-sub{color:var(--muted);margin:0 0 16px}
+.lesson-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.lcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 20px 18px;box-shadow:var(--shadow);cursor:pointer;display:flex;flex-direction:column;gap:8px;transition:transform .15s,box-shadow .15s;position:relative;overflow:hidden}
+.lcard:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(16,24,40,.12)}
+.lcard::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:linear-gradient(90deg,var(--accent),var(--ok))}
+.lc-num{width:42px;height:42px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:800;font-size:19px}
+.lcard h3{margin:4px 0 0;font-size:19px}
+.lcard p{margin:0;color:var(--muted);font-size:15px}
+.lc-meta{list-style:none;padding:0;margin:4px 0;display:flex;flex-wrap:wrap;gap:6px}
+.lc-meta li{font-size:13px;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+.lc-prog{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);margin-top:auto;padding-top:6px}
+.lc-prog .bar{flex:1;width:auto}
+.lcard .btn{align-self:flex-start;margin-top:4px}
+.lcard.next{border:2px dashed var(--line);cursor:default;background:transparent;box-shadow:none}
+.lcard.next::before{display:none}
+.lcard.next:hover{transform:none;box-shadow:none}
+.lcard.next .lc-num{background:transparent;border:2px dashed var(--line);color:var(--muted)}
+.lcard.next ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+.gg-src{display:flex;justify-content:center;margin-bottom:14px}
+.gg-why{min-height:1.5em;color:var(--muted);font-size:15px;max-width:560px;margin:4px auto 10px}
+.gg-why b{color:var(--ink)}
+.rules .more{margin-top:12px}
 
-/* nav */
-nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
-nav.toc .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:thin}
-nav.toc a{flex:none;text-decoration:none;font-family:var(--font-display);font-stretch:80%;font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.03em;padding:6px 12px;border:1.5px solid var(--ink);border-radius:999px}
-nav.toc a:hover{background:var(--ink);color:var(--paper)}
-
-section{padding:48px 0 16px;border-bottom:1px solid var(--rule)}
-.sec-head{display:flex;gap:18px;align-items:baseline;margin-bottom:22px;flex-wrap:wrap}
-.sec-num{font-family:var(--font-mono);font-size:14px;color:var(--muted)}
-.sec-head p{color:var(--muted);margin:0;flex-basis:100%}
-
-.grid{display:grid;gap:18px}
-.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr))}
-.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
-.panel{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:20px 22px}
-.panel.flush{padding:0;overflow:hidden}
-
-/* gender colour classes */
-.m{color:var(--der);font-weight:600}.f{color:var(--die);font-weight:600}.n{color:var(--das);font-weight:600}.p{color:var(--pl);font-weight:600}
-.tag{display:inline-block;font-family:var(--font-mono);font-weight:600;font-size:13px;padding:1px 7px;border-radius:4px}
-.tag.m{background:var(--der-bg)}.tag.f{background:var(--die-bg)}.tag.n{background:var(--das-bg)}.tag.p{background:var(--pl-bg)}
-.de{font-style:italic}
-.ex{font-family:var(--font-body);padding-left:12px;border-left:3px solid var(--rule);margin:6px 0}
-.ex .en{display:block;color:var(--muted);font-size:14px;font-style:normal}
-mark,.hi{background:var(--signal);color:var(--signal-ink);padding:0 3px;border-radius:2px}
-
-/* cheat codes strip */
-.codes{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:0;border:2px solid var(--ink);border-radius:6px;overflow:hidden;background:var(--sheet)}
-.code{padding:16px 18px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.code b{display:block;font-family:var(--font-mono);font-size:12px;color:var(--muted);font-weight:500;margin-bottom:4px}
-.code strong{display:block;font-family:var(--font-display);font-stretch:80%;font-size:19px;line-height:1.15;margin-bottom:4px}
-.code span{font-size:14px;color:var(--muted)}
-
+/* ===== Lesson 2: grammar (scoped) ===== */
+.gl mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:3px}
+.gl .legend mark{font-weight:600}
+.gl .sec-head{display:flex;gap:12px;align-items:center;margin:2px 0 16px;flex-wrap:wrap}
+.gl .sec-num{width:36px;height:36px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:800;font-size:14px;flex:none}
+.gl .sec-head h2{margin:0;font-size:clamp(22px,3vw,27px);flex:1;min-width:200px}
+.gl .sec-head p{flex-basis:100%;margin:0;color:var(--muted)}
+.gl .understood{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:6px 14px;font-weight:700;font-size:13px;color:var(--muted);transition:.15s}
+.gl .understood:hover{border-color:var(--ok);color:var(--ok)}
+.gl .understood.on{background:var(--ok);border-color:var(--ok);color:#fff;animation:pop .3s}
+.gl .next-chap{display:flex;justify-content:flex-end;margin-top:20px}
+.gl h3{font-size:18px;margin:0 0 8px;line-height:1.25}
+.gl h4{font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:16px 0 6px}
+.gl p{margin:0 0 10px}
+.gl ul{margin:0 0 10px;padding-left:20px}
+.gl li{margin-bottom:4px}
+.gl a{color:var(--accent)}
+.gl .grid{display:grid;gap:14px}
+.gl .g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr))}
+.gl .g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.gl .panel{margin-bottom:0}
+.gl .panel.flush{padding:0;overflow:hidden}
+.gl .m{color:var(--der);font-weight:600}.gl .f{color:var(--die);font-weight:600}.gl .n{color:var(--das);font-weight:600}.gl .p{color:var(--pl);font-weight:600}
+.gl .gde{font-style:italic;cursor:pointer;border-radius:4px;transition:background .2s}
+.gl .gde:hover{background:var(--accent-soft)}
+.gl .gde.saying{background:color-mix(in srgb,var(--ok) 20%,transparent)}
+.gl .ex{padding:4px 8px 4px 12px;border-left:3px solid var(--accent);margin:6px 0}
+.gl .ex .en{display:block;color:var(--muted);font-size:14px;font-style:normal}
+.gl .mono,.gl td.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14.5px}
+.gl .pct{font-size:13px;color:var(--muted)}
+/* cheat codes */
+.gl .codes{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:12px}
+.gl .code{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);border-top:4px solid var(--accent)}
+.gl .code b{display:block;font-size:11.5px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.gl .code strong{display:block;font-size:17px;line-height:1.3;margin-bottom:6px}
+.gl .code>span{display:block;font-size:14px;color:var(--muted)}
 /* tables */
-.tbl-wrap{overflow-x:auto}
-table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
-th,td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
-th{font-family:var(--font-display);font-stretch:85%;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
-td.mono,.mono{font-family:var(--font-mono);font-size:15px}
-table.art td,table.art th{text-align:center}
-table.art td:first-child,table.art th:first-child{text-align:left}
-table.art td{font-family:var(--font-mono);font-size:17px;font-weight:600}
-table.art td.case{font-family:var(--font-display);font-stretch:85%;font-size:16px;font-weight:700}
-td.case small{display:block;font-family:var(--font-body);font-weight:400;font-size:12px;color:var(--muted);font-stretch:100%}
-.chg{box-shadow:inset 0 -3px 0 var(--signal)}
-th.m{color:var(--der)}th.f{color:var(--die)}th.n{color:var(--das)}th.p{color:var(--pl)}
-
-/* ending chips */
-.endings{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
-.endings span{font-family:var(--font-mono);font-weight:600;font-size:15px;padding:3px 9px;border-radius:4px}
-.col-m .endings span{background:var(--der-bg);color:var(--der)}
-.col-f .endings span{background:var(--die-bg);color:var(--die)}
-.col-n .endings span{background:var(--das-bg);color:var(--das)}
-.col-m{border-top:6px solid var(--der)}.col-f{border-top:6px solid var(--die)}.col-n{border-top:6px solid var(--das)}
-.col-m h3{color:var(--der)}.col-f h3{color:var(--die)}.col-n h3{color:var(--das)}
-.pct{font-family:var(--font-mono);font-size:12px;color:var(--muted)}
-
+.gl .tbl-wrap{overflow-x:auto}
+.gl table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+.gl th,.gl td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.gl tr:last-child td{border-bottom:0}
+.gl th{font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.gl table.art td,.gl table.art th{text-align:center}
+.gl table.art td:first-child,.gl table.art th:first-child{text-align:left}
+.gl table.art td{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px;font-weight:600}
+.gl table.art td.case{font-family:inherit;font-size:15px;font-weight:700}
+.gl td.case small{display:block;font-weight:400;font-size:12px;color:var(--muted)}
+.gl .chg{background:color-mix(in srgb,var(--hl) 55%,transparent);box-shadow:inset 0 -3px 0 var(--hl-line)}
+.gl th.m{color:var(--der)}.gl th.f{color:var(--die)}.gl th.n{color:var(--das)}.gl th.p{color:var(--pl)}
+/* gender columns */
+.gl .endings{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
+.gl .endings span{font-family:ui-monospace,Menlo,monospace;font-weight:700;font-size:14px;padding:3px 9px;border-radius:6px}
+.gl .col-m .endings span{background:var(--der-bg);color:var(--der)}
+.gl .col-f .endings span{background:var(--die-bg);color:var(--die)}
+.gl .col-n .endings span{background:var(--das-bg);color:var(--das)}
+.gl .col-m{border-top:5px solid var(--der)}.gl .col-f{border-top:5px solid var(--die)}.gl .col-n{border-top:5px solid var(--das)}
+.gl .col-m h3{color:var(--der)}.gl .col-f h3{color:var(--die)}.gl .col-n h3{color:var(--das)}
 /* tools */
-.tool{border:2px solid var(--ink)}
-.tool label{font-weight:600;display:block;margin-bottom:6px}
-.tool input[type=text]{width:100%;font:500 20px var(--font-body);padding:10px 12px;border:1.5px solid var(--ink);border-radius:4px;background:var(--paper);color:var(--ink)}
-.guess-out{margin-top:14px;min-height:84px;display:flex;gap:14px;align-items:flex-start}
-.big-art{font-family:var(--font-display);font-stretch:70%;font-weight:900;font-size:56px;line-height:.9;min-width:90px}
-.guess-out .why{font-size:15px}
-.meter{height:6px;background:var(--rule);border-radius:3px;margin-top:6px;max-width:220px}
-.meter i{display:block;height:100%;border-radius:3px;background:currentColor}
-.drill-noun{font-family:var(--font-display);font-stretch:75%;font-weight:850;font-size:48px;margin:6px 0 12px}
-.btns{display:flex;gap:8px;flex-wrap:wrap}
-button{font:700 16px var(--font-display);font-stretch:85%;text-transform:uppercase;letter-spacing:.04em;padding:10px 18px;border-radius:4px;border:2px solid currentColor;background:var(--sheet);cursor:pointer;color:var(--ink)}
-button.bm{color:var(--der)}button.bf{color:var(--die)}button.bn{color:var(--das)}
-button:hover{background:var(--paper)}
-button.ghost{border-color:var(--rule);color:var(--muted);font-size:14px;padding:8px 12px}
-.drill-fb{margin-top:12px;min-height:48px;font-size:15px}
-.score{font-family:var(--font-mono);font-size:13px;color:var(--muted)}
-
-/* case cards */
-.case-card{border-left:6px solid var(--ink)}
-.case-card .q{font-family:var(--font-mono);font-size:14px;background:var(--paper);padding:2px 8px;border-radius:4px}
-.case-card .role{font-family:var(--font-display);font-stretch:80%;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
-.chant{font-family:var(--font-display);font-stretch:78%;font-weight:800;font-size:22px;line-height:1.2;margin:8px 0;padding:10px 14px;background:var(--signal);color:var(--signal-ink);border-radius:4px;display:inline-block}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media (max-width:560px){.split{grid-template-columns:1fr}}
-.wo{background:var(--das-bg);border-radius:6px;padding:12px 14px}
-.wohin{background:var(--der-bg);border-radius:6px;padding:12px 14px}
-.wo b,.wohin b{font-family:var(--font-display);font-stretch:80%;font-size:18px;display:block;margin-bottom:4px}
-
-/* sentence diagram */
-.slots{display:flex;flex-wrap:wrap;gap:4px;margin:10px 0 4px}
-.slot{flex:1 1 auto;border:1.5px solid var(--rule);border-radius:4px;padding:6px 10px;text-align:center;font-style:italic;min-width:60px}
-.slot small{display:block;font-family:var(--font-mono);font-style:normal;font-size:11px;color:var(--muted);text-transform:uppercase}
-.slot.v{border-color:var(--signal);background:var(--signal);color:var(--signal-ink)}
-.slot.v small{color:var(--signal-ink)}
-
+.gl .tool{border:2px solid var(--accent)}
+.gl .tool label{font-weight:600;display:block;margin-bottom:6px}
+.gl .tool input[type=text]{width:100%;font-size:20px;font-weight:600;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--bg)}
+.gl .tool input[type=text]:focus{outline:none;border-color:var(--accent)}
+.gl .guess-out{margin-top:14px;min-height:84px;display:flex;gap:14px;align-items:flex-start}
+.gl .big-art{font-weight:900;font-size:52px;line-height:.9;min-width:96px}
+.gl .guess-out .why{font-size:15px}
+.gl .meter{height:7px;background:var(--line);border-radius:9px;margin-top:6px;max-width:220px;overflow:hidden}
+.gl .meter i{display:block;height:100%;border-radius:9px;background:currentColor}
+.gl .cta{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+/* cases */
+.gl .case-card{border-left:5px solid var(--ink)}
+.gl .case-card .q{font-family:ui-monospace,Menlo,monospace;font-size:13px;background:var(--bg);padding:2px 8px;border-radius:6px;font-weight:600}
+.gl .case-card .role{font-weight:800;font-size:12.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.gl .chant{font-weight:800;font-size:18px;line-height:1.3;margin:6px 0 10px;padding:8px 14px;background:var(--accent-soft);color:var(--accent);border-radius:10px;display:inline-block}
+.gl .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:6px}
+.gl .wo{background:var(--das-bg);border-radius:10px;padding:12px 14px}
+.gl .wohin{background:var(--der-bg);border-radius:10px;padding:12px 14px}
+.gl .wo b,.gl .wohin b{font-size:17px;display:block;margin-bottom:4px}
+/* sentence slots */
+.gl .slots{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0 4px}
+.gl .slot{flex:1 1 auto;border:1.5px solid var(--line);border-radius:8px;padding:6px 10px;text-align:center;font-style:italic;min-width:60px;background:var(--card)}
+.gl .slot small{display:block;font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.gl .slot.v{border-color:var(--accent);background:var(--accent);color:#fff;font-weight:700}
+.gl .slot.v small{color:rgba(255,255,255,.85)}
 /* nuggets */
-.nuggets{columns:3 300px;column-gap:18px}
-.nug{break-inside:avoid;background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:16px 18px;margin-bottom:18px}
-.nug h3{font-size:19px}
-.nug p:last-child{margin-bottom:0}
-
-footer{padding:36px 0 60px;color:var(--muted);font-size:14px}
-footer a{color:var(--ink)}
-@media print{nav.toc,.tool{display:none}section{break-inside:avoid-page}}
+.gl .nuggets{columns:3 290px;column-gap:14px}
+.gl .nug{break-inside:avoid;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:14px;box-shadow:var(--shadow)}
+.gl .nug p:last-child,.gl .nug ul:last-child{margin-bottom:0}
+.gl .sources{margin-top:8px;font-size:13px}
+@media (max-width:680px){.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}.stat{padding:6px 10px 6px 6px}.stat .ring{width:32px;height:32px}.stat .ring::after{inset:5px}.stat b{font-size:15px}.stat span{font-size:11px}.gl .split{grid-template-columns:1fr}.lessons .tempo{display:none}.gl .big-art{font-size:42px;min-width:76px}}
+@media print{.sticky,.hero .stats,.tool,.understood,.next-chap,footer{display:none!important}.lesson.active .tab{display:block!important}}
 </style>
 </head>
 <body>
-
-<header class="mast">
-  <div class="wrap mast-grid">
-    <div>
-      <h1>German Grammar<br><span class="hl">Cheat Codes</span></h1>
-      <p class="sub">Genders, cases, pronouns, verbs and word order, condensed for a B1 learner who knows plenty of words but wants the grammar to finally click. Every noun on this page is colour-coded by gender.</p>
-    </div>
-    <div class="legend" aria-label="Colour key">
-      <span><i class="sw" style="background:var(--der)"></i><b class="m">der</b> masculine</span>
-      <span><i class="sw" style="background:var(--die)"></i><b class="f">die</b> feminine</span>
-      <span><i class="sw" style="background:var(--das)"></i><b class="n">das</b> neuter</span>
-      <span><i class="sw" style="background:var(--pl)"></i><b class="p">die</b> plural</span>
-      <span><i class="sw" style="background:var(--signal)"></i>the bit that changes</span>
-    </div>
+<header class="hero">
+ <div class="hero-in">
+  <div class="kicker">Osnabrück → München · Niveau B1</div>
+  <h1>Mein Deutsch: <span>Lektionen</span></h1>
+  <p class="sub">My growing collection of German lessons. Tick what you know, tap blurred text to reveal it, and tap 🔊 or any German example to hear it spoken.</p>
+  <div class="stats">
+   <div class="stat"><div class="ring" id="ring-v"></div><div><b id="st-v">0/0</b><span>Vokabeln</span></div></div>
+   <div class="stat"><div class="ring" id="ring-c"></div><div><b id="st-c">0/0</b><span>Chunks</span></div></div>
+   <div class="stat"><div class="ring" id="ring-g"></div><div><b id="st-g">0/0</b><span>Grammatik-Kapitel</span></div></div>
+   <div class="stat"><div class="ring trophy">🏆</div><div><b id="st-best">0</b><span>der/die/das-Rekord</span></div></div>
   </div>
+ </div>
 </header>
 
-<nav class="toc" aria-label="Sections">
-  <div class="wrap">
-    <a href="#codes">Top 12</a>
-    <a href="#gender">Gender</a>
-    <a href="#cases">Cases</a>
-    <a href="#prepositions">Prepositions</a>
-    <a href="#pronouns">Pronouns</a>
-    <a href="#adjectives">Adjectives</a>
-    <a href="#verbs">Verbs</a>
-    <a href="#verb-cases">Verbs &amp; cases</a>
-    <a href="#word-order">Word order</a>
-    <a href="#nuggets">Nuggets</a>
+<div class="sticky">
+ <nav class="lessons" aria-label="Lektionen">
+  <button class="lesson-btn" data-lesson="home"><small>⌂</small>Übersicht</button>
+  <button class="lesson-btn" data-lesson="rolle"><small>1</small>Meine Rolle</button>
+  <button class="lesson-btn" data-lesson="grammatik"><small>2</small>Grammatik</button>
+  <div class="voice-ctrl">
+   <select class="sel voice-sel" id="voice" title="Stimme – choose a German voice" aria-label="Stimme"></select>
+   <button class="speak" id="voice-test" title="Test this voice" aria-label="Stimme testen">🔊</button>
+   <label class="tempo" title="Speaking speed">Tempo <input type="range" id="rate" min="0.6" max="1.1" step="0.05"></label>
   </div>
-</nav>
+ </nav>
+ <nav class="tabs" id="tabs-rolle" data-lesson="rolle" hidden>
+  <button class="tab-btn" data-tab="vocab">📚 Vokabeln</button>
+  <button class="tab-btn" data-tab="chunks">🧩 Chunks</button>
+  <button class="tab-btn" data-tab="story">📖 Geschichte</button>
+  <button class="tab-btn" data-tab="cards">🃏 Karteikarten</button>
+  <button class="tab-btn" data-tab="gender">🎯 der · die · das</button>
+ </nav>
+ <nav class="tabs" id="tabs-grammatik" data-lesson="grammatik" hidden>
+  <button class="tab-btn" data-tab="codes">Top 12</button>
+  <button class="tab-btn" data-tab="gender">Genus</button>
+  <button class="tab-btn" data-tab="cases">Fälle</button>
+  <button class="tab-btn" data-tab="prepositions">Präpositionen</button>
+  <button class="tab-btn" data-tab="pronouns">Pronomen</button>
+  <button class="tab-btn" data-tab="adjectives">Adjektive</button>
+  <button class="tab-btn" data-tab="verbs">Verben</button>
+  <button class="tab-btn" data-tab="verb-cases">Verben & Fälle</button>
+  <button class="tab-btn" data-tab="word-order">Satzbau</button>
+  <button class="tab-btn" data-tab="nuggets">Nuggets</button>
+ </nav>
+ <div class="toolbar" id="toolbar" hidden>
+  <input class="search" id="q" type="search" placeholder="Suchen … (Deutsch oder Englisch)">
+  <div class="seg" id="stars" title="Minimum essential score">
+   <button data-s="1">Alle</button><button data-s="3">★3+</button><button data-s="4">★4+</button><button data-s="5">★5</button>
+  </div>
+  <select class="sel" id="test" title="Test yourself">
+   <option value="none">Testmodus: aus</option>
+   <option value="hide-en">Englisch verdecken</option>
+   <option value="hide-de">Deutsch verdecken</option>
+  </select>
+  <button class="btn" id="hideBtn"></button>
+ </div>
+</div>
 
-<main class="wrap">
+<main>
+<!-- ================= HOME ================= -->
+<div class="lesson" id="lesson-home">
+ <h2 class="home-h">Meine Lektionen</h2>
+ <p class="home-sub">Pick up where you left off. Your progress is saved in this browser.</p>
+ <div class="lesson-cards">
+  <article class="lcard" data-open="rolle">
+   <div class="lc-num">1</div>
+   <h3>Business-Deutsch: Meine Rolle</h3>
+   <p>Words, phrases and a story for explaining my job: Sovereign AI, pre-sales, deal assurance, delivery and the Munich Client Experience Center.</p>
+   <ul class="lc-meta"><li>📚 Vokabeln</li><li>🧩 Chunks</li><li>📖 Geschichte</li><li>🃏 Karteikarten</li><li>🎯 der·die·das</li></ul>
+   <div class="lc-prog"><span class="bar"><i id="lc-rolle-bar"></i></span><span id="lc-rolle-txt"></span></div>
+   <button class="btn primary">Öffnen →</button>
+  </article>
+  <article class="lcard" data-open="grammatik">
+   <div class="lc-num">2</div>
+   <h3>Grammatik-Cheat-Codes</h3>
+   <p>Genders, cases, prepositions, pronouns, adjective endings, verbs and word order, boiled down to rules that click. Includes a gender guesser.</p>
+   <ul class="lc-meta"><li>📐 10 Kapitel</li><li>🔎 Genus-Rater</li><li>🔊 Beispiele zum Anhören</li></ul>
+   <div class="lc-prog"><span class="bar"><i id="lc-gram-bar"></i></span><span id="lc-gram-txt"></span></div>
+   <button class="btn primary">Öffnen →</button>
+  </article>
+  <article class="lcard next">
+   <div class="lc-num">+</div>
+   <h3>Nächste Lektion</h3>
+   <p>Ask Claude to add the next lesson to this collection. Some ideas:</p>
+   <ul>
+    <li>Meetings, E-Mails und Telefonate im Job</li>
+    <li>Umzug nach München: Anmeldung, Mietvertrag, Bank</li>
+    <li>Diplomatisch formulieren mit Konjunktiv II</li>
+    <li>Small Talk mit Kunden und Kollegen</li>
+   </ul>
+  </article>
+ </div>
+</div>
 
-<!-- ============ TOP 12 ============ -->
-<section id="codes">
-  <div class="sec-head"><span class="sec-num">00</span><h2>The 12 cheat codes</h2>
+<!-- ================= LESSON 1: MEINE ROLLE ================= -->
+<div class="lesson" id="lesson-rolle">
+ <section class="tab" data-tab="vocab">
+  <div class="legend">
+   <span>Genus-Farben:</span><i class="der">der</i><i class="die">die</i><i class="das">das</i><i class="pl">Plural</i>
+   <span>· ★★★★★ = learn first</span>
+  </div>
+  <div id="vocab"></div>
+ </section>
+
+ <section class="tab" data-tab="chunks">
+  <p class="hint">Learn these as whole phrases. Try <b>Deutsch verdecken</b>: read the English, say the German aloud, then tap to check.</p>
+  <div id="chunks"></div>
+  <div class="tips" id="tips"></div>
+ </section>
+
+ <section class="tab" data-tab="story">
+  <div class="panel story-ctrl">
+   <button class="btn" id="st-cloze">🕳️ Lückentext</button>
+   <button class="btn" id="st-en">🇬🇧 Alle Übersetzungen</button>
+   <button class="btn" id="st-read">▶ Ganze Geschichte vorlesen</button>
+   <button class="btn" id="st-stop" hidden>■ Stopp</button>
+   <p class="hint">Tap a dotted word for its meaning. In <b>Lückentext</b> mode the key words are blanked out. Guess each one aloud, then tap to reveal it.</p>
+  </div>
+  <article class="story" id="story"></article>
+ </section>
+
+ <section class="tab" data-tab="cards">
+  <div class="panel fc-setup" id="fc-setup">
+   <label>Quelle<select class="sel" id="fc-src"><option value="vocab">Vokabeln</option><option value="chunks">Chunks</option><option value="both">Beides</option></select></label>
+   <label>Richtung<select class="sel" id="fc-dir"><option value="de">Deutsch → Englisch</option><option value="en">Englisch → Deutsch</option></select></label>
+   <label>Vokabeln ab<select class="sel" id="fc-stars"><option value="1">★1</option><option value="3">★3</option><option value="4">★4</option><option value="5" selected>★5</option></select></label>
+   <label class="chk"><input type="checkbox" id="fc-new" checked> Nur nicht abgehakte</label>
+   <button class="btn primary" id="fc-start">Los geht's →</button>
+  </div>
+  <div id="fc-area" hidden>
+   <div class="fc-meta"><span id="fc-left"></span><div class="fc-prog"><i id="fc-bar"></i></div><button class="link" id="fc-end">Beenden</button></div>
+   <div class="card3d" id="fc-card" tabindex="0"><div class="inner"><div class="face front" id="fc-front"></div><div class="face back" id="fc-back"></div></div></div>
+   <div class="fc-btns">
+    <button class="btn" id="fc-again">↺ Nochmal<kbd>1</kbd></button>
+    <button class="btn" id="fc-flip">Umdrehen<kbd>␣</kbd></button>
+    <button class="btn ok" id="fc-know">✓ Kann ich<kbd>2</kbd></button>
+   </div>
+   <p class="hint" style="text-align:center">Say the answer out loud before you flip. <b>Kann ich</b> ticks the word everywhere.</p>
+  </div>
+  <div class="panel done-box" id="fc-done" hidden></div>
+ </section>
+
+ <section class="tab" data-tab="gender">
+  <div class="panel gg" id="gg">
+   <div class="gg-src"><div class="seg" id="gg-src">
+    <button data-s="vocab">Meine Vokabeln</button><button data-s="general">Allgemeine Nomen</button><button data-s="both">Beides</button>
+   </div></div>
+   <div class="gg-score"><span>Serie <b id="gg-streak">0</b></span><span>Richtig <b id="gg-right">0</b>/<b id="gg-total">0</b></span><span>Rekord <b id="gg-best">0</b></span></div>
+   <div class="gg-word" id="gg-word"></div>
+   <div class="gg-en" id="gg-en"></div>
+   <div class="gg-btns">
+    <button class="art-btn der" data-a="der"><span>der</span></button>
+    <button class="art-btn die" data-a="die"><span>die</span></button>
+    <button class="art-btn das" data-a="das"><span>das</span></button>
+   </div>
+   <div class="gg-fb" id="gg-fb"></div>
+   <div class="gg-why" id="gg-why"></div>
+   <button class="btn" id="gg-next" hidden>Weiter →<kbd>↵</kbd></button>
+   <p class="hint">Keys 1, 2 and 3 choose der, die or das. After each answer you'll see the rule that gives it away, or a warning when the word breaks the rules.</p>
+  </div>
+  <div class="panel rules">
+   <h3>Merkhilfen for your business words</h3>
+   <table>
+    <tr><td>Compounds</td><td>The <b>last</b> word decides: <span class="g-das">das Rechen<u>zentrum</u></span> (das Zentrum), <span class="g-der">der Freigabe<u>prozess</u></span> (der Prozess), <span class="g-die">die Kunden<u>zufriedenheit</u></span>.</td></tr>
+    <tr><td>-ung, -heit, -keit, -schaft, -ion, -tät, -ie</td><td>Always <span class="g-die"><b>die</b></span>: die Umsetzung, die Skalierbarkeit, die Kalkulation, die Souveränität, die Strategie.</td></tr>
+    <tr><td>-e</td><td>Usually <span class="g-die"><b>die</b></span>: die Freigabe, die Abnahme, die Marge. Male people are the exception: <span class="g-der">der Kunde, der Kollege</span>.</td></tr>
+    <tr><td>-er, -or</td><td>Usually <span class="g-der"><b>der</b></span>: der Anbieter, der Wettbewerber, der Arbeitgeber, der Grafikprozessor.</td></tr>
+    <tr><td>-um, Ge-</td><td>Usually <span class="g-das"><b>das</b></span>: das Gremium, das Zentrum, das Gehalt, das (Vorstellungs)gespräch.</td></tr>
+    <tr><td>English loanwords</td><td>Often <span class="g-das"><b>das</b></span> (das Meeting, das Team, das Projekt), but learn each one: <span class="g-der">der Workflow</span>, <span class="g-die">die Cloud</span>.</td></tr>
+   </table>
+   <button class="btn more" data-goto="grammatik:gender">📐 All gender rules: Lektion 2 →</button>
+  </div>
+ </section>
+</div>
+
+<!-- ================= LESSON 2: GRAMMATIK ================= -->
+<div class="lesson gl" id="lesson-grammatik">
+ <div class="legend">
+  <span>Genus-Farben:</span><i class="der">der</i><i class="die">die</i><i class="das">das</i><i class="pl">Plural</i>
+  <span>· <mark>highlighted</mark> = the bit that changes · tap any <span class="gde">German example</span> to hear it</span>
+ </div>
+<section class="tab" data-tab="codes">
+  <div class="sec-head"><span class="sec-num">00</span><h2>The 12 cheat codes</h2><button class="understood" data-id="g-codes"></button>
     <p>If you remember nothing else, remember these. Each one is expanded further down.</p></div>
   <div class="codes">
     <div class="code"><b>01 · gender</b><strong>Ends in -e? Bet on <span class="f">die</span>.</strong><span>Right about 90% of the time across some 15,000 nouns. Male people and animals are the main exceptions (<span class="m">der Junge</span>).</span></div>
@@ -226,15 +517,13 @@ footer a{color:var(--ink)}
     <div class="code"><b>07 · cases</b><strong>Dative's signature letters: <mark>m</mark> and <mark>r</mark>.</strong><span>dem, einem, ihm, mir · der, einer, ihr. Plural: den + an extra -n on the noun.</span></div>
     <div class="code"><b>08 · pronouns</b><strong>ihn ↔ den, ihm ↔ dem</strong><span>The pronoun ends with the same letter as the article. n = accusative, m = dative.</span></div>
     <div class="code"><b>09 · prepositions</b><strong>Wo? → dative. Wohin? → accusative.</strong><span>Location stays put (dative); movement towards a destination (accusative).</span></div>
-    <div class="code"><b>10 · verbs</b><strong>The conjugated verb is always in slot 2.</strong><span>Whatever comes first, the verb comes next: <span class="de">Morgen <mark>fahre</mark> ich…</span></span></div>
-    <div class="code"><b>11 · verbs</b><strong>weil, dass, wenn, ob… kick the verb to the end.</strong><span><span class="de">…weil ich keine Zeit <mark>habe</mark>.</span></span></div>
+    <div class="code"><b>10 · verbs</b><strong>The conjugated verb is always in slot 2.</strong><span>Whatever comes first, the verb comes next: <span class="gde">Morgen <mark>fahre</mark> ich…</span></span></div>
+    <div class="code"><b>11 · verbs</b><strong>weil, dass, wenn, ob… kick the verb to the end.</strong><span><span class="gde">…weil ich keine Zeit <mark>habe</mark>.</span></span></div>
     <div class="code"><b>12 · adjectives</b><strong>If the article already shows the case, the adjective relaxes to -e or -en.</strong><span>If there's no article, the adjective does the article's job.</span></div>
   </div>
-</section>
-
-<!-- ============ GENDER ============ -->
-<section id="gender">
-  <div class="sec-head"><span class="sec-num">01</span><h2>Working out gender</h2>
+<div class="next-chap"><button class="btn" data-goto="grammatik:gender">Nächstes Kapitel: Genus →</button></div></section>
+<section class="tab" data-tab="gender">
+  <div class="sec-head"><span class="sec-num">01</span><h2>Working out gender</h2><button class="understood" data-id="g-gender"></button>
     <p>Gender isn't random. Endings and meaning predict most nouns. Check the ending first, then the meaning, then fall back on <span class="m">der</span>.</p></div>
 
   <div class="grid g3">
@@ -242,10 +531,10 @@ footer a{color:var(--ink)}
       <h3>die · feminine</h3>
       <h4>Rock-solid endings</h4>
       <div class="endings"><span>-ung</span><span>-heit</span><span>-keit</span><span>-schaft</span><span>-ion</span><span>-tät</span><span>-ik</span><span>-ei</span><span>-ie</span><span>-ur</span><span>-enz</span><span>-anz</span><span>-in</span></div>
-      <p class="de"><span class="f">die Zeitung, Freiheit, Möglichkeit, Freundschaft, Station, Universität, Musik, Bäckerei, Energie, Kultur, Konferenz, Toleranz, Lehrerin</span></p>
+      <p class="gde"><span class="f">die Zeitung, Freiheit, Möglichkeit, Freundschaft, Station, Universität, Musik, Bäckerei, Energie, Kultur, Konferenz, Toleranz, Lehrerin</span></p>
       <h4>Strong tendency</h4>
       <div class="endings"><span>-e</span><span>-cke</span><span>-ade</span></div>
-      <p><span class="pct">≈ 90% of -e nouns</span> <span class="de f">die Lampe, Straße, Ecke, Schokolade</span></p>
+      <p><span class="pct">≈ 90% of -e nouns</span> <span class="gde f">die Lampe, Straße, Ecke, Schokolade</span></p>
       <h4>By meaning</h4>
       <ul>
         <li>Female people and animals: <span class="f">die Frau, die Kuh</span></li>
@@ -260,10 +549,10 @@ footer a{color:var(--ink)}
       <h3>der · masculine</h3>
       <h4>Rock-solid endings</h4>
       <div class="endings"><span>-ling</span><span>-ismus</span><span>-ist</span><span>-ant</span><span>-ig</span><span>-eur</span><span>-or</span><span>-ich</span></div>
-      <p class="de"><span class="m">der Frühling, Tourismus, Polizist, Elefant, Honig, Ingenieur, Motor, Teppich</span></p>
+      <p class="gde"><span class="m">der Frühling, Tourismus, Polizist, Elefant, Honig, Ingenieur, Motor, Teppich</span></p>
       <h4>Strong tendency</h4>
       <div class="endings"><span>-en</span><span>-er</span><span>-el</span></div>
-      <p><span class="pct">-en ≈ 80% · -er, -el ≈ 60%</span> <span class="de m">der Garten, Computer, Löffel</span></p>
+      <p><span class="pct">-en ≈ 80% · -er, -el ≈ 60%</span> <span class="gde m">der Garten, Computer, Löffel</span></p>
       <h4>By meaning</h4>
       <ul>
         <li>Male people and animals: <span class="m">der Mann, der Löwe</span></li>
@@ -280,10 +569,10 @@ footer a{color:var(--ink)}
       <h3>das · neuter</h3>
       <h4>Rock-solid endings</h4>
       <div class="endings"><span>-chen</span><span>-lein</span><span>-ment</span><span>-um</span><span>-ma</span><span>-tum</span></div>
-      <p class="de"><span class="n">das Mädchen, Fräulein, Instrument, Museum, Thema, Eigentum</span> <span class="pct">(but der Irrtum, der Reichtum)</span></p>
+      <p class="gde"><span class="n">das Mädchen, Fräulein, Instrument, Museum, Thema, Eigentum</span> <span class="pct">(but der Irrtum, der Reichtum)</span></p>
       <h4>Strong tendency</h4>
       <div class="endings"><span>Ge-</span><span>Ge-…-e</span><span>-nis</span><span>-sal</span><span>-tel</span></div>
-      <p><span class="pct">Ge- ≈ 90% · -nis ≈ ⅔</span> <span class="de n">das Geschenk, Gebäude, Ergebnis, Schicksal, Viertel</span></p>
+      <p><span class="pct">Ge- ≈ 90% · -nis ≈ ⅔</span> <span class="gde n">das Geschenk, Gebäude, Ergebnis, Schicksal, Viertel</span></p>
       <h4>By meaning</h4>
       <ul>
         <li>Verbs used as nouns, always: <span class="n">das Essen, das Schwimmen</span></li>
@@ -305,25 +594,14 @@ footer a{color:var(--ink)}
       <div class="guess-out" id="guess-out" aria-live="polite"></div>
       <p class="pct" style="margin-top:8px">Rules of thumb, not a dictionary. Check compounds by their last part.</p>
     </div>
-    <div class="panel tool">
-      <h3>Gender drill</h3>
-      <p class="score" id="drill-score">0 right · 0 tries · streak 0</p>
-      <div class="drill-noun" id="drill-noun">Zeitung</div>
-      <div class="btns">
-        <button class="bm" data-g="m" type="button">der</button>
-        <button class="bf" data-g="f" type="button">die</button>
-        <button class="bn" data-g="n" type="button">das</button>
-        <button class="ghost" id="drill-skip" type="button">Next noun</button>
-      </div>
-      <div class="drill-fb" id="drill-fb" aria-live="polite">Pick an article. You'll see the rule that gives it away.</div>
-    </div>
+    <div class="panel tool cta"><h3>Gender drill</h3><p>Practise in the <b>der · die · das</b> game. It mixes these general nouns with your business vocabulary and shows the rule behind every answer, or warns you when a word breaks the rules.</p><button class="btn primary" data-goto="rolle:gender" data-src="both">🎯 Zum Spiel →</button></div>
   </div>
 
   <div class="grid g2" style="margin-top:18px">
     <div class="panel">
       <h3>The masculine -e trap (and why it's predictable)</h3>
       <p>Most masculine nouns ending in -e are male beings: <span class="m">der Junge, der Kollege, der Kunde, der Löwe, der Franzose</span>. A small set are abstract: <span class="m">der Name, der Gedanke, der Glaube, der Buchstabe, der Wille, der Friede</span>.</p>
-      <p>Both groups are <b>weak nouns</b> (n-declension): they add <mark>-n</mark> everywhere except the nominative singular. <span class="de">Ich kenne <span class="m">den Kunde<mark>n</mark></span>. Ich helfe <span class="m">dem Kollege<mark>n</mark></span>.</span> Learn the gender and the extra -n come as a package.</p>
+      <p>Both groups are <b>weak nouns</b> (n-declension): they add <mark>-n</mark> everywhere except the nominative singular. <span class="gde">Ich kenne <span class="m">den Kunde<mark>n</mark></span>. Ich helfe <span class="m">dem Kollege<mark>n</mark></span>.</span> Learn the gender and the extra -n come as a package.</p>
       <p>Neuter -e exceptions to memorise: <span class="n">das Auge, das Ende, das Erbe</span>, plus the <span class="n">Ge-…-e</span> family (<span class="n">das Gebäude, das Gemüse, das Gebirge</span>). And <span class="m">der Käse</span>, because cheese is special.</p>
     </div>
     <div class="panel">
@@ -331,24 +609,22 @@ footer a{color:var(--ink)}
       <p>Masculine is the biggest group of German nouns. If no ending or meaning rule applies, guess <span class="m">der</span>.</p>
       <h4>How to stop forgetting genders</h4>
       <ul>
-        <li>Never learn a noun without its article. Say <span class="de">„<span class="f">die</span> Wohnung"</span> as one word.</li>
-        <li>Learn the plural at the same time: <span class="de">das Buch, <span class="p">die Bücher</span></span>.</li>
+        <li>Never learn a noun without its article. Say <span class="gde">„<span class="f">die</span> Wohnung"</span> as one word.</li>
+        <li>Learn the plural at the same time: <span class="gde">das Buch, <span class="p">die Bücher</span></span>.</li>
         <li>Colour-code your notes exactly like this page. Visual memory does the work.</li>
         <li>Picture a scene: every <span class="m">der</span> noun is on fire, every <span class="f">die</span> noun is frozen, every <span class="n">das</span> noun is covered in grass. Weird pictures stick.</li>
         <li>Use the rules above to retro-fit words you already know. You'll find you can now explain the gender of hundreds of them.</li>
       </ul>
     </div>
   </div>
-</section>
-
-<!-- ============ CASES ============ -->
-<section id="cases">
-  <div class="sec-head"><span class="sec-num">02</span><h2>The four cases</h2>
+<div class="next-chap"><button class="btn" data-goto="grammatik:cases">Nächstes Kapitel: Fälle →</button></div></section>
+<section class="tab" data-tab="cases">
+  <div class="sec-head"><span class="sec-num">02</span><h2>The four cases</h2><button class="understood" data-id="g-cases"></button>
     <p>Case tells you what job a noun is doing in the sentence. German marks the job on the article, so word order can move around without losing the meaning.</p></div>
 
   <div class="panel" style="margin-bottom:18px">
     <h3>One sentence, all four cases</h3>
-    <p class="ex de" style="font-size:20px"><span class="m">Der Vater</span> gibt <span class="n">dem Kind</span> <span class="m">den Ball</span> <span class="m">des Nachbarn</span>.
+    <p class="ex gde" style="font-size:20px"><span class="m">Der Vater</span> gibt <span class="n">dem Kind</span> <span class="m">den Ball</span> <span class="m">des Nachbarn</span>.
       <span class="en">The father gives the child the neighbour's ball.</span></p>
     <div class="slots">
       <div class="slot">Der Vater<small>Nom · doer</small></div>
@@ -357,7 +633,7 @@ footer a{color:var(--ink)}
       <div class="slot">den Ball<small>Akk · thing</small></div>
       <div class="slot">des Nachbarn<small>Gen · owner</small></div>
     </div>
-    <p class="pct" style="margin-top:8px">Swap the order (<span class="de">Den Ball gibt der Vater dem Kind</span>) and it still means the same thing. The articles carry the meaning.</p>
+    <p class="pct" style="margin-top:8px">Swap the order (<span class="gde">Den Ball gibt der Vater dem Kind</span>) and it still means the same thing. The articles carry the meaning.</p>
   </div>
 
   <div class="grid g2">
@@ -395,7 +671,7 @@ footer a{color:var(--ink)}
       <div><span class="chant">n · e · s · e</span><p>Accusative: only the first letter changes. de<b>n</b>, die, das, die.</p></div>
       <div><span class="chant">m · r · m · n</span><p>Dative: de<b>m</b>, de<b>r</b>, de<b>m</b>, de<b>n</b>.</p></div>
       <div><span class="chant">s · r · s · r</span><p>Genitive: de<b>s</b>, de<b>r</b>, de<b>s</b>, de<b>r</b>.</p></div>
-      <div><p style="margin-top:8px">Chant it as one line: <b>"res-e, nes-e, mrmn, srsr"</b>. These four letter-strings also give you the endings for <span class="de">dieser, jeder, welcher</span>, the pronouns, and strong adjectives.</p></div>
+      <div><p style="margin-top:8px">Chant it as one line: <b>"res-e, nes-e, mrmn, srsr"</b>. These four letter-strings also give you the endings for <span class="gde">dieser, jeder, welcher</span>, the pronouns, and strong adjectives.</p></div>
     </div>
   </div>
 
@@ -404,8 +680,8 @@ footer a{color:var(--ink)}
       <span class="role">Nominativ · the doer</span>
       <h3 style="margin-top:4px">Who is doing it? <span class="q">Wer oder was?</span></h3>
       <ul>
-        <li>The subject of the verb: <span class="de"><span class="m">Der Hund</span> bellt.</span></li>
-        <li>After <b>sein, werden, bleiben, heißen</b>, both sides are nominative (they're "equals" signs): <span class="de"><span class="m">Er</span> ist <span class="m">ein guter Lehrer</span>.</span></li>
+        <li>The subject of the verb: <span class="gde"><span class="m">Der Hund</span> bellt.</span></li>
+        <li>After <b>sein, werden, bleiben, heißen</b>, both sides are nominative (they're "equals" signs): <span class="gde"><span class="m">Er</span> ist <span class="m">ein guter Lehrer</span>.</span></li>
         <li>The dictionary form. If you're just naming a thing, it's nominative.</li>
       </ul>
       <p class="pct">Test: replace it with <i>er / sie / es</i>. If that works, it's nominative.</p>
@@ -414,11 +690,11 @@ footer a{color:var(--ink)}
       <span class="role">Akkusativ · the target</span>
       <h3 style="margin-top:4px">What is directly affected? <span class="q">Wen oder was?</span></h3>
       <ul>
-        <li>The direct object: <span class="de">Ich sehe <span class="m">den Mann</span>. Ich kaufe <span class="m">einen Tisch</span>.</span></li>
-        <li><b>Es gibt</b> always takes accusative: <span class="de">Es gibt <span class="m">keinen Zucker</span>.</span></li>
+        <li>The direct object: <span class="gde">Ich sehe <span class="m">den Mann</span>. Ich kaufe <span class="m">einen Tisch</span>.</span></li>
+        <li><b>Es gibt</b> always takes accusative: <span class="gde">Es gibt <span class="m">keinen Zucker</span>.</span></li>
         <li>After <b>durch, für, gegen, ohne, um</b> and with movement after two-way prepositions.</li>
-        <li>Time with no preposition: <span class="de"><span class="m">jeden Tag</span>, <span class="m">nächsten Monat</span>, <span class="f">die ganze Woche</span></span>.</li>
-        <li>Greetings and wishes (there's a hidden "I wish you"): <span class="de">Guten Morgen! Einen schönen Tag!</span></li>
+        <li>Time with no preposition: <span class="gde"><span class="m">jeden Tag</span>, <span class="m">nächsten Monat</span>, <span class="f">die ganze Woche</span></span>.</li>
+        <li>Greetings and wishes (there's a hidden "I wish you"): <span class="gde">Guten Morgen! Einen schönen Tag!</span></li>
       </ul>
       <p class="pct">Test: would English use "him"? Then German probably wants accusative.</p>
     </div>
@@ -426,31 +702,29 @@ footer a{color:var(--ink)}
       <span class="role">Dativ · the receiver</span>
       <h3 style="margin-top:4px">To or for whom? <span class="q">Wem?</span></h3>
       <ul>
-        <li>The indirect object, usually a person who receives or benefits: <span class="de">Ich gebe <span class="f">der Frau</span> <span class="n">das Geld</span>.</span></li>
+        <li>The indirect object, usually a person who receives or benefits: <span class="gde">Ich gebe <span class="f">der Frau</span> <span class="n">das Geld</span>.</span></li>
         <li>After <b>aus, außer, bei, mit, nach, seit, von, zu, gegenüber</b> and for location after two-way prepositions.</li>
-        <li>With dative verbs: <span class="de">helfen, danken, gefallen, gehören…</span> (see Verbs &amp; cases).</li>
-        <li>Feelings and states, where English uses "I am": <span class="de">Mir ist kalt. Mir ist langweilig. Es tut mir leid.</span></li>
-        <li>Body parts and clothes, instead of "my": <span class="de">Ich wasche <span class="m">mir</span> die Hände.</span></li>
+        <li>With dative verbs: <span class="gde">helfen, danken, gefallen, gehören…</span> (see Verbs &amp; cases).</li>
+        <li>Feelings and states, where English uses "I am": <span class="gde">Mir ist kalt. Mir ist langweilig. Es tut mir leid.</span></li>
+        <li>Body parts and clothes, instead of "my": <span class="gde">Ich wasche <span class="m">mir</span> die Hände.</span></li>
       </ul>
-      <p class="pct">Plural reminder: add -n to the noun if it doesn't already end in -n or -s. <span class="de">mit den Kinder<mark>n</mark></span>.</p>
+      <p class="pct">Plural reminder: add -n to the noun if it doesn't already end in -n or -s. <span class="gde">mit den Kinder<mark>n</mark></span>.</p>
     </div>
     <div class="panel case-card" style="border-left-color:var(--die)">
       <span class="role">Genitiv · the owner</span>
       <h3 style="margin-top:4px">Whose? <span class="q">Wessen?</span></h3>
       <ul>
-        <li>Possession: <span class="de"><span class="n">das Auto</span> <span class="m">meines Vaters</span>, <span class="n">das Ende</span> <span class="m">des Films</span></span>.</li>
-        <li>Masculine and neuter nouns add <mark>-s</mark> or <mark>-es</mark> (one-syllable nouns usually take -es): <span class="de">des Mann<mark>es</mark>, des Kind<mark>es</mark>, des Computer<mark>s</mark></span>.</li>
+        <li>Possession: <span class="gde"><span class="n">das Auto</span> <span class="m">meines Vaters</span>, <span class="n">das Ende</span> <span class="m">des Films</span></span>.</li>
+        <li>Masculine and neuter nouns add <mark>-s</mark> or <mark>-es</mark> (one-syllable nouns usually take -es): <span class="gde">des Mann<mark>es</mark>, des Kind<mark>es</mark>, des Computer<mark>s</mark></span>.</li>
         <li>After <b>wegen, trotz, während, statt (anstatt), innerhalb, außerhalb</b>.</li>
-        <li>Names: just add -s, no apostrophe. <span class="de">Peters Wohnung, Annas Bruder</span>.</li>
+        <li>Names: just add -s, no apostrophe. <span class="gde">Peters Wohnung, Annas Bruder</span>.</li>
       </ul>
-      <p class="pct">In speech, <span class="de">von + dative</span> often replaces it: <span class="de">das Auto von meinem Vater</span>. Recognise genitive; use it in writing.</p>
+      <p class="pct">In speech, <span class="gde">von + dative</span> often replaces it: <span class="gde">das Auto von meinem Vater</span>. Recognise genitive; use it in writing.</p>
     </div>
   </div>
-</section>
-
-<!-- ============ PREPOSITIONS ============ -->
-<section id="prepositions">
-  <div class="sec-head"><span class="sec-num">03</span><h2>Prepositions decide the case</h2>
+<div class="next-chap"><button class="btn" data-goto="grammatik:prepositions">Nächstes Kapitel: Präpositionen →</button></div></section>
+<section class="tab" data-tab="prepositions">
+  <div class="sec-head"><span class="sec-num">03</span><h2>Prepositions decide the case</h2><button class="understood" data-id="g-prepositions"></button>
     <p>Learn these four lists and most case decisions make themselves.</p></div>
 
   <div class="grid g2">
@@ -458,41 +732,41 @@ footer a{color:var(--ink)}
       <h3>Always accusative</h3>
       <span class="chant">durch · für · gegen · ohne · um</span>
       <p>Rhyme: <b>„Durch, für, gegen, ohne, um – Deutsch zu lernen ist nicht dumm."</b> Or the acronym <b>DOGFU</b>.</p>
-      <p class="ex de">Ich gehe <b>durch</b> <span class="m">den Park</span>. Das ist <b>für</b> <span class="m">dich</span>. Wir sitzen <b>um</b> <span class="m">den Tisch</span>.</p>
-      <p class="pct">Also: <span class="de">bis</span> (<span class="de">bis nächsten Montag</span>) and <span class="de">entlang</span> when placed after the noun.</p>
+      <p class="ex gde">Ich gehe <b>durch</b> <span class="m">den Park</span>. Das ist <b>für</b> <span class="m">dich</span>. Wir sitzen <b>um</b> <span class="m">den Tisch</span>.</p>
+      <p class="pct">Also: <span class="gde">bis</span> (<span class="gde">bis nächsten Montag</span>) and <span class="gde">entlang</span> when placed after the noun.</p>
     </div>
     <div class="panel">
       <h3>Always dative</h3>
       <span class="chant">aus · außer · bei · mit · nach · seit · von · zu</span>
-      <p>Sing it to the tune of the <b>Blue Danube</b> waltz ("da-da-da-daa, dum-dum, dum-dum"). Add <span class="de">gegenüber</span> on the end.</p>
-      <p class="ex de">Ich komme <b>aus</b> <span class="m">dem Büro</span>. Ich fahre <b>mit</b> <span class="m">dem Zug</span>. <b>Seit</b> <span class="n">einem Jahr</span> wohne ich hier.</p>
-      <p class="pct">Dative wins even when there's movement: <span class="de">Ich gehe zu<b>m</b> Arzt.</span> The preposition's rule overrides any "motion" instinct.</p>
+      <p>Sing it to the tune of the <b>Blue Danube</b> waltz ("da-da-da-daa, dum-dum, dum-dum"). Add <span class="gde">gegenüber</span> on the end.</p>
+      <p class="ex gde">Ich komme <b>aus</b> <span class="m">dem Büro</span>. Ich fahre <b>mit</b> <span class="m">dem Zug</span>. <b>Seit</b> <span class="n">einem Jahr</span> wohne ich hier.</p>
+      <p class="pct">Dative wins even when there's movement: <span class="gde">Ich gehe zu<b>m</b> Arzt.</span> The preposition's rule overrides any "motion" instinct.</p>
     </div>
     <div class="panel">
       <h3>Two-way (Wechselpräpositionen)</h3>
       <span class="chant">an · auf · hinter · in · neben · über · unter · vor · zwischen</span>
       <p>Nine words. Sing them to <b>Ode to Joy</b>. Then ask one question:</p>
       <div class="split">
-        <div class="wo"><b>Wo? → Dativ</b>Position. Something is somewhere.<p class="de" style="margin:6px 0 0">Das Buch liegt auf <span class="m">dem Tisch</span>.</p></div>
-        <div class="wohin"><b>Wohin? → Akkusativ</b>Movement to a new place.<p class="de" style="margin:6px 0 0">Ich lege das Buch auf <span class="m">den Tisch</span>.</p></div>
+        <div class="wo"><b>Wo? → Dativ</b>Position. Something is somewhere.<p class="gde" style="margin:6px 0 0">Das Buch liegt auf <span class="m">dem Tisch</span>.</p></div>
+        <div class="wohin"><b>Wohin? → Akkusativ</b>Movement to a new place.<p class="gde" style="margin:6px 0 0">Ich lege das Buch auf <span class="m">den Tisch</span>.</p></div>
       </div>
       <h4>The verb pairs that make it automatic</h4>
       <div class="tbl-wrap"><table>
         <thead><tr><th>Wohin? (Akk) · you do it</th><th>Wo? (Dat) · result</th></tr></thead>
         <tbody>
-          <tr><td class="de">legen · lay down flat</td><td class="de">liegen · lie</td></tr>
-          <tr><td class="de">stellen · stand upright</td><td class="de">stehen · stand</td></tr>
-          <tr><td class="de">setzen · sit someone down</td><td class="de">sitzen · sit</td></tr>
-          <tr><td class="de">hängen (hängte) · hang up</td><td class="de">hängen (hing) · be hanging</td></tr>
+          <tr><td class="gde">legen · lay down flat</td><td class="gde">liegen · lie</td></tr>
+          <tr><td class="gde">stellen · stand upright</td><td class="gde">stehen · stand</td></tr>
+          <tr><td class="gde">setzen · sit someone down</td><td class="gde">sitzen · sit</td></tr>
+          <tr><td class="gde">hängen (hängte) · hang up</td><td class="gde">hängen (hing) · be hanging</td></tr>
         </tbody>
       </table></div>
-      <p class="pct" style="margin-top:8px">Action verbs are regular and take accusative; the resting verbs are irregular and take dative. In time expressions, two-way prepositions take dative: <span class="de">am Montag, in der Nacht, vor einer Woche</span> (vor + time = "ago").</p>
+      <p class="pct" style="margin-top:8px">Action verbs are regular and take accusative; the resting verbs are irregular and take dative. In time expressions, two-way prepositions take dative: <span class="gde">am Montag, in der Nacht, vor einer Woche</span> (vor + time = "ago").</p>
     </div>
     <div class="panel">
       <h3>Genitive</h3>
       <span class="chant">wegen · trotz · während · statt</span>
-      <p class="ex de"><b>Wegen</b> <span class="m">des Regens</span> bleiben wir zu Hause. <b>Trotz</b> <span class="f">der Kälte</span> gehen wir spazieren.</p>
-      <p class="pct">In everyday speech you'll hear <span class="de">wegen dem Regen</span>. It's common and understood, though written German keeps the genitive.</p>
+      <p class="ex gde"><b>Wegen</b> <span class="m">des Regens</span> bleiben wir zu Hause. <b>Trotz</b> <span class="f">der Kälte</span> gehen wir spazieren.</p>
+      <p class="pct">In everyday speech you'll hear <span class="gde">wegen dem Regen</span>. It's common and understood, though written German keeps the genitive.</p>
 
       <h4>Contractions to recognise instantly</h4>
       <div class="tbl-wrap"><table>
@@ -503,7 +777,7 @@ footer a{color:var(--ink)}
           <tr><td class="mono">zu + dem</td><td class="mono"><b>zum</b></td><td class="mono">zu + der</td><td class="mono"><b>zur</b></td></tr>
         </tbody>
       </table></div>
-      <p class="pct" style="margin-top:8px"><b>im</b> = dative (wo?), <b>ins</b> = accusative (wohin?). <span class="de">Ich bin im Kino. Ich gehe ins Kino.</span> The contraction tells you the case.</p>
+      <p class="pct" style="margin-top:8px"><b>im</b> = dative (wo?), <b>ins</b> = accusative (wohin?). <span class="gde">Ich bin im Kino. Ich gehe ins Kino.</span> The contraction tells you the case.</p>
     </div>
   </div>
 
@@ -512,20 +786,18 @@ footer a{color:var(--ink)}
     <div class="tbl-wrap"><table>
       <thead><tr><th>Use</th><th>When</th><th>Example</th></tr></thead>
       <tbody>
-        <tr><td class="mono"><b>nach</b> + Dat</td><td>Cities, countries without article, and home</td><td class="de">nach Berlin, nach Spanien, nach Hause</td></tr>
-        <tr><td class="mono"><b>in</b> + Akk</td><td>Countries with article; going inside a building</td><td class="de">in die Schweiz, in die USA, ins Kino</td></tr>
-        <tr><td class="mono"><b>zu</b> + Dat</td><td>People, shops, events, and places you won't enter</td><td class="de">zum Arzt, zu Lidl, zur Party, zu meiner Mutter</td></tr>
-        <tr><td class="mono"><b>an</b> + Akk</td><td>Edges and water</td><td class="de">ans Meer, an den See, an die Wand</td></tr>
-        <tr><td class="mono"><b>auf</b> + Akk</td><td>Open surfaces and some public places</td><td class="de">auf den Markt, auf die Insel, auf die Toilette</td></tr>
+        <tr><td class="mono"><b>nach</b> + Dat</td><td>Cities, countries without article, and home</td><td class="gde">nach Berlin, nach Spanien, nach Hause</td></tr>
+        <tr><td class="mono"><b>in</b> + Akk</td><td>Countries with article; going inside a building</td><td class="gde">in die Schweiz, in die USA, ins Kino</td></tr>
+        <tr><td class="mono"><b>zu</b> + Dat</td><td>People, shops, events, and places you won't enter</td><td class="gde">zum Arzt, zu Lidl, zur Party, zu meiner Mutter</td></tr>
+        <tr><td class="mono"><b>an</b> + Akk</td><td>Edges and water</td><td class="gde">ans Meer, an den See, an die Wand</td></tr>
+        <tr><td class="mono"><b>auf</b> + Akk</td><td>Open surfaces and some public places</td><td class="gde">auf den Markt, auf die Insel, auf die Toilette</td></tr>
       </tbody>
     </table></div>
-    <p class="pct" style="margin-top:8px">And to say where you <em>are</em>: <span class="de">in Berlin</span>, <span class="de">zu Hause</span>, <span class="de">beim Arzt</span>, <span class="de">am Meer</span>, <span class="de">auf dem Markt</span>.</p>
+    <p class="pct" style="margin-top:8px">And to say where you <em>are</em>: <span class="gde">in Berlin</span>, <span class="gde">zu Hause</span>, <span class="gde">beim Arzt</span>, <span class="gde">am Meer</span>, <span class="gde">auf dem Markt</span>.</p>
   </div>
-</section>
-
-<!-- ============ PRONOUNS ============ -->
-<section id="pronouns">
-  <div class="sec-head"><span class="sec-num">04</span><h2>Personal pronouns</h2>
+<div class="next-chap"><button class="btn" data-goto="grammatik:pronouns">Nächstes Kapitel: Pronomen →</button></div></section>
+<section class="tab" data-tab="pronouns">
+  <div class="sec-head"><span class="sec-num">04</span><h2>Personal pronouns</h2><button class="understood" data-id="g-pronouns"></button>
     <p>Same four cases, but every person gets its own word. The tricks below cut the learning load in half.</p></div>
   <div class="grid g2">
     <div class="panel flush">
@@ -552,28 +824,26 @@ footer a{color:var(--ink)}
         <li><b>wir and ihr don't care</b> about accusative vs dative: uns/uns, euch/euch.</li>
         <li><b>Neuter is masculine in disguise</b> everywhere except nominative and accusative (es/es vs er/ihn).</li>
         <li><b>"ihr" has three jobs</b>: <i>you all</i> (nom), <i>to her</i> (dat), <i>her/their</i> (possessive). Context sorts it.</li>
-        <li><b>Formal Sie = they, capitalised.</b> Conjugate with the plural: <span class="de">Sie sind, Sie haben</span>.</li>
-        <li><b>Pronouns follow grammatical gender.</b> A table is "he": <span class="de">Wo ist <span class="m">der Tisch</span>? – <span class="m">Er</span> ist dort.</span></li>
+        <li><b>Formal Sie = they, capitalised.</b> Conjugate with the plural: <span class="gde">Sie sind, Sie haben</span>.</li>
+        <li><b>Pronouns follow grammatical gender.</b> A table is "he": <span class="gde">Wo ist <span class="m">der Tisch</span>? – <span class="m">Er</span> ist dort.</span></li>
       </ul>
       <h4>Reflexive pronouns (sich…)</h4>
       <p>Identical to the table except every third person (er, sie, es, sie, Sie) becomes <b>sich</b>. Use dative (mir, dir) when there's already an accusative object:</p>
-      <p class="ex de">Ich wasche <b>mich</b>. → Ich wasche <b>mir</b> die Hände.<span class="en">I wash myself. → I wash my hands.</span></p>
+      <p class="ex gde">Ich wasche <b>mich</b>. → Ich wasche <b>mir</b> die Hände.<span class="en">I wash myself. → I wash my hands.</span></p>
     </div>
   </div>
-</section>
-
-<!-- ============ ADJECTIVES ============ -->
-<section id="adjectives">
-  <div class="sec-head"><span class="sec-num">05</span><h2>Adjective endings</h2>
-    <p>Only adjectives <em>before</em> a noun take endings. After sein they're bare: <span class="de">Der Wein ist rot</span>.</p></div>
+<div class="next-chap"><button class="btn" data-goto="grammatik:adjectives">Nächstes Kapitel: Adjektive →</button></div></section>
+<section class="tab" data-tab="adjectives">
+  <div class="sec-head"><span class="sec-num">05</span><h2>Adjective endings</h2><button class="understood" data-id="g-adjectives"></button>
+    <p>Only adjectives <em>before</em> a noun take endings. After sein they're bare: <span class="gde">Der Wein ist rot</span>.</p></div>
 
   <div class="panel" style="margin-bottom:18px">
     <h3>The one idea behind all three tables</h3>
     <p style="max-width:none">Someone has to signal gender and case. <b>If the article has already done it, the adjective takes a lazy -e or -en. If the article hasn't (or there's no article), the adjective takes the signal itself</b>, using the same r/e/s/n/m letters as der/die/das.</p>
     <div class="grid g3" style="gap:12px">
-      <p class="ex de"><span class="m">der</span> rot<b>e</b> Wein<span class="en">"der" already says masculine → lazy -e</span></p>
-      <p class="ex de"><span class="m">ein</span> rot<b class="m">er</b> Wein<span class="en">"ein" is ambiguous → adjective adds -er</span></p>
-      <p class="ex de">rot<b class="m">er</b> Wein<span class="en">no article → adjective carries it all</span></p>
+      <p class="ex gde"><span class="m">der</span> rot<b>e</b> Wein<span class="en">"der" already says masculine → lazy -e</span></p>
+      <p class="ex gde"><span class="m">ein</span> rot<b class="m">er</b> Wein<span class="en">"ein" is ambiguous → adjective adds -er</span></p>
+      <p class="ex gde">rot<b class="m">er</b> Wein<span class="en">no article → adjective carries it all</span></p>
     </div>
   </div>
 
@@ -618,12 +888,10 @@ footer a{color:var(--ink)}
       <p style="padding:10px 18px" class="pct">It's just the der-word endings (res-e, nes-e, mrmn, srsr), except masc/neut genitive: the noun's -s already signals it.</p>
     </div>
   </div>
-  <p class="ex de" style="margin-top:14px">Mit <b>frisch<span class="m">em</span></b> Kaffee · bei <b>schön<span class="n">em</span></b> Wetter · <b>Lieb<span class="f">e</span></b> Anna, <b>Lieb<span class="m">er</span></b> Thomas · <b>Viel<span class="m">en</span></b> Dank (accusative, hidden "I wish you")</p>
-</section>
-
-<!-- ============ VERBS ============ -->
-<section id="verbs">
-  <div class="sec-head"><span class="sec-num">06</span><h2>Verb conjugation</h2>
+  <p class="ex gde" style="margin-top:14px">Mit <b>frisch<span class="m">em</span></b> Kaffee · bei <b>schön<span class="n">em</span></b> Wetter · <b>Lieb<span class="f">e</span></b> Anna, <b>Lieb<span class="m">er</span></b> Thomas · <b>Viel<span class="m">en</span></b> Dank (accusative, hidden "I wish you")</p>
+<div class="next-chap"><button class="btn" data-goto="grammatik:verbs">Nächstes Kapitel: Verben →</button></div></section>
+<section class="tab" data-tab="verbs">
+  <div class="sec-head"><span class="sec-num">06</span><h2>Verb conjugation</h2><button class="understood" data-id="g-verbs"></button>
     <p>Take the infinitive, chop off -en, add the ending for the person.</p></div>
 
   <div class="grid g3">
@@ -640,7 +908,7 @@ footer a{color:var(--ink)}
           <tr><td>sie/Sie</td><td><b>-en</b></td><td>mach<b>en</b></td><td>arbeit<b>en</b></td></tr>
         </tbody>
       </table></div>
-      <p style="padding:10px 18px" class="pct">wir = sie = Sie = infinitive. Always. Stems ending in -t/-d slip in an -e for pronunciation (arbeitest, findet). Stems ending in -s/-ß/-z just add -t for du: <span class="de">du heißt, du tanzt</span>.</p>
+      <p style="padding:10px 18px" class="pct">wir = sie = Sie = infinitive. Always. Stems ending in -t/-d slip in an -e for pronunciation (arbeitest, findet). Stems ending in -s/-ß/-z just add -t for du: <span class="gde">du heißt, du tanzt</span>.</p>
     </div>
     <div class="panel">
       <h3>Stem-changers: only du and er</h3>
@@ -648,10 +916,10 @@ footer a{color:var(--ink)}
       <div class="tbl-wrap"><table>
         <thead><tr><th>Change</th><th>Infinitive</th><th>du / er</th></tr></thead>
         <tbody>
-          <tr><td class="mono">a → ä</td><td class="de">fahren, schlafen, tragen</td><td class="de">fährst, fährt</td></tr>
-          <tr><td class="mono">au → äu</td><td class="de">laufen</td><td class="de">läufst, läuft</td></tr>
-          <tr><td class="mono">e → i</td><td class="de">sprechen, helfen, nehmen, essen, geben</td><td class="de">sprichst, nimmt, isst, gibt</td></tr>
-          <tr><td class="mono">e → ie</td><td class="de">sehen, lesen, empfehlen</td><td class="de">siehst, liest, empfiehlt</td></tr>
+          <tr><td class="mono">a → ä</td><td class="gde">fahren, schlafen, tragen</td><td class="gde">fährst, fährt</td></tr>
+          <tr><td class="mono">au → äu</td><td class="gde">laufen</td><td class="gde">läufst, läuft</td></tr>
+          <tr><td class="mono">e → i</td><td class="gde">sprechen, helfen, nehmen, essen, geben</td><td class="gde">sprichst, nimmt, isst, gibt</td></tr>
+          <tr><td class="mono">e → ie</td><td class="gde">sehen, lesen, empfehlen</td><td class="gde">siehst, liest, empfiehlt</td></tr>
         </tbody>
       </table></div>
       <p class="pct" style="margin-top:8px">Picture the change as a "promotion" for the two people closest to the action: you and him.</p>
@@ -676,64 +944,62 @@ footer a{color:var(--ink)}
   <div class="grid g3" style="margin-top:18px">
     <div class="panel">
       <h3>Modal verbs</h3>
-      <p><span class="de">können, müssen, dürfen, wollen, sollen, mögen</span> (and <span class="de">wissen</span>):</p>
+      <p><span class="gde">können, müssen, dürfen, wollen, sollen, mögen</span> (and <span class="gde">wissen</span>):</p>
       <ul>
-        <li>Vowel changes in the singular: <span class="de">ich kann, ich muss, ich darf, ich will</span>.</li>
-        <li><b>ich and er are identical, with no ending</b>: <span class="de">ich kann / er kann</span>, <span class="de">ich weiß / er weiß</span>.</li>
-        <li>The second verb goes to the end as an infinitive: <span class="de">Ich <b>muss</b> heute <b>arbeiten</b>.</span></li>
-        <li><span class="de">möchte</span> is a polite "would like": <span class="de">ich möchte, du möchtest, er möchte</span>.</li>
+        <li>Vowel changes in the singular: <span class="gde">ich kann, ich muss, ich darf, ich will</span>.</li>
+        <li><b>ich and er are identical, with no ending</b>: <span class="gde">ich kann / er kann</span>, <span class="gde">ich weiß / er weiß</span>.</li>
+        <li>The second verb goes to the end as an infinitive: <span class="gde">Ich <b>muss</b> heute <b>arbeiten</b>.</span></li>
+        <li><span class="gde">möchte</span> is a polite "would like": <span class="gde">ich möchte, du möchtest, er möchte</span>.</li>
       </ul>
     </div>
     <div class="panel">
       <h3>Perfekt: haben or sein?</h3>
       <p>Default is <b>haben</b>. Use <b>sein</b> when the verb has no accusative object and shows:</p>
       <ul>
-        <li><b>Movement from A to B</b>: <span class="de">Ich bin nach Köln gefahren.</span></li>
-        <li><b>Change of state</b>: <span class="de">Er ist eingeschlafen. Sie ist gestorben. Es ist kalt geworden.</span></li>
-        <li><b>The rebels</b>: <span class="de">sein, bleiben, passieren</span>. <span class="de">Ich bin zu Hause geblieben.</span></li>
+        <li><b>Movement from A to B</b>: <span class="gde">Ich bin nach Köln gefahren.</span></li>
+        <li><b>Change of state</b>: <span class="gde">Er ist eingeschlafen. Sie ist gestorben. Es ist kalt geworden.</span></li>
+        <li><b>The rebels</b>: <span class="gde">sein, bleiben, passieren</span>. <span class="gde">Ich bin zu Hause geblieben.</span></li>
       </ul>
-      <p class="pct">Spoken German uses Perfekt for the past, but Präteritum for <span class="de">war, hatte</span> and the modals (<span class="de">konnte, musste, wollte</span>).</p>
+      <p class="pct">Spoken German uses Perfekt for the past, but Präteritum for <span class="gde">war, hatte</span> and the modals (<span class="gde">konnte, musste, wollte</span>).</p>
     </div>
     <div class="panel">
       <h3>Building the participle</h3>
       <ul>
-        <li>Weak: <b>ge-</b>stem<b>-t</b> → <span class="de">gemacht, gekauft, gearbeitet</span></li>
-        <li>Strong: <b>ge-</b>stem<b>-en</b>, often new vowel → <span class="de">gefahren, gesprochen, getrunken</span></li>
-        <li>Separable: ge goes inside → <span class="de">ein<b>ge</b>kauft, an<b>ge</b>rufen</span></li>
-        <li><b>No ge-</b> for -ieren verbs (<span class="de">studiert, telefoniert</span>) and inseparable prefixes <b>be-, emp-, ent-, er-, ge-, miss-, ver-, zer-</b> (<span class="de">bekommen, verstanden, erzählt</span>)</li>
+        <li>Weak: <b>ge-</b>stem<b>-t</b> → <span class="gde">gemacht, gekauft, gearbeitet</span></li>
+        <li>Strong: <b>ge-</b>stem<b>-en</b>, often new vowel → <span class="gde">gefahren, gesprochen, getrunken</span></li>
+        <li>Separable: ge goes inside → <span class="gde">ein<b>ge</b>kauft, an<b>ge</b>rufen</span></li>
+        <li><b>No ge-</b> for -ieren verbs (<span class="gde">studiert, telefoniert</span>) and inseparable prefixes <b>be-, emp-, ent-, er-, ge-, miss-, ver-, zer-</b> (<span class="gde">bekommen, verstanden, erzählt</span>)</li>
       </ul>
-      <p class="pct">Inseparable prefixes are never stressed: <span class="de">ver<b>STEH</b>en</span>. Separable ones always are: <span class="de"><b>AN</b>rufen</span>.</p>
+      <p class="pct">Inseparable prefixes are never stressed: <span class="gde">ver<b>STEH</b>en</span>. Separable ones always are: <span class="gde"><b>AN</b>rufen</span>.</p>
     </div>
     <div class="panel">
       <h3>Separable verbs</h3>
       <p>The prefix flies to the end of the clause:</p>
-      <p class="ex de">aufstehen → Ich <b>stehe</b> um sieben <b>auf</b>.</p>
-      <p class="ex de">anrufen → <b>Rufst</b> du mich morgen <b>an</b>?</p>
-      <p>In a weil/dass clause it glues back together: <span class="de">…weil ich früh <b>aufstehe</b>.</span> With zu: <span class="de">auf<b>zu</b>stehen</span>.</p>
+      <p class="ex gde">aufstehen → Ich <b>stehe</b> um sieben <b>auf</b>.</p>
+      <p class="ex gde">anrufen → <b>Rufst</b> du mich morgen <b>an</b>?</p>
+      <p>In a weil/dass clause it glues back together: <span class="gde">…weil ich früh <b>aufstehe</b>.</span> With zu: <span class="gde">auf<b>zu</b>stehen</span>.</p>
     </div>
     <div class="panel">
       <h3>Konjunktiv II: the polite and the "if"</h3>
-      <p>For most verbs: <b>würde + infinitive</b>. <span class="de">Ich würde gern kommen.</span></p>
+      <p>For most verbs: <b>würde + infinitive</b>. <span class="gde">Ich würde gern kommen.</span></p>
       <p>Learn these six as single words:</p>
       <p class="mono">wäre · hätte · könnte · müsste · sollte · dürfte</p>
-      <p class="ex de">Wenn ich Zeit <b>hätte</b>, <b>würde</b> ich mehr lesen.<span class="en">If I had time, I would read more.</span></p>
-      <p class="ex de"><b>Könnten</b> Sie mir helfen?<span class="en">Could you help me?</span></p>
+      <p class="ex gde">Wenn ich Zeit <b>hätte</b>, <b>würde</b> ich mehr lesen.<span class="en">If I had time, I would read more.</span></p>
+      <p class="ex gde"><b>Könnten</b> Sie mir helfen?<span class="en">Could you help me?</span></p>
     </div>
     <div class="panel">
       <h3>werden: one verb, three jobs</h3>
       <ul>
-        <li><b>become</b>: <span class="de">Es <b>wird</b> dunkel.</span></li>
-        <li><b>future</b> (+ infinitive): <span class="de">Ich <b>werde</b> morgen <b>anrufen</b>.</span></li>
-        <li><b>passive</b> (+ participle): <span class="de">Das Haus <b>wird</b> 2027 <b>gebaut</b>.</span></li>
+        <li><b>become</b>: <span class="gde">Es <b>wird</b> dunkel.</span></li>
+        <li><b>future</b> (+ infinitive): <span class="gde">Ich <b>werde</b> morgen <b>anrufen</b>.</span></li>
+        <li><b>passive</b> (+ participle): <span class="gde">Das Haus <b>wird</b> 2027 <b>gebaut</b>.</span></li>
       </ul>
       <p class="pct">Look at what sits at the end of the clause: infinitive = future, participle = passive, adjective or noun = become.</p>
     </div>
   </div>
-</section>
-
-<!-- ============ VERBS & CASES ============ -->
-<section id="verb-cases">
-  <div class="sec-head"><span class="sec-num">07</span><h2>Verbs choose cases too</h2>
+<div class="next-chap"><button class="btn" data-goto="grammatik:verb-cases">Nächstes Kapitel: Verben & Fälle →</button></div></section>
+<section class="tab" data-tab="verb-cases">
+  <div class="sec-head"><span class="sec-num">07</span><h2>Verbs choose cases too</h2><button class="understood" data-id="g-verb-cases"></button>
     <p>Most verbs take an accusative object. These are the ones that don't, or that take two.</p></div>
   <div class="grid g3">
     <div class="panel">
@@ -741,31 +1007,31 @@ footer a{color:var(--ink)}
       <p>Think of the person as "receiving" help, thanks, pleasure. Learn them with <b>mir</b> attached:</p>
       <div class="tbl-wrap"><table>
         <tbody>
-          <tr><td class="de">helfen</td><td class="de">Ich helfe <b>dir</b>.</td></tr>
-          <tr><td class="de">danken</td><td class="de">Ich danke <b>Ihnen</b>.</td></tr>
-          <tr><td class="de">gefallen</td><td class="de">Das gefällt <b>mir</b>.</td></tr>
-          <tr><td class="de">gehören</td><td class="de">Das gehört <b>mir</b>.</td></tr>
-          <tr><td class="de">schmecken</td><td class="de">Schmeckt es <b>dir</b>?</td></tr>
-          <tr><td class="de">passen / stehen</td><td class="de">Das steht <b>dir</b> gut.</td></tr>
-          <tr><td class="de">antworten</td><td class="de">Antworte <b>mir</b>!</td></tr>
-          <tr><td class="de">glauben</td><td class="de">Ich glaube <b>dir</b>.</td></tr>
-          <tr><td class="de">folgen</td><td class="de">Folgen Sie <b>mir</b>.</td></tr>
-          <tr><td class="de">gratulieren</td><td class="de">Ich gratuliere <b>dir</b>!</td></tr>
-          <tr><td class="de">fehlen</td><td class="de">Du fehlst <b>mir</b>.</td></tr>
-          <tr><td class="de">wehtun</td><td class="de">Der Kopf tut <b>mir</b> weh.</td></tr>
+          <tr><td class="gde">helfen</td><td class="gde">Ich helfe <b>dir</b>.</td></tr>
+          <tr><td class="gde">danken</td><td class="gde">Ich danke <b>Ihnen</b>.</td></tr>
+          <tr><td class="gde">gefallen</td><td class="gde">Das gefällt <b>mir</b>.</td></tr>
+          <tr><td class="gde">gehören</td><td class="gde">Das gehört <b>mir</b>.</td></tr>
+          <tr><td class="gde">schmecken</td><td class="gde">Schmeckt es <b>dir</b>?</td></tr>
+          <tr><td class="gde">passen / stehen</td><td class="gde">Das steht <b>dir</b> gut.</td></tr>
+          <tr><td class="gde">antworten</td><td class="gde">Antworte <b>mir</b>!</td></tr>
+          <tr><td class="gde">glauben</td><td class="gde">Ich glaube <b>dir</b>.</td></tr>
+          <tr><td class="gde">folgen</td><td class="gde">Folgen Sie <b>mir</b>.</td></tr>
+          <tr><td class="gde">gratulieren</td><td class="gde">Ich gratuliere <b>dir</b>!</td></tr>
+          <tr><td class="gde">fehlen</td><td class="gde">Du fehlst <b>mir</b>.</td></tr>
+          <tr><td class="gde">wehtun</td><td class="gde">Der Kopf tut <b>mir</b> weh.</td></tr>
         </tbody>
       </table></div>
     </div>
     <div class="panel">
       <h3>Give-something-to-someone verbs</h3>
       <p><b>Person = dative, thing = accusative.</b></p>
-      <p class="de">geben, schenken, zeigen, schicken, bringen, erklären, empfehlen, leihen, sagen, kaufen</p>
-      <p class="ex de">Ich schenke <span class="f">meiner Mutter</span> <span class="m">einen Schal</span>.</p>
+      <p class="gde">geben, schenken, zeigen, schicken, bringen, erklären, empfehlen, leihen, sagen, kaufen</p>
+      <p class="ex gde">Ich schenke <span class="f">meiner Mutter</span> <span class="m">einen Schal</span>.</p>
       <h4>Which object goes first?</h4>
       <ul>
-        <li>Two nouns: <b>dative before accusative</b>. <span class="de">Ich gebe dem Mann das Buch.</span></li>
-        <li>Accusative pronoun: <b>it jumps ahead</b>. <span class="de">Ich gebe <b>es</b> dem Mann.</span></li>
-        <li>Two pronouns: <b>accusative first</b>. <span class="de">Ich gebe <b>es ihm</b>.</span></li>
+        <li>Two nouns: <b>dative before accusative</b>. <span class="gde">Ich gebe dem Mann das Buch.</span></li>
+        <li>Accusative pronoun: <b>it jumps ahead</b>. <span class="gde">Ich gebe <b>es</b> dem Mann.</span></li>
+        <li>Two pronouns: <b>accusative first</b>. <span class="gde">Ich gebe <b>es ihm</b>.</span></li>
       </ul>
       <p class="pct">Short rule: pronouns before nouns; between two pronouns, accusative first.</p>
     </div>
@@ -774,28 +1040,26 @@ footer a{color:var(--ink)}
       <p>Learn the preposition and its case as part of the verb.</p>
       <div class="tbl-wrap"><table>
         <tbody>
-          <tr><td class="de">warten auf</td><td class="mono">Akk</td></tr>
-          <tr><td class="de">sich freuen auf (future)</td><td class="mono">Akk</td></tr>
-          <tr><td class="de">sich freuen über (now/past)</td><td class="mono">Akk</td></tr>
-          <tr><td class="de">denken an / sich erinnern an</td><td class="mono">Akk</td></tr>
-          <tr><td class="de">sich interessieren für</td><td class="mono">Akk</td></tr>
-          <tr><td class="de">sich kümmern um</td><td class="mono">Akk</td></tr>
-          <tr><td class="de">sprechen über</td><td class="mono">Akk</td></tr>
-          <tr><td class="de">sprechen mit</td><td class="mono">Dat</td></tr>
-          <tr><td class="de">Angst haben vor</td><td class="mono">Dat</td></tr>
-          <tr><td class="de">teilnehmen an</td><td class="mono">Dat</td></tr>
-          <tr><td class="de">träumen von / abhängen von</td><td class="mono">Dat</td></tr>
-          <tr><td class="de">fragen nach</td><td class="mono">Dat</td></tr>
+          <tr><td class="gde">warten auf</td><td class="mono">Akk</td></tr>
+          <tr><td class="gde">sich freuen auf (future)</td><td class="mono">Akk</td></tr>
+          <tr><td class="gde">sich freuen über (now/past)</td><td class="mono">Akk</td></tr>
+          <tr><td class="gde">denken an / sich erinnern an</td><td class="mono">Akk</td></tr>
+          <tr><td class="gde">sich interessieren für</td><td class="mono">Akk</td></tr>
+          <tr><td class="gde">sich kümmern um</td><td class="mono">Akk</td></tr>
+          <tr><td class="gde">sprechen über</td><td class="mono">Akk</td></tr>
+          <tr><td class="gde">sprechen mit</td><td class="mono">Dat</td></tr>
+          <tr><td class="gde">Angst haben vor</td><td class="mono">Dat</td></tr>
+          <tr><td class="gde">teilnehmen an</td><td class="mono">Dat</td></tr>
+          <tr><td class="gde">träumen von / abhängen von</td><td class="mono">Dat</td></tr>
+          <tr><td class="gde">fragen nach</td><td class="mono">Dat</td></tr>
         </tbody>
       </table></div>
-      <p class="pct" style="margin-top:8px">Rule of thumb: in fixed phrases, <b>auf</b> and <b>über</b> are almost always accusative. Ask about things with <span class="de">wo(r)- + preposition</span>: <span class="de">Worauf wartest du? – Darauf!</span></p>
+      <p class="pct" style="margin-top:8px">Rule of thumb: in fixed phrases, <b>auf</b> and <b>über</b> are almost always accusative. Ask about things with <span class="gde">wo(r)- + preposition</span>: <span class="gde">Worauf wartest du? – Darauf!</span></p>
     </div>
   </div>
-</section>
-
-<!-- ============ WORD ORDER ============ -->
-<section id="word-order">
-  <div class="sec-head"><span class="sec-num">08</span><h2>Word order</h2>
+<div class="next-chap"><button class="btn" data-goto="grammatik:word-order">Nächstes Kapitel: Satzbau →</button></div></section>
+<section class="tab" data-tab="word-order">
+  <div class="sec-head"><span class="sec-num">08</span><h2>Word order</h2><button class="understood" data-id="g-word-order"></button>
     <p>German sentences are built around fixed verb slots. Get the verbs in the right place and everything else is flexible.</p></div>
   <div class="grid g2">
     <div class="panel">
@@ -814,15 +1078,15 @@ footer a{color:var(--ink)}
       <h3>Subordinate clause: verb last</h3>
       <div class="slots"><div class="slot">…, weil<small>conj</small></div><div class="slot">ich heute keine Zeit<small>middle</small></div><div class="slot v">habe<small>end</small></div></div>
       <div class="slots"><div class="slot">…, dass<small>conj</small></div><div class="slot">er nicht<small>middle</small></div><div class="slot v">kommen kann<small>end</small></div></div>
-      <p style="margin-top:10px"><b>Verb-kickers:</b> <span class="de">weil, dass, wenn, ob, als, obwohl, damit, bevor, nachdem, während, bis, seit(dem)</span>, and question words used inside a sentence (<span class="de">Ich weiß nicht, wo er <b>wohnt</b>.</span>)</p>
-      <p>Start with the subordinate clause and the main verb comes straight after the comma: <span class="de">Weil ich krank bin, <b>bleibe</b> ich zu Hause.</span> (The whole weil-clause counts as slot 1.)</p>
+      <p style="margin-top:10px"><b>Verb-kickers:</b> <span class="gde">weil, dass, wenn, ob, als, obwohl, damit, bevor, nachdem, während, bis, seit(dem)</span>, and question words used inside a sentence (<span class="gde">Ich weiß nicht, wo er <b>wohnt</b>.</span>)</p>
+      <p>Start with the subordinate clause and the main verb comes straight after the comma: <span class="gde">Weil ich krank bin, <b>bleibe</b> ich zu Hause.</span> (The whole weil-clause counts as slot 1.)</p>
     </div>
     <div class="panel">
       <h3>Connectors that change nothing</h3>
       <span class="chant">aber · denn · und · sondern · oder</span>
-      <p>Mnemonic <b>ADUSO</b>. They sit in "position zero" and normal word order follows: <span class="de">…, denn ich <b>habe</b> keine Zeit.</span></p>
-      <p><span class="de">denn</span> and <span class="de">weil</span> both mean "because", but only <span class="de">weil</span> kicks the verb to the end. When in doubt, use <span class="de">denn</span>.</p>
-      <p>Adverbs like <span class="de">deshalb, trotzdem, dann, also</span> take slot 1, so the verb comes next: <span class="de">Deshalb <b>bleibe</b> ich zu Hause.</span></p>
+      <p>Mnemonic <b>ADUSO</b>. They sit in "position zero" and normal word order follows: <span class="gde">…, denn ich <b>habe</b> keine Zeit.</span></p>
+      <p><span class="gde">denn</span> and <span class="gde">weil</span> both mean "because", but only <span class="gde">weil</span> kicks the verb to the end. When in doubt, use <span class="gde">denn</span>.</p>
+      <p>Adverbs like <span class="gde">deshalb, trotzdem, dann, also</span> take slot 1, so the verb comes next: <span class="gde">Deshalb <b>bleibe</b> ich zu Hause.</span></p>
     </div>
     <div class="panel">
       <h3>The middle field: TeKaMoLo</h3>
@@ -835,18 +1099,16 @@ footer a{color:var(--ink)}
     <div class="panel">
       <h3>Where does nicht go?</h3>
       <ul>
-        <li>Negating the whole sentence: near the end, but before the final verb part. <span class="de">Ich habe das Buch <b>nicht</b> gelesen.</span></li>
-        <li>Before adjectives, adverbs of manner and prepositional phrases: <span class="de">Das ist <b>nicht</b> teuer. Ich wohne <b>nicht</b> in Berlin.</span></li>
-        <li>Directly before the word you're contrasting: <span class="de">Ich habe <b>nicht</b> das Buch gelesen, sondern den Artikel.</span></li>
-        <li>Nouns with <i>ein</i> or no article use <b>kein</b> instead: <span class="de">Ich habe <b>keine</b> Zeit.</span></li>
+        <li>Negating the whole sentence: near the end, but before the final verb part. <span class="gde">Ich habe das Buch <b>nicht</b> gelesen.</span></li>
+        <li>Before adjectives, adverbs of manner and prepositional phrases: <span class="gde">Das ist <b>nicht</b> teuer. Ich wohne <b>nicht</b> in Berlin.</span></li>
+        <li>Directly before the word you're contrasting: <span class="gde">Ich habe <b>nicht</b> das Buch gelesen, sondern den Artikel.</span></li>
+        <li>Nouns with <i>ein</i> or no article use <b>kein</b> instead: <span class="gde">Ich habe <b>keine</b> Zeit.</span></li>
       </ul>
     </div>
   </div>
-</section>
-
-<!-- ============ NUGGETS ============ -->
-<section id="nuggets">
-  <div class="sec-head"><span class="sec-num">09</span><h2>Nuggets worth knowing</h2>
+<div class="next-chap"><button class="btn" data-goto="grammatik:nuggets">Nächstes Kapitel: Nuggets →</button></div></section>
+<section class="tab" data-tab="nuggets">
+  <div class="sec-head"><span class="sec-num">09</span><h2>Nuggets worth knowing</h2><button class="understood" data-id="g-nuggets"></button>
     <p>Odd facts that make the system easier to remember.</p></div>
   <div class="nuggets">
     <div class="nug"><h3>Mark Twain's complaint</h3><p>In his 1880 essay <i>The Awful German Language</i>, Twain grumbled that in German a young lady has no sex but a turnip does. He was right about the grammar: <span class="n">das Mädchen</span> is neuter because <b>-chen</b> always wins, and <span class="f">die Rübe</span> is feminine because of its <b>-e</b>. The endings were behaving perfectly.</p></div>
@@ -864,28 +1126,70 @@ footer a{color:var(--ink)}
     <div class="nug"><h3>English loanwords borrow a German twin's gender</h3><p><span class="f">die E-Mail</span> (die Post), <span class="m">der Laptop</span> (der Rechner), <span class="f">die Party</span> (die Feier), <span class="m">der Job</span> (der Beruf). When you meet a new loanword, ask what the German word for it would be.</p></div>
     <div class="nug"><h3>The sun is she, the moon is he</h3><p><span class="f">die Sonne</span>, <span class="m">der Mond</span>: the reverse of French, Italian and Spanish. Handy as a reminder that you can't import genders from other languages.</p></div>
     <div class="nug"><h3>Nationalities flip with -in</h3><p><span class="m">der Engländer</span> → <span class="f">die Engländerin</span>. But -e nationalities are weak nouns: <span class="m">der Franzose</span>, <span class="m">den Franzosen</span>, <span class="f">die Französin</span>. Adjectival ones change ending: <span class="m">ein Deutscher</span>, <span class="m">der Deutsche</span>, <span class="f">eine Deutsche</span>.</p></div>
-    <div class="nug"><h3>Anything can become a neuter noun</h3><p>Capitalise an infinitive and it's <span class="n">das</span>: <span class="n">das Lesen, das Autofahren</span>. Very useful after <span class="de">beim</span>: <span class="de">beim Kochen</span> = "while cooking".</p></div>
-    <div class="nug"><h3>Herr is irregular</h3><p><span class="m">der Herr</span>, but <span class="de">sehr geehrter Herr Schmidt</span> becomes <span class="de">Ich spreche mit Herr<b>n</b> Schmidt</span>. Plural <span class="p">die Herren</span>. Every formal email you write will need this.</p></div>
+    <div class="nug"><h3>Anything can become a neuter noun</h3><p>Capitalise an infinitive and it's <span class="n">das</span>: <span class="n">das Lesen, das Autofahren</span>. Very useful after <span class="gde">beim</span>: <span class="gde">beim Kochen</span> = "while cooking".</p></div>
+    <div class="nug"><h3>Herr is irregular</h3><p><span class="m">der Herr</span>, but <span class="gde">sehr geehrter Herr Schmidt</span> becomes <span class="gde">Ich spreche mit Herr<b>n</b> Schmidt</span>. Plural <span class="p">die Herren</span>. Every formal email you write will need this.</p></div>
     <div class="nug"><h3>Some nouns double their gender</h3><p>A few common nouns have two acceptable genders, often regional: <span class="m">der</span>/<span class="n">das</span> Joghurt, <span class="m">der</span>/<span class="n">das</span> Teil, <span class="n">das</span>/<span class="m">der</span> Virus, <span class="f">die</span>/<span class="n">das</span> Cola (south). Native speakers argue about these too.</p></div>
-    <div class="nug"><h3>Dative is how German says "I feel"</h3><p>German turns many feelings into something that happens <i>to</i> you: <span class="de">Mir ist schlecht</span> (I feel sick), <span class="de">Mir ist warm</span>, <span class="de">Mir fällt ein…</span> (it occurs to me). Saying <span class="de">Ich bin warm</span> has a different, rather personal meaning.</p></div>
-    <div class="nug"><h3>Compound nouns build from right to left</h3><p>Read long words backwards to find the head: <span class="de">Donau|dampf|schiff|fahrt</span> is a <span class="f">trip</span> (die Fahrt) by steamship on the Danube. The last part gives the meaning and the gender; the rest just describes it. Linking letters (-s-, -n-, -es-) are glue: <span class="de">Arbeit<b>s</b>platz</span>.</p></div>
+    <div class="nug"><h3>Dative is how German says "I feel"</h3><p>German turns many feelings into something that happens <i>to</i> you: <span class="gde">Mir ist schlecht</span> (I feel sick), <span class="gde">Mir ist warm</span>, <span class="gde">Mir fällt ein…</span> (it occurs to me). Saying <span class="gde">Ich bin warm</span> has a different, rather personal meaning.</p></div>
+    <div class="nug"><h3>Compound nouns build from right to left</h3><p>Read long words backwards to find the head: <span class="gde">Donau|dampf|schiff|fahrt</span> is a <span class="f">trip</span> (die Fahrt) by steamship on the Danube. The last part gives the meaning and the gender; the rest just describes it. Linking letters (-s-, -n-, -es-) are glue: <span class="gde">Arbeit<b>s</b>platz</span>.</p></div>
   </div>
-</section>
-
+<p class="hint sources">Sources: Gender percentages are tendencies from corpus studies, not guarantees: <a href="https://en.wikipedia.org/wiki/Grammatical_gender_in_German">Wikipedia: Grammatical gender in German</a> (after Durrell's <i>Hammer's German Grammar</i>), <a href="https://foreignlanguages.camden.rutgers.edu/?p=885">Rutgers–Camden on gender rules</a>, <a href="https://medium.com/wugs/how-to-guess-the-gender-in-german-2-ba31e9ea780b">David Rosson on predictive endings</a>. Preposition songs via <a href="https://resources.german.lsa.umich.edu/grammatik/prepositions">University of Michigan German</a>.</p></section>
+</div>
 </main>
 
 <footer>
-  <div class="wrap">
-    <p>Gender percentages are tendencies from corpus studies, not guarantees: <a href="https://en.wikipedia.org/wiki/Grammatical_gender_in_German">Wikipedia: Grammatical gender in German</a> (after Durrell's <i>Hammer's German Grammar</i>), <a href="https://foreignlanguages.camden.rutgers.edu/?p=885">Rutgers–Camden on gender rules</a>, <a href="https://medium.com/wugs/how-to-guess-the-gender-in-german-2-ba31e9ea780b">David Rosson on predictive endings</a>. Preposition songs via <a href="https://resources.german.lsa.umich.edu/grammatik/prepositions">University of Michigan German</a>.</p>
-  </div>
+ <span>Your progress is saved in this browser.</span>
+ <button class="link" id="reset">Fortschritt zurücksetzen</button>
 </footer>
 
 <script>
-(function(){
-  var ART={m:'der',f:'die',n:'das'};
-  var CLS={m:'m',f:'f',n:'n'};
+/*
+  Mein Deutsch: Lektionen
+  ------------------------
+  A collection of lessons in one offline HTML file.
+  Lessons are <div class="lesson" id="lesson-ID"> blocks with <section class="tab" data-tab="..."> children,
+  a matching <nav class="tabs" id="tabs-ID" data-lesson="ID"> and a .lesson-btn / .lcard on the home screen.
+  Progress (ticks) is stored in localStorage under KEY; ids: v* = vocab, c* = chunks, g-* = grammar chapters.
+*/
+const DATA = {"levels": [{"n": 1, "de": "Grundlagen", "en": "Absolute basics", "note": "", "items": [{"id": "v1-0", "de": "das Unternehmen, - / die Firma, Firmen", "en": "company", "stars": 5}, {"id": "v1-1", "de": "der Arbeitgeber, -", "en": "employer", "stars": 5}, {"id": "v1-2", "de": "die Stelle, -n", "en": "job, position", "stars": 5}, {"id": "v1-3", "de": "die Abteilung, -en", "en": "department", "stars": 5}, {"id": "v1-4", "de": "der Kollege, -n / die Kollegin, -nen", "en": "colleague", "stars": 5}, {"id": "v1-5", "de": "der/die Vorgesetzte, -n", "en": "line manager, boss", "stars": 5}, {"id": "v1-6", "de": "der Mitarbeiter, - / die Mitarbeiterin, -nen", "en": "employee, team member", "stars": 5}, {"id": "v1-7", "de": "der Kunde, -n / die Kundin, -nen", "en": "client, customer", "stars": 5}, {"id": "v1-8", "de": "der Termin, -e", "en": "appointment, meeting slot", "stars": 5}, {"id": "v1-9", "de": "die Besprechung, -en / das Meeting, -s", "en": "meeting", "stars": 5}, {"id": "v1-10", "de": "das Projekt, -e", "en": "project", "stars": 5}, {"id": "v1-11", "de": "die Aufgabe, -n", "en": "task, duty", "stars": 5}, {"id": "v1-12", "de": "die Verantwortung", "en": "responsibility", "stars": 5}, {"id": "v1-13", "de": "der Vertrag, ¨-e", "en": "contract", "stars": 5}, {"id": "v1-14", "de": "der Standort, -e", "en": "site, location", "stars": 5}, {"id": "v1-15", "de": "die Frist, -en", "en": "deadline", "stars": 4}, {"id": "v1-16", "de": "die Tagesordnung, -en", "en": "agenda", "stars": 4}, {"id": "v1-17", "de": "die Geschäftsreise, -n", "en": "business trip", "stars": 4}, {"id": "v1-18", "de": "das Gehalt, ¨-er", "en": "salary", "stars": 4}, {"id": "v1-19", "de": "das Protokoll, -e", "en": "minutes (of a meeting)", "stars": 3}, {"id": "v1-20", "de": "der Hauptsitz, -e / die Zentrale, -n", "en": "headquarters", "stars": 3}]}, {"n": 2, "de": "Organisation & Führung", "en": "Organisation and leadership", "note": "<strong>Note:<\/strong> <em>Geschäftsführer<\/em> is a legal role (the statutory director of a GmbH). For a business-unit title like yours, Germans in large IT firms usually keep the English: <em>„Ich berichte an den Managing Director für Sovereign AI.“<\/em> English job titles are completely normal in German IT.", "items": [{"id": "v2-0", "de": "der Bereich, -e", "en": "division, area", "stars": 5}, {"id": "v2-1", "de": "das Ziel, -e", "en": "goal, objective", "stars": 5}, {"id": "v2-2", "de": "die Kosten (pl.)", "en": "costs", "stars": 5}, {"id": "v2-3", "de": "der Umsatz, ¨-e", "en": "revenue, turnover", "stars": 5}, {"id": "v2-4", "de": "einstellen / die Einstellung", "en": "to hire / hiring", "stars": 5}, {"id": "v2-5", "de": "der Ansprechpartner, -", "en": "point of contact", "stars": 5}, {"id": "v2-6", "de": "zuständig sein für + Akk.", "en": "to be responsible for", "stars": 5}, {"id": "v2-7", "de": "die Geschäftsleitung", "en": "senior management", "stars": 4}, {"id": "v2-8", "de": "die Führungskraft, ¨-e", "en": "manager, leader", "stars": 4}, {"id": "v2-9", "de": "die Zuständigkeit, -en", "en": "remit, area of responsibility", "stars": 4}, {"id": "v2-10", "de": "der Geschäftsführer, -", "en": "managing director (see note)", "stars": 4}, {"id": "v2-11", "de": "die Strategie, -n", "en": "strategy", "stars": 4}, {"id": "v2-12", "de": "die Kennzahl, -en", "en": "KPI, metric", "stars": 4}, {"id": "v2-13", "de": "das Budget, -s", "en": "budget", "stars": 4}, {"id": "v2-14", "de": "der Gewinn, -e", "en": "profit", "stars": 4}, {"id": "v2-15", "de": "die Marge, -n", "en": "margin", "stars": 4}, {"id": "v2-16", "de": "das Vorstellungsgespräch, -e", "en": "job interview", "stars": 4}, {"id": "v2-17", "de": "die Stellenbeschreibung, -en", "en": "job description", "stars": 3}, {"id": "v2-18", "de": "die Personalplanung", "en": "workforce planning", "stars": 3}]}, {"n": 3, "de": "Vertrieb & Pre-Sales", "en": "Sales and pre-sales", "note": "", "items": [{"id": "v3-0", "de": "der Vertrieb", "en": "sales (the function)", "stars": 5}, {"id": "v3-1", "de": "die Pre-Sales-Phase", "en": "pre-sales stage", "stars": 5}, {"id": "v3-2", "de": "die Beratung / beraten", "en": "consulting / to advise", "stars": 5}, {"id": "v3-3", "de": "das Angebot, -e", "en": "proposal, quote, offer", "stars": 5}, {"id": "v3-4", "de": "die Anforderung, -en", "en": "requirement", "stars": 5}, {"id": "v3-5", "de": "die Lösung, -en", "en": "solution", "stars": 5}, {"id": "v3-6", "de": "der Anwendungsfall, ¨-e (Use Case)", "en": "use case", "stars": 5}, {"id": "v3-7", "de": "der Bedarf", "en": "need, demand", "stars": 4}, {"id": "v3-8", "de": "die Ausschreibung, -en", "en": "tender, RFP", "stars": 4}, {"id": "v3-9", "de": "die Vorführung, -en / die Demo, -s", "en": "demonstration", "stars": 4}, {"id": "v3-10", "de": "einen Auftrag gewinnen", "en": "to win a deal", "stars": 4}, {"id": "v3-11", "de": "der Folgeauftrag, ¨-e", "en": "follow-on order", "stars": 4}, {"id": "v3-12", "de": "das Zusatzgeschäft / Upselling", "en": "upselling", "stars": 4}, {"id": "v3-13", "de": "die Kundenbeziehung, -en", "en": "client relationship", "stars": 4}, {"id": "v3-14", "de": "die Verhandlung, -en / verhandeln", "en": "negotiation / to negotiate", "stars": 4}, {"id": "v3-15", "de": "der Mehrwert", "en": "added value", "stars": 4}, {"id": "v3-16", "de": "die Lösungsskizze, -n", "en": "solution outline", "stars": 3}, {"id": "v3-17", "de": "der Wettbewerber, -", "en": "competitor", "stars": 3}]}, {"n": 4, "de": "Governance & Deal Assurance", "en": "Governance and deal assurance", "note": "", "items": [{"id": "v4-0", "de": "die Freigabe, -n / freigeben", "en": "approval, sign-off / to approve", "stars": 5}, {"id": "v4-1", "de": "die Genehmigung, -en / genehmigen", "en": "authorisation / to authorise", "stars": 5}, {"id": "v4-2", "de": "der Freigabeprozess, -e", "en": "approval process", "stars": 5}, {"id": "v4-3", "de": "die Prüfung, -en / prüfen", "en": "review / to review, check", "stars": 5}, {"id": "v4-4", "de": "das Risiko, Risiken", "en": "risk", "stars": 5}, {"id": "v4-5", "de": "eine Freigabe einholen", "en": "to obtain approval", "stars": 5}, {"id": "v4-6", "de": "der Arbeitsablauf, ¨-e / der Workflow, -s", "en": "workflow", "stars": 4}, {"id": "v4-7", "de": "die Prüfstufe, -n", "en": "approval stage, gate", "stars": 4}, {"id": "v4-8", "de": "die Risikobewertung, -en", "en": "risk assessment", "stars": 4}, {"id": "v4-9", "de": "die Richtlinie, -n / die Vorgaben (pl.)", "en": "policy / guidelines", "stars": 4}, {"id": "v4-10", "de": "die Einhaltung (Compliance)", "en": "compliance", "stars": 4}, {"id": "v4-11", "de": "der Lenkungsausschuss, ¨-e", "en": "steering committee", "stars": 4}, {"id": "v4-12", "de": "die Eskalation / eskalieren", "en": "escalation / to escalate", "stars": 4}, {"id": "v4-13", "de": "die Kalkulation, -en", "en": "costing, pricing model", "stars": 4}, {"id": "v4-14", "de": "verbindlich", "en": "binding", "stars": 4}, {"id": "v4-15", "de": "das Gremium, Gremien", "en": "committee, board", "stars": 3}, {"id": "v4-16", "de": "die Entscheidungsvorlage, -n", "en": "decision paper", "stars": 3}, {"id": "v4-17", "de": "die Preisgestaltung", "en": "pricing", "stars": 3}, {"id": "v4-18", "de": "die Haftung", "en": "liability", "stars": 3}, {"id": "v4-19", "de": "die Vertragsbedingungen (pl.)", "en": "terms and conditions", "stars": 3}]}, {"n": 5, "de": "Delivery & Delivery Assurance", "en": "Delivery and delivery assurance", "note": "<strong>Note:<\/strong> <em>Abnahme<\/em> matters a lot in Germany. It's the formal, often contractual, moment when the client accepts the work, and payment usually depends on it.", "items": [{"id": "v5-0", "de": "die Umsetzung / umsetzen", "en": "implementation / to implement", "stars": 5}, {"id": "v5-1", "de": "der Zeitplan, ¨-e", "en": "schedule, timeline", "stars": 5}, {"id": "v5-2", "de": "der Meilenstein, -e", "en": "milestone", "stars": 5}, {"id": "v5-3", "de": "die Kundenzufriedenheit", "en": "client satisfaction", "stars": 5}, {"id": "v5-4", "de": "die Abstimmung / sich abstimmen", "en": "alignment / to align", "stars": 5}, {"id": "v5-5", "de": "termingerecht", "en": "on time", "stars": 4}, {"id": "v5-6", "de": "im Budget", "en": "on budget", "stars": 4}, {"id": "v5-7", "de": "die Lieferung / liefern", "en": "delivery / to deliver", "stars": 4}, {"id": "v5-8", "de": "der Leistungsumfang", "en": "scope", "stars": 4}, {"id": "v5-9", "de": "die Abnahme, -n", "en": "formal acceptance (sign-off by client)", "stars": 4}, {"id": "v5-10", "de": "der Statusbericht, -e", "en": "status report", "stars": 4}, {"id": "v5-11", "de": "die Verzögerung, -en", "en": "delay", "stars": 4}, {"id": "v5-12", "de": "die Qualitätssicherung", "en": "quality assurance", "stars": 4}, {"id": "v5-13", "de": "die Bereitstellung", "en": "provisioning, deployment", "stars": 4}, {"id": "v5-14", "de": "die Ressourcen (pl.)", "en": "resources", "stars": 4}, {"id": "v5-15", "de": "der Engpass, ¨-e", "en": "bottleneck", "stars": 3}]}, {"n": 6, "de": "IT, KI & Rechenzentrum", "en": "IT, AI and data centres", "note": "", "items": [{"id": "v6-0", "de": "die Künstliche Intelligenz (KI)", "en": "artificial intelligence (AI)", "stars": 5}, {"id": "v6-1", "de": "souverän / die Souveränität", "en": "sovereign / sovereignty", "stars": 5}, {"id": "v6-2", "de": "die Datensouveränität", "en": "data sovereignty", "stars": 5}, {"id": "v6-3", "de": "der Datenschutz", "en": "data protection", "stars": 5}, {"id": "v6-4", "de": "das Rechenzentrum, -zentren", "en": "data centre", "stars": 5}, {"id": "v6-5", "de": "die Infrastruktur, -en", "en": "infrastructure", "stars": 5}, {"id": "v6-6", "de": "der Betrieb", "en": "operations", "stars": 5}, {"id": "v6-7", "de": "die DSGVO", "en": "GDPR", "stars": 4}, {"id": "v6-8", "de": "die KI-Verordnung", "en": "EU AI Act", "stars": 4}, {"id": "v6-9", "de": "die KI-Fabrik, -en (AI Factory)", "en": "AI factory", "stars": 4}, {"id": "v6-10", "de": "das KI-Labor, -e", "en": "AI lab", "stars": 4}, {"id": "v6-11", "de": "die Rechenleistung", "en": "compute power", "stars": 4}, {"id": "v6-12", "de": "das Sprachmodell, -e", "en": "language model (LLM)", "stars": 4}, {"id": "v6-13", "de": "im Produktionsmaßstab", "en": "at production scale", "stars": 4}, {"id": "v6-14", "de": "skalieren / die Skalierbarkeit", "en": "to scale / scalability", "stars": 4}, {"id": "v6-15", "de": "die Datenhaltung in der EU", "en": "EU data residency", "stars": 4}, {"id": "v6-16", "de": "die IT-Sicherheit", "en": "IT security", "stars": 4}, {"id": "v6-17", "de": "der Anbieter, -", "en": "provider, vendor", "stars": 4}, {"id": "v6-18", "de": "der Grafikprozessor, -en (GPU)", "en": "GPU", "stars": 3}, {"id": "v6-19", "de": "das Training / die Inferenz", "en": "training / inference", "stars": 3}, {"id": "v6-20", "de": "die Verfügbarkeit", "en": "availability, uptime", "stars": 3}, {"id": "v6-21", "de": "die Inbetriebnahme", "en": "commissioning, go-live", "stars": 3}]}, {"n": 7, "de": "Das Client Experience Center", "en": "The Munich Client Experience Center", "note": "", "items": [{"id": "v7-0", "de": "das Client Experience Center / das Kundenerlebniszentrum", "en": "client experience centre", "stars": 5}, {"id": "v7-1", "de": "der Aufbau / aufbauen", "en": "setup / to set up", "stars": 5}, {"id": "v7-2", "de": "die Eröffnung / eröffnen", "en": "opening / to open", "stars": 5}, {"id": "v7-3", "de": "der laufende Betrieb", "en": "day-to-day running", "stars": 5}, {"id": "v7-4", "de": "der Besucher, -", "en": "visitor", "stars": 4}, {"id": "v7-5", "de": "die Führung, -en", "en": "guided tour", "stars": 4}, {"id": "v7-6", "de": "die Veranstaltung, -en", "en": "event", "stars": 4}, {"id": "v7-7", "de": "das Vertriebsinstrument, -e", "en": "sales tool", "stars": 4}, {"id": "v7-8", "de": "interaktiv", "en": "interactive", "stars": 4}, {"id": "v7-9", "de": "vor Ort", "en": "on site, locally", "stars": 4}, {"id": "v7-10", "de": "der Kollaborationsbereich, -e", "en": "collaboration space", "stars": 3}, {"id": "v7-11", "de": "das Aushängeschild, -er", "en": "flagship, showpiece", "stars": 3}, {"id": "v7-12", "de": "die Auslastung", "en": "utilisation", "stars": 3}]}], "groups": [{"key": "A", "de": "Mich und meine Rolle vorstellen", "en": "Introducing myself and my role", "items": [{"id": "cA-0", "de_html": "Ich arbeite <strong>bei<\/strong> NTT DATA.", "de_plain": "Ich arbeite bei NTT DATA.", "note": "company = bei, not für", "en": "I work at NTT DATA."}, {"id": "cA-1", "de_html": "Ich arbeite in einem Kompetenzzentrum für souveräne KI.", "de_plain": "Ich arbeite in einem Kompetenzzentrum für souveräne KI.", "note": "", "en": "I work in a centre of excellence for sovereign AI."}, {"id": "cA-2", "de_html": "Mein Titel ist Operations and Delivery Director.", "de_plain": "Mein Titel ist Operations and Delivery Director.", "note": "", "en": "My title is Operations and Delivery Director."}, {"id": "cA-3", "de_html": "Ich berichte direkt an den Managing Director für Sovereign AI.", "de_plain": "Ich berichte direkt an den Managing Director für Sovereign AI.", "note": "", "en": "I report directly to the Managing Director for Sovereign AI."}, {"id": "cA-4", "de_html": "Meine Rolle hat drei Schwerpunkte: …", "de_plain": "Meine Rolle hat drei Schwerpunkte: …", "note": "", "en": "My role has three focus areas: …"}, {"id": "cA-5", "de_html": "Ich bin für … verantwortlich. / Ich bin für … zuständig.", "de_plain": "Ich bin für … verantwortlich. / Ich bin für … zuständig.", "note": "", "en": "I'm responsible for … (two ways of saying it)"}, {"id": "cA-6", "de_html": "Zu meinen Aufgaben gehört(en) …", "de_plain": "Zu meinen Aufgaben gehört(en) …", "note": "", "en": "My responsibilities include …"}, {"id": "cA-7", "de_html": "Ich kümmere mich um …", "de_plain": "Ich kümmere mich um …", "note": "", "en": "I look after …"}, {"id": "cA-8", "de_html": "Kurz gesagt: Ich sorge dafür, dass …", "de_plain": "Kurz gesagt: Ich sorge dafür, dass …", "note": "", "en": "In short: I make sure that …"}]}, {"key": "B", "de": "Souveräne KI erklären", "en": "Explaining sovereign AI", "items": [{"id": "cB-0", "de_html": "Bei souveräner KI geht es darum, dass …", "de_plain": "Bei souveräner KI geht es darum, dass …", "note": "", "en": "Sovereign AI is about making sure that …"}, {"id": "cB-1", "de_html": "Die Daten bleiben in Deutschland bzw. in der EU.", "de_plain": "Die Daten bleiben in Deutschland bzw. in der EU.", "note": "", "en": "The data stays in Germany or in the EU."}, {"id": "cB-2", "de_html": "Der Kunde behält jederzeit die volle Kontrolle über seine Daten.", "de_plain": "Der Kunde behält jederzeit die volle Kontrolle über seine Daten.", "note": "", "en": "The client keeps full control of their data at all times."}, {"id": "cB-3", "de_html": "Das ist besonders wichtig für Behörden, Banken und kritische Infrastruktur.", "de_plain": "Das ist besonders wichtig für Behörden, Banken und kritische Infrastruktur.", "note": "", "en": "This is especially important for public authorities, banks and critical infrastructure."}, {"id": "cB-4", "de_html": "Viele Unternehmen wollen nicht von einzelnen Anbietern abhängig sein.", "de_plain": "Viele Unternehmen wollen nicht von einzelnen Anbietern abhängig sein.", "note": "", "en": "Many companies don't want to depend on individual providers."}]}, {"key": "C", "de": "Pre-Sales", "en": "Pre-sales", "items": [{"id": "cC-0", "de_html": "Ich unterstütze den Vertrieb in der Pre-Sales-Phase.", "de_plain": "Ich unterstütze den Vertrieb in der Pre-Sales-Phase.", "note": "", "en": "I support sales in the pre-sales phase."}, {"id": "cC-1", "de_html": "Wir beraten Kunden, bevor sie eine Entscheidung treffen.", "de_plain": "Wir beraten Kunden, bevor sie eine Entscheidung treffen.", "note": "", "en": "We advise clients before they make a decision."}, {"id": "cC-2", "de_html": "Zuerst klären wir die Anforderungen des Kunden.", "de_plain": "Zuerst klären wir die Anforderungen des Kunden.", "note": "", "en": "First, we clarify the client's requirements."}, {"id": "cC-3", "de_html": "Wir entwickeln gemeinsam mit dem Kunden eine passende Lösung.", "de_plain": "Wir entwickeln gemeinsam mit dem Kunden eine passende Lösung.", "note": "", "en": "We develop a suitable solution together with the client."}, {"id": "cC-4", "de_html": "Wir übersetzen die Geschäftsanforderungen in eine technische Lösung.", "de_plain": "Wir übersetzen die Geschäftsanforderungen in eine technische Lösung.", "note": "", "en": "We translate the business requirements into a technical solution."}, {"id": "cC-5", "de_html": "Wir zeigen dem Kunden, was mit KI wirklich möglich ist.", "de_plain": "Wir zeigen dem Kunden, was mit KI wirklich möglich ist.", "note": "", "en": "We show the client what's really possible with AI."}]}, {"key": "D", "de": "Deal Assurance & Governance", "en": "Deal assurance and governance", "items": [{"id": "cD-0", "de_html": "Bevor wir ein Angebot abgeben, muss es intern freigegeben werden.", "de_plain": "Bevor wir ein Angebot abgeben, muss es intern freigegeben werden.", "note": "", "en": "Before we submit a proposal, it has to be approved internally."}, {"id": "cD-1", "de_html": "Ich steuere den internen Freigabeprozess.", "de_plain": "Ich steuere den internen Freigabeprozess.", "note": "", "en": "I run the internal approval process."}, {"id": "cD-2", "de_html": "Das Angebot muss mehrere Prüfstufen durchlaufen.", "de_plain": "Das Angebot muss mehrere Prüfstufen durchlaufen.", "note": "", "en": "The proposal has to pass through several approval stages."}, {"id": "cD-3", "de_html": "Ich prüfe, ob die Kalkulation stimmt.", "de_plain": "Ich prüfe, ob die Kalkulation stimmt.", "note": "", "en": "I check whether the costing is right."}, {"id": "cD-4", "de_html": "Ich sorge dafür, dass alle Risiken bewertet worden sind.", "de_plain": "Ich sorge dafür, dass alle Risiken bewertet worden sind.", "note": "", "en": "I make sure that all risks have been assessed."}, {"id": "cD-5", "de_html": "Wir müssen die Freigabe der Geschäftsleitung einholen.", "de_plain": "Wir müssen die Freigabe der Geschäftsleitung einholen.", "note": "", "en": "We have to get approval from senior management."}, {"id": "cD-6", "de_html": "Die Marge muss stimmen, und das Risiko muss vertretbar sein.", "de_plain": "Die Marge muss stimmen, und das Risiko muss vertretbar sein.", "note": "", "en": "The margin has to be right and the risk has to be acceptable."}, {"id": "cD-7", "de_html": "Wenn etwas nicht passt, eskaliere ich das.", "de_plain": "Wenn etwas nicht passt, eskaliere ich das.", "note": "", "en": "If something isn't right, I escalate it."}]}, {"key": "E", "de": "Delivery Assurance", "en": "Delivery assurance", "items": [{"id": "cE-0", "de_html": "Ich stelle sicher, dass die Projekte termingerecht und im Budget umgesetzt werden.", "de_plain": "Ich stelle sicher, dass die Projekte termingerecht und im Budget umgesetzt werden.", "note": "", "en": "I make sure projects are delivered on time and on budget."}, {"id": "cE-1", "de_html": "Die eigentliche Umsetzung übernehmen die lokalen Delivery-Teams.", "de_plain": "Die eigentliche Umsetzung übernehmen die lokalen Delivery-Teams.", "note": "", "en": "The local delivery teams do the actual implementation."}, {"id": "cE-2", "de_html": "Ich behalte den Überblick über alle laufenden Projekte.", "de_plain": "Ich behalte den Überblick über alle laufenden Projekte.", "note": "", "en": "I keep track of all ongoing projects."}, {"id": "cE-3", "de_html": "Ich greife ein, wenn ein Projekt aus dem Ruder läuft.", "de_plain": "Ich greife ein, wenn ein Projekt aus dem Ruder läuft.", "note": "goes off the rails", "en": "I step in when a project goes off the rails."}, {"id": "cE-4", "de_html": "Ein zufriedener Kunde ist die beste Grundlage für Folgeaufträge.", "de_plain": "Ein zufriedener Kunde ist die beste Grundlage für Folgeaufträge.", "note": "", "en": "A happy client is the best basis for follow-on business."}, {"id": "cE-5", "de_html": "Wir wollen langfristige Kundenbeziehungen aufbauen.", "de_plain": "Wir wollen langfristige Kundenbeziehungen aufbauen.", "note": "", "en": "We want to build long-term client relationships."}]}, {"key": "F", "de": "Das Zentrum in München", "en": "The Munich centre", "items": [{"id": "cF-0", "de_html": "Am 7. Oktober haben wir in München ein Client Experience Center eröffnet.", "de_plain": "Am 7. Oktober haben wir in München ein Client Experience Center eröffnet.", "note": "", "en": "On 7 October we opened a Client Experience Center in Munich."}, {"id": "cF-1", "de_html": "Das Zentrum befindet sich in einem unserer eigenen Rechenzentren.", "de_plain": "Das Zentrum befindet sich in einem unserer eigenen Rechenzentren.", "note": "", "en": "The centre is located in one of our own data centres."}, {"id": "cF-2", "de_html": "Dort steht eine vollständige KI-Fabrik im Produktionsmaßstab.", "de_plain": "Dort steht eine vollständige KI-Fabrik im Produktionsmaßstab.", "note": "", "en": "There's a complete AI factory at production scale there."}, {"id": "cF-3", "de_html": "Wir zeigen nicht nur Folien, sondern echte Anwendungsfälle, die live laufen.", "de_plain": "Wir zeigen nicht nur Folien, sondern echte Anwendungsfälle, die live laufen.", "note": "", "en": "We don't just show slides, but real use cases running live."}, {"id": "cF-4", "de_html": "Die Besucher können direkt mit dem KI-Labor interagieren.", "de_plain": "Die Besucher können direkt mit dem KI-Labor interagieren.", "note": "", "en": "Visitors can interact directly with the AI lab."}, {"id": "cF-5", "de_html": "Ich war für den gesamten Aufbau verantwortlich.", "de_plain": "Ich war für den gesamten Aufbau verantwortlich.", "note": "", "en": "I was responsible for the entire setup."}, {"id": "cF-6", "de_html": "Jetzt bin ich für den laufenden Betrieb zuständig.", "de_plain": "Jetzt bin ich für den laufenden Betrieb zuständig.", "note": "", "en": "Now I'm responsible for the day-to-day running."}, {"id": "cF-7", "de_html": "Das Zentrum ist für uns ein wichtiges Vertriebsinstrument.", "de_plain": "Das Zentrum ist für uns ein wichtiges Vertriebsinstrument.", "note": "", "en": "The centre is an important sales tool for us."}, {"id": "cF-8", "de_html": "Wir stellen gerade Leute in München ein.", "de_plain": "Wir stellen gerade Leute in München ein.", "note": "", "en": "We're currently hiring people in Munich."}]}, {"key": "G", "de": "Mein möglicher Umzug", "en": "My possible move", "items": [{"id": "cG-0", "de_html": "Es kann gut sein, dass ich nächstes Jahr nach München ziehe.", "de_plain": "Es kann gut sein, dass ich nächstes Jahr nach München ziehe.", "note": "", "en": "There's a good chance I'll move to Munich next year."}, {"id": "cG-1", "de_html": "Das hängt davon ab, ob mein Vertrag geklärt wird.", "de_plain": "Das hängt davon ab, ob mein Vertrag geklärt wird.", "note": "", "en": "That depends on whether my contract gets sorted."}, {"id": "cG-2", "de_html": "Noch ist nichts unter Dach und Fach.", "de_plain": "Noch ist nichts unter Dach und Fach.", "note": "nothing's signed and sealed yet", "en": "Nothing's signed and sealed yet."}]}, {"key": "H", "de": "Überlebenssätze für Meetings", "en": "Meeting survival phrases", "items": [{"id": "cH-0", "de_html": "Darf ich kurz etwas ergänzen?", "de_plain": "Darf ich kurz etwas ergänzen?", "note": "", "en": "May I add something briefly?"}, {"id": "cH-1", "de_html": "Wie ist der aktuelle Stand?", "de_plain": "Wie ist der aktuelle Stand?", "note": "", "en": "What's the current status?"}, {"id": "cH-2", "de_html": "Wer ist dafür zuständig?", "de_plain": "Wer ist dafür zuständig?", "note": "", "en": "Who's responsible for that?"}, {"id": "cH-3", "de_html": "Bis wann können wir das erledigen?", "de_plain": "Bis wann können wir das erledigen?", "note": "", "en": "By when can we get that done?"}, {"id": "cH-4", "de_html": "Das müssen wir noch abstimmen.", "de_plain": "Das müssen wir noch abstimmen.", "note": "", "en": "We still need to align on that."}, {"id": "cH-5", "de_html": "Können Sie das bitte genauer erklären?", "de_plain": "Können Sie das bitte genauer erklären?", "note": "", "en": "Could you explain that in more detail, please?"}, {"id": "cH-6", "de_html": "Das ist ein guter Punkt, aber …", "de_plain": "Das ist ein guter Punkt, aber …", "note": "", "en": "That's a good point, but …"}, {"id": "cH-7", "de_html": "Ich fasse kurz zusammen: …", "de_plain": "Ich fasse kurz zusammen: …", "note": "", "en": "Let me briefly summarise: …"}, {"id": "cH-8", "de_html": "Lassen Sie uns das im nächsten Termin besprechen.", "de_plain": "Lassen Sie uns das im nächsten Termin besprechen.", "note": "", "en": "Let's discuss that at the next meeting."}, {"id": "cH-9", "de_html": "Was sind die nächsten Schritte?", "de_plain": "Was sind die nächsten Schritte?", "note": "", "en": "What are the next steps?"}]}], "tips": ["<strong>Sie vs du:<\/strong> In German IT, colleagues often use <em>du<\/em>. With clients, start with <em>Sie<\/em> and let them offer <em>du<\/em>.", "<strong>Denglisch is fine:<\/strong> <em>Pre-Sales, Delivery, Use Case, Workshop, Deal<\/em> are all normal in German IT conversations. Learn the German word too, but don't worry about using the English one.", "<strong>verantwortlich für / zuständig für<\/strong> both take the accusative: <em>für den Betrieb, für die Umsetzung<\/em>."], "story": {"title": "Ein Dienstag in München", "titleEn": "A Tuesday in Munich", "paras": [{"de_html": "Es ist Dienstagmorgen, kurz nach sieben. Ich sitze in der S-Bahn vom Flughafen in die Stadt und gehe noch einmal die <span class=\"g\" tabindex=\"0\" data-en=\"agenda\">Tagesordnung<\/span> für heute durch. Um zehn Uhr besucht uns eine Delegation eines großen deutschen <span class=\"g\" tabindex=\"0\" data-en=\"insurance group (genitive)\">Versicherungskonzerns<\/span> in unserem Client Experience Center. Der Termin ist wichtig: Der Kunde überlegt, eine eigene <span class=\"g\" tabindex=\"0\" data-en=\"AI platform\">KI-Plattform<\/span> <span class=\"g\" tabindex=\"0\" data-en=\"to build / set up\">aufzubauen<\/span>, und wir möchten ihm zeigen, warum wir der richtige Partner dafür sind.", "de_plain": "Es ist Dienstagmorgen, kurz nach sieben. Ich sitze in der S-Bahn vom Flughafen in die Stadt und gehe noch einmal die Tagesordnung für heute durch. Um zehn Uhr besucht uns eine Delegation eines großen deutschen Versicherungskonzerns in unserem Client Experience Center. Der Termin ist wichtig: Der Kunde überlegt, eine eigene KI-Plattform aufzubauen, und wir möchten ihm zeigen, warum wir der richtige Partner dafür sind.", "en": "It's Tuesday morning, just after seven. I'm on the S-Bahn from the airport into the city, going through today's agenda one more time. At ten o'clock a delegation from a large German insurance group is visiting our Client Experience Center. The meeting matters: the client is thinking about building its own AI platform, and we want to show them why we're the right partner."}, {"de_html": "Ich arbeite bei NTT DATA, und zwar in einem <span class=\"g\" tabindex=\"0\" data-en=\"centre of excellence\">Kompetenzzentrum<\/span> für <span class=\"g\" tabindex=\"0\" data-en=\"sovereign AI\">souveräne KI<\/span>. Mein Titel ist Operations and Delivery Director, und ich <span class=\"g\" tabindex=\"0\" data-en=\"report directly to\">berichte direkt an<\/span> den Managing Director für Sovereign AI. Wenn mich Freunde fragen, was ich eigentlich mache, sage ich meistens: „Ich <span class=\"g\" tabindex=\"0\" data-en=\"make sure\">sorge dafür<\/span>, dass aus einer guten Idee ein gutes Geschäft wird – und dass der Kunde am Ende zufrieden ist.“", "de_plain": "Ich arbeite bei NTT DATA, und zwar in einem Kompetenzzentrum für souveräne KI. Mein Titel ist Operations and Delivery Director, und ich berichte direkt an den Managing Director für Sovereign AI. Wenn mich Freunde fragen, was ich eigentlich mache, sage ich meistens: „Ich sorge dafür, dass aus einer guten Idee ein gutes Geschäft wird – und dass der Kunde am Ende zufrieden ist.“", "en": "I work at NTT DATA, in a centre of excellence for sovereign AI. My title is Operations and Delivery Director, and I report directly to the Managing Director for Sovereign AI. When friends ask what I actually do, I usually say: \"I make sure a good idea turns into good business, and that the client is happy at the end.\""}, {"de_html": "Meine Rolle hat drei <span class=\"g\" tabindex=\"0\" data-en=\"focus areas\">Schwerpunkte<\/span>. Erstens <span class=\"g\" tabindex=\"0\" data-en=\"I support sales\">unterstütze ich den Vertrieb<\/span> in der Pre-Sales-Phase. Das heißt, wir <span class=\"g\" tabindex=\"0\" data-en=\"advise\">beraten<\/span> Kunden, klären ihre <span class=\"g\" tabindex=\"0\" data-en=\"requirements\">Anforderungen<\/span> und entwickeln gemeinsam eine <span class=\"g\" tabindex=\"0\" data-en=\"suitable solution\">passende Lösung<\/span>. Zweitens bin ich für die Deal Assurance <span class=\"g\" tabindex=\"0\" data-en=\"responsible\">zuständig<\/span>. Bevor wir einem Kunden ein <span class=\"g\" tabindex=\"0\" data-en=\"binding offer\">verbindliches Angebot<\/span> machen dürfen, muss es intern <span class=\"g\" tabindex=\"0\" data-en=\"approved\">freigegeben<\/span> werden. Ich steuere diesen <span class=\"g\" tabindex=\"0\" data-en=\"approval process\">Freigabeprozess<\/span>: Ich prüfe, ob die <span class=\"g\" tabindex=\"0\" data-en=\"costing\">Kalkulation<\/span> stimmt, ob alle <span class=\"g\" tabindex=\"0\" data-en=\"risks assessed\">Risiken bewertet<\/span> worden sind und ob wir die <span class=\"g\" tabindex=\"0\" data-en=\"service, work\">Leistung<\/span> überhaupt liefern können. Erst wenn alle <span class=\"g\" tabindex=\"0\" data-en=\"approval stages\">Prüfstufen<\/span> durchlaufen sind und die <span class=\"g\" tabindex=\"0\" data-en=\"senior management\">Geschäftsleitung<\/span> zugestimmt hat, geht das Angebot an den Kunden. Drittens <span class=\"g\" tabindex=\"0\" data-en=\"I look after\">kümmere ich mich um<\/span> die Delivery Assurance. Die eigentliche <span class=\"g\" tabindex=\"0\" data-en=\"implementation\">Umsetzung<\/span> übernehmen unsere lokalen Delivery-Teams, aber ich <span class=\"g\" tabindex=\"0\" data-en=\"keep track of everything\">behalte den Überblick<\/span>. Ich stelle sicher, dass die Projekte <span class=\"g\" tabindex=\"0\" data-en=\"on time\">termingerecht<\/span> und <span class=\"g\" tabindex=\"0\" data-en=\"on budget\">im Budget<\/span> umgesetzt werden und dass der Kunde zufrieden bleibt. Denn ein zufriedener Kunde ist die beste <span class=\"g\" tabindex=\"0\" data-en=\"basis\">Grundlage<\/span> für <span class=\"g\" tabindex=\"0\" data-en=\"follow-on orders\">Folgeaufträge<\/span>.", "de_plain": "Meine Rolle hat drei Schwerpunkte. Erstens unterstütze ich den Vertrieb in der Pre-Sales-Phase. Das heißt, wir beraten Kunden, klären ihre Anforderungen und entwickeln gemeinsam eine passende Lösung. Zweitens bin ich für die Deal Assurance zuständig. Bevor wir einem Kunden ein verbindliches Angebot machen dürfen, muss es intern freigegeben werden. Ich steuere diesen Freigabeprozess: Ich prüfe, ob die Kalkulation stimmt, ob alle Risiken bewertet worden sind und ob wir die Leistung überhaupt liefern können. Erst wenn alle Prüfstufen durchlaufen sind und die Geschäftsleitung zugestimmt hat, geht das Angebot an den Kunden. Drittens kümmere ich mich um die Delivery Assurance. Die eigentliche Umsetzung übernehmen unsere lokalen Delivery-Teams, aber ich behalte den Überblick. Ich stelle sicher, dass die Projekte termingerecht und im Budget umgesetzt werden und dass der Kunde zufrieden bleibt. Denn ein zufriedener Kunde ist die beste Grundlage für Folgeaufträge.", "en": "My role has three focus areas. First, I support sales in the pre-sales phase. That means we advise clients, clarify their requirements and develop a suitable solution together. Second, I'm responsible for deal assurance. Before we can make a client a binding offer, it has to be approved internally. I run that approval process: I check whether the costing is right, whether all the risks have been assessed and whether we can actually deliver. Only when every approval stage has been passed and senior management has agreed does the offer go to the client. Third, I look after delivery assurance. Our local delivery teams do the actual implementation, but I keep the overview. I make sure projects are delivered on time and on budget and that the client stays happy, because a happy client is the best basis for follow-on business."}, {"de_html": "Um halb neun komme ich im <span class=\"g\" tabindex=\"0\" data-en=\"data centre\">Rechenzentrum<\/span> an. Nach der <span class=\"g\" tabindex=\"0\" data-en=\"security check\">Sicherheitskontrolle<\/span> gehe ich direkt ins Zentrum. Am 7. Oktober haben wir es <span class=\"g\" tabindex=\"0\" data-en=\"officially opened\">feierlich eröffnet<\/span>, und ich bin immer noch ein bisschen stolz darauf. Ich war für den <span class=\"g\" tabindex=\"0\" data-en=\"entire setup\">gesamten Aufbau<\/span> verantwortlich – von der ersten <span class=\"g\" tabindex=\"0\" data-en=\"planning\">Planung<\/span> bis zur Eröffnung. Jetzt bin ich für den <span class=\"g\" tabindex=\"0\" data-en=\"day-to-day running\">laufenden Betrieb<\/span> <span class=\"g\" tabindex=\"0\" data-en=\"responsible\">zuständig<\/span>.", "de_plain": "Um halb neun komme ich im Rechenzentrum an. Nach der Sicherheitskontrolle gehe ich direkt ins Zentrum. Am 7. Oktober haben wir es feierlich eröffnet, und ich bin immer noch ein bisschen stolz darauf. Ich war für den gesamten Aufbau verantwortlich – von der ersten Planung bis zur Eröffnung. Jetzt bin ich für den laufenden Betrieb zuständig.", "en": "At half past eight I arrive at the data centre. After the security check I go straight to the centre. We officially opened it on 7 October, and I'm still a little proud of it. I was responsible for the whole setup, from the first planning to the opening. Now I'm responsible for running it day to day."}, {"de_html": "Das Besondere an dem Zentrum ist, dass es sich in einem unserer eigenen <span class=\"g\" tabindex=\"0\" data-en=\"data centres\">Rechenzentren<\/span> befindet. Hinter einer großen Glaswand steht eine vollständige <span class=\"g\" tabindex=\"0\" data-en=\"AI factory\">KI-Fabrik<\/span> im <span class=\"g\" tabindex=\"0\" data-en=\"production scale\">Produktionsmaßstab<\/span>. Wir zeigen unseren Kunden also nicht nur schöne <span class=\"g\" tabindex=\"0\" data-en=\"slides\">Folien<\/span>, sondern echte <span class=\"g\" tabindex=\"0\" data-en=\"use cases\">Anwendungsfälle<\/span>, die live laufen. Außerdem gibt es <span class=\"g\" tabindex=\"0\" data-en=\"collaboration areas\">Kollaborationsbereiche<\/span> und interaktive Räume. Dort können die Besucher Präsentationen <span class=\"g\" tabindex=\"0\" data-en=\"follow, watch\">verfolgen<\/span> und direkt mit dem <span class=\"g\" tabindex=\"0\" data-en=\"AI lab\">KI-Labor<\/span> interagieren.", "de_plain": "Das Besondere an dem Zentrum ist, dass es sich in einem unserer eigenen Rechenzentren befindet. Hinter einer großen Glaswand steht eine vollständige KI-Fabrik im Produktionsmaßstab. Wir zeigen unseren Kunden also nicht nur schöne Folien, sondern echte Anwendungsfälle, die live laufen. Außerdem gibt es Kollaborationsbereiche und interaktive Räume. Dort können die Besucher Präsentationen verfolgen und direkt mit dem KI-Labor interagieren.", "en": "What's special about the centre is that it's inside one of our own data centres. Behind a large glass wall is a complete AI factory at production scale. So we don't just show clients nice slides. We show real use cases running live. There are also collaboration areas and interactive rooms, where visitors can watch presentations and interact directly with the AI lab."}, {"de_html": "Um zehn Uhr <span class=\"g\" tabindex=\"0\" data-en=\"welcome\">begrüße<\/span> ich die Gäste. Der <span class=\"g\" tabindex=\"0\" data-en=\"head of IT\">IT-Leiter<\/span> der Versicherung ist <span class=\"g\" tabindex=\"0\" data-en=\"sceptical\">skeptisch<\/span>. „Wir haben sehr sensible <span class=\"g\" tabindex=\"0\" data-en=\"customer data\">Kundendaten<\/span>“, sagt er. „Die dürfen Deutschland <span class=\"g\" tabindex=\"0\" data-en=\"under no circumstances\">auf keinen Fall<\/span> verlassen.“ Genau darum geht es bei <span class=\"g\" tabindex=\"0\" data-en=\"sovereign AI (dative)\">souveräner KI<\/span>, erkläre ich ihm. Die Daten bleiben in Deutschland, die <span class=\"g\" tabindex=\"0\" data-en=\"infrastructure\">Infrastruktur<\/span> wird hier <span class=\"g\" tabindex=\"0\" data-en=\"operated\">betrieben<\/span>, und der Kunde behält jederzeit die <span class=\"g\" tabindex=\"0\" data-en=\"full control\">volle Kontrolle<\/span>. Dann zeigen wir ihm einen <span class=\"g\" tabindex=\"0\" data-en=\"use case\">Anwendungsfall<\/span>: Ein <span class=\"g\" tabindex=\"0\" data-en=\"language model\">Sprachmodell<\/span> bearbeitet <span class=\"g\" tabindex=\"0\" data-en=\"insurance claims\">Schadensmeldungen<\/span> automatisch – in wenigen Sekunden statt in mehreren Tagen. Der <span class=\"g\" tabindex=\"0\" data-en=\"head of IT\">IT-Leiter<\/span> wird still und macht sich Notizen. Das ist immer ein gutes <span class=\"g\" tabindex=\"0\" data-en=\"sign\">Zeichen<\/span>.", "de_plain": "Um zehn Uhr begrüße ich die Gäste. Der IT-Leiter der Versicherung ist skeptisch. „Wir haben sehr sensible Kundendaten“, sagt er. „Die dürfen Deutschland auf keinen Fall verlassen.“ Genau darum geht es bei souveräner KI, erkläre ich ihm. Die Daten bleiben in Deutschland, die Infrastruktur wird hier betrieben, und der Kunde behält jederzeit die volle Kontrolle. Dann zeigen wir ihm einen Anwendungsfall: Ein Sprachmodell bearbeitet Schadensmeldungen automatisch – in wenigen Sekunden statt in mehreren Tagen. Der IT-Leiter wird still und macht sich Notizen. Das ist immer ein gutes Zeichen.", "en": "At ten I welcome the guests. The insurer's head of IT is sceptical. \"We have very sensitive customer data,\" he says. \"Under no circumstances can it leave Germany.\" That's exactly what sovereign AI is about, I explain. The data stays in Germany, the infrastructure is operated here, and the client keeps full control at all times. Then we show him a use case: a language model processing insurance claims automatically, in a few seconds instead of several days. The head of IT goes quiet and takes notes. That's always a good sign."}, {"de_html": "Nach dem Workshop fasse ich die <span class=\"g\" tabindex=\"0\" data-en=\"next steps\">nächsten Schritte<\/span> zusammen: Wir erstellen eine <span class=\"g\" tabindex=\"0\" data-en=\"solution outline\">Lösungsskizze<\/span>, klären die offenen Fragen zum <span class=\"g\" tabindex=\"0\" data-en=\"data protection\">Datenschutz<\/span> und <span class=\"g\" tabindex=\"0\" data-en=\"arrange, agree\">vereinbaren<\/span> einen weiteren Termin in vier Wochen. Die <span class=\"g\" tabindex=\"0\" data-en=\"mood\">Stimmung<\/span> ist positiv. Wenn alles gut läuft, wird daraus ein Angebot – und dann beginnt für mich der <span class=\"g\" tabindex=\"0\" data-en=\"approval process\">Freigabeprozess<\/span>.", "de_plain": "Nach dem Workshop fasse ich die nächsten Schritte zusammen: Wir erstellen eine Lösungsskizze, klären die offenen Fragen zum Datenschutz und vereinbaren einen weiteren Termin in vier Wochen. Die Stimmung ist positiv. Wenn alles gut läuft, wird daraus ein Angebot – und dann beginnt für mich der Freigabeprozess.", "en": "After the workshop I summarise the next steps: we'll prepare a solution outline, resolve the open data-protection questions and arrange another meeting in four weeks. The mood is positive. If all goes well, it'll become a proposal, and then my approval process begins."}, {"de_html": "Am Nachmittag habe ich zwei <span class=\"g\" tabindex=\"0\" data-en=\"job interviews\">Vorstellungsgespräche<\/span>. Wir stellen gerade Leute in München ein, weil das Zentrum ein <span class=\"g\" tabindex=\"0\" data-en=\"permanent on-site team\">festes Team vor Ort<\/span> braucht. Auch für mich könnte sich bald etwas ändern: Es kann gut sein, dass ich nächstes Jahr nach München ziehe. Das <span class=\"g\" tabindex=\"0\" data-en=\"depends, though\">hängt allerdings davon ab<\/span>, ob mein Vertrag <span class=\"g\" tabindex=\"0\" data-en=\"sorted, clarified\">geklärt<\/span> wird. Noch ist nichts <span class=\"g\" tabindex=\"0\" data-en=\"signed and sealed\">unter Dach und Fach<\/span>.", "de_plain": "Am Nachmittag habe ich zwei Vorstellungsgespräche. Wir stellen gerade Leute in München ein, weil das Zentrum ein festes Team vor Ort braucht. Auch für mich könnte sich bald etwas ändern: Es kann gut sein, dass ich nächstes Jahr nach München ziehe. Das hängt allerdings davon ab, ob mein Vertrag geklärt wird. Noch ist nichts unter Dach und Fach.", "en": "In the afternoon I have two job interviews. We're hiring in Munich because the centre needs a permanent team on site. Things could soon change for me too: there's a good chance I'll move to Munich next year. That depends on whether my contract gets sorted, though. Nothing is signed and sealed yet."}, {"de_html": "Am Abend sitze ich in einem <span class=\"g\" tabindex=\"0\" data-en=\"traditional pub\">Wirtshaus<\/span> in der Nähe des Viktualienmarkts, trinke ein <span class=\"g\" tabindex=\"0\" data-en=\"Munich pale lager\">Helles<\/span> und denke an den Tag zurück. Vor zehn Jahren habe ich mich in diese Stadt <span class=\"g\" tabindex=\"0\" data-en=\"fell in love\">verliebt<\/span>. Jetzt habe ich vielleicht bald einen Grund, für immer hier zu bleiben.", "de_plain": "Am Abend sitze ich in einem Wirtshaus in der Nähe des Viktualienmarkts, trinke ein Helles und denke an den Tag zurück. Vor zehn Jahren habe ich mich in diese Stadt verliebt. Jetzt habe ich vielleicht bald einen Grund, für immer hier zu bleiben.", "en": "In the evening I sit in a pub near the Viktualienmarkt, drink a Helles and think back over the day. Ten years ago I fell in love with this city. Soon I might have a reason to stay here for good."}]}};
+const GRAM_CH = [{"id": "codes", "label": "Top 12"}, {"id": "gender", "label": "Genus"}, {"id": "cases", "label": "Fälle"}, {"id": "prepositions", "label": "Präpositionen"}, {"id": "pronouns", "label": "Pronomen"}, {"id": "adjectives", "label": "Adjektive"}, {"id": "verbs", "label": "Verben"}, {"id": "verb-cases", "label": "Verben & Fälle"}, {"id": "word-order", "label": "Satzbau"}, {"id": "nuggets", "label": "Nuggets"}];
+const KEY='bg-myrole-known-v1', SKEY='bg-myrole-settings-v1';
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+function load(k,d){try{const s=localStorage.getItem(k);return s?JSON.parse(s):d}catch(e){return d}}
+function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+let known=load(KEY,{});
+const settings=Object.assign({hideKnown:false,test:'none',minStars:1,rate:0.9,best:0,lesson:'home',tabs:{rolle:'vocab',grammatik:'codes'},ggSrc:'vocab'},load(SKEY,{}));
+if(typeof settings.tab==='string'){settings.tabs={rolle:settings.tab,grammatik:'codes'};delete settings.tab}
+let query='';
+const saveSettings=()=>save(SKEY,settings);
+const isKnown=id=>!!known[id];
+function setKnown(id,v){if(v)known[id]=1;else delete known[id];save(KEY,known)}
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
 
-  // ---------- Gender guesser ----------
+/* ---------- Speech ---------- */
+let deVoice=null;const hasSpeech='speechSynthesis' in window;
+/* German voices, best first: online "Natural" voices (Edge) > enhanced/premium (Apple) > Google > the rest; Germany before AT/CH */
+function voiceRank(v){let r=0;if(/natural|online/i.test(v.name))r-=40;if(/premium|enhanced|erweitert/i.test(v.name))r-=30;if(/google/i.test(v.name))r-=10;if(/de[-_]DE/i.test(v.lang))r-=5;return r}
+function voiceLabel(v){const reg=(v.lang.split(/[-_]/)[1]||'').toUpperCase();
+ let n=v.name.replace(/^Microsoft\s+/,'').replace(/\s*-\s*German.*$/i,'').replace(/\s*\((Natural)\)/i,' ✨ Natural').replace(/\s+Online/,'');
+ return n+(reg&&reg!=='DE'?' · '+reg:'')}
+function germanVoices(){return speechSynthesis.getVoices().filter(v=>/^de/i.test(v.lang)).sort((a,b)=>voiceRank(a)-voiceRank(b)||a.name.localeCompare(b.name))}
+function pickVoice(){
+ const vs=germanVoices();
+ deVoice=vs.find(v=>v.voiceURI===settings.voice)||vs[0]||null;
+ const sel=$('#voice');if(!sel)return;
+ sel.innerHTML=vs.length?vs.map(v=>'<option value="'+esc(v.voiceURI)+'">'+esc(voiceLabel(v))+'</option>').join(''):'<option>Keine deutsche Stimme gefunden</option>';
+ sel.disabled=!vs.length;if(deVoice)sel.value=deVoice.voiceURI;
+}
+const VOICE_TESTS=['Hallo! Ich bin deine neue Stimme.','Willkommen in unserem Client Experience Center in München.','Bevor wir ein Angebot abgeben, muss es intern freigegeben werden.'];
+if(hasSpeech){pickVoice();speechSynthesis.onvoiceschanged=pickVoice}else document.body.classList.add('no-speech');
+function speak(text,onend){if(!hasSpeech)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='de-DE';if(deVoice)u.voice=deVoice;u.rate=settings.rate;if(onend){u.onend=onend}speechSynthesis.speak(u)}
+function sayable(de){return de.replace(/\([^)]*\)/g,'').replace(/\+\s*Akk\./,'').split(' / ').map(s=>s.split(',')[0].trim()).join('. ').replace('der/die','der oder die')}
+
+/* ---------- Grammar engine (gender guesser from Lektion 2) ---------- */
+const GRAM=(function(){
+var ART={m:'der',f:'die',n:'das'};var CLS={m:'m',f:'f',n:'n'};
+
   var EXC={
     'käse':['m','Exception: der Käse.'],'name':['m','Abstract masculine -e noun (weak noun: des Namens).'],
     'gedanke':['m','Abstract masculine -e noun (weak noun).'],'glaube':['m','Abstract masculine -e noun.'],
@@ -966,8 +1270,12 @@ footer a{color:var(--ink)}
   function escapeHtml(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   gin.addEventListener('input',renderGuess); renderGuess();
 
-  // ---------- Drill ----------
-  var NOUNS=[
+  
+// business-vocabulary compound heads (Lektion 1)
+Object.assign(HEADS,{prozess:'m',zentrum:'n',plan:'m',bericht:'m',auftrag:'m',vertrag:'m',gespräch:'n',schild:'n',fall:'m',modell:'n',team:'n',leitung:'f',bewertung:'f',stufe:'f',ausschuss:'m',instrument:'n',reise:'f',stein:'m',geschäft:'n',kraft:'f',zahl:'f',labor:'n'});
+Object.assign(EXC,{'unternehmen':['n','Originally the verb unternehmen used as a noun, so it is neuter.'],'firma':['f','Most -a nouns are feminine (die Firma, die Kamera); only -ma words like das Thema are neuter.'],'frist':['f','Exception: -ist is masculine for people (der Polizist), but die Frist is not a person.'],'ziel':['n','Exception to -el: das Ziel. Just learn this one.'],'gewinn':['m','Exception to Ge-: der Gewinn comes from the verb stem of gewinnen, and verb stems lean masculine.'],'angebot':['n','Nouns from a prefixed verb stem in -bot are neuter: das Angebot, das Verbot, das Gebot.'],'demo':['f','Short forms keep the gender of the full word: die Demo = die Demonstration.'],'dsgvo':['f','Abbreviations keep the gender of their last word: die DSGVO = die Datenschutz-Grundverordnung.'],'budget':['n','Most French and English loanwords are neuter: das Budget, das Hotel, das Team.'],'center':['n','Loanword that copies its German twin: das Center = das Zentrum.'],'projekt':['n','Latin loanword, neuter like das Objekt and das Subjekt.']});
+RULES.push(['ing','n',80,'English -ing nouns are neuter: das Meeting, das Training, das Marketing.'],['o','n',75,'-o nouns are usually neuter: das Risiko, das Büro, das Kino (but der Euro).']);RULES.sort(function(a,b){return b[0].length-a[0].length;});
+var NOUNS=[
     ['Zeitung','f','-ung is always feminine.'],['Freiheit','f','-heit is always feminine.'],['Möglichkeit','f','-keit is always feminine.'],
     ['Freundschaft','f','-schaft is always feminine.'],['Information','f','-tion is always feminine.'],['Universität','f','-tät is always feminine.'],
     ['Musik','f','-ik is feminine.'],['Bäckerei','f','-ei is feminine.'],['Energie','f','-ie is feminine.'],['Kultur','f','-ur is feminine.'],
@@ -982,29 +1290,267 @@ footer a{color:var(--ink)}
     ['Schwimmen','n','Verb used as a noun: always neuter.'],['Gold','n','Metals are neuter.'],['Auge','n','Neuter -e exception.'],['Krankenhaus','n','Compound: das Haus decides.'],
     ['Hotel','n','Hotels are neuter.'],['Bier','n','The one neuter drink.'],['Haustür','f','Compound: die Tür decides.'],['Kalb','n','Young animals are neuter.']
   ];
-  var cur=null,right=0,tries=0,streak=0,answered=false;
-  var elNoun=document.getElementById('drill-noun'),elFb=document.getElementById('drill-fb'),elScore=document.getElementById('drill-score');
-  function next(){
-    var pick; do{pick=NOUNS[Math.floor(Math.random()*NOUNS.length)];}while(cur&&pick[0]===cur[0]);
-    cur=pick; answered=false; elNoun.textContent=cur[0]; elNoun.className='drill-noun';
-    elFb.textContent='Pick an article. You’ll see the rule that gives it away.';
-  }
-  function score(){elScore.textContent=right+' right · '+tries+' tries · streak '+streak;}
-  document.querySelectorAll('button[data-g]').forEach(function(b){
-    b.addEventListener('click',function(){
-      if(answered){next();return;}
-      answered=true; tries++;
-      var ok=b.getAttribute('data-g')===cur[1];
-      if(ok){right++;streak++;}else{streak=0;}
-      elNoun.className='drill-noun '+CLS[cur[1]];
-      elNoun.textContent=ART[cur[1]]+' '+cur[0];
-      elFb.innerHTML=(ok?'<b>Richtig!</b> ':'<b>Not quite.</b> It’s <b class="'+CLS[cur[1]]+'">'+ART[cur[1]]+'</b>. ')+cur[2]+' <span class="pct">Press any article for the next noun.</span>';
-      score();
-    });
-  });
-  document.getElementById('drill-skip').addEventListener('click',next);
-  cur=NOUNS[0]; score();
+return {guess:guess,NOUNS:NOUNS};
 })();
+const ARTS={m:'der',f:'die',n:'das'};
+
+/* ---------- Vocabulary formatting ---------- */
+function colourDe(de){
+ return de.split(' / ').map(seg=>{
+  const m=seg.match(/^(der|die|das)(\/(der|die|das))?\s/);
+  let cls='';if(seg.includes('(pl.)'))cls='g-pl';else if(m&&m[2])cls='';else if(m)cls='g-'+m[1];
+  let s=esc(seg);
+  s=s.replace(/,\s([^()]+?)(?=\s*\(|$)/,', <span class="plu">$1</span>');
+  s=s.replace(/\(([^)]+)\)/g,'<span class="paren">($1)</span>');
+  if(m){const a=m[0].trim();s=s.replace(esc(a),'<span class="art">'+esc(a)+'</span>')}
+  return cls?'<span class="'+cls+'">'+s+'</span>':s;
+ }).join(' <span class="sep">/</span> ');
+}
+const starHTML=n=>'<span class="st" title="Essential score '+n+'/5">'+'★'.repeat(n)+'<span class="st-off">'+'★'.repeat(5-n)+'</span></span>';
+
+const ITEMS={};
+DATA.levels.forEach(l=>l.items.forEach(it=>{it.kind='vocab';it.say=sayable(it.de);it.deHtml=colourDe(it.de);it.search=(it.de+' '+it.en).toLowerCase();ITEMS[it.id]=it}));
+DATA.groups.forEach(g=>g.items.forEach(it=>{it.kind='chunk';it.stars=5;it.say=it.de_plain;it.deHtml=it.de_html+(it.note?'<span class="cnote">'+esc(it.note)+'</span>':'');it.search=(it.de_plain+' '+it.en).toLowerCase();ITEMS[it.id]=it}));
+
+function rowHTML(it,withStars){
+ return '<div class="row'+(isKnown(it.id)?' known':'')+'" data-id="'+it.id+'">'+
+  '<label class="tick" title="Kann ich – I know this"><input type="checkbox"'+(isKnown(it.id)?' checked':'')+' aria-label="Kann ich"></label>'+
+  '<div class="de cell">'+it.deHtml+'</div><div class="en cell">'+esc(it.en)+'</div>'+
+  (withStars?'<div class="stc">'+starHTML(it.stars)+'</div>':'')+
+  '<button class="speak" aria-label="Anhören">🔊</button></div>';
+}
+function sectionHTML(num,de,en,rows,note,chunk){
+ return '<details class="level" open><summary><span class="lvnum">'+num+'</span><span class="lvtitle"><b>'+esc(de)+'</b><small>'+esc(en)+'</small></span>'+
+  '<span class="lvprog"><span class="bar"><i></i></span><span class="count"></span></span><span class="chev">▶</span></summary>'+
+  '<div class="rows'+(chunk?' chunkrows':'')+'">'+rows+'<div class="empty" hidden></div></div>'+(note?'<p class="note">'+note+'</p>':'')+'</details>';
+}
+function render(){
+ $('#vocab').innerHTML=DATA.levels.map(l=>sectionHTML(l.n,l.de,l.en,l.items.map(it=>rowHTML(it,true)).join(''),l.note,false)).join('');
+ $('#chunks').innerHTML=DATA.groups.map(g=>sectionHTML(g.key,g.de,g.en,g.items.map(it=>rowHTML(it,false)).join(''),'',true)).join('');
+ $('#tips').innerHTML='<h3>💡 Tipps</h3><ul>'+DATA.tips.map(t=>'<li>'+t+'</li>').join('')+'</ul>';
+}
+
+function applyFilters(){
+ const q=query.trim().toLowerCase();
+ $$('#lesson-rolle .level').forEach(lv=>{
+  let vis=0,tot=0,kn=0;
+  $$('.row',lv).forEach(r=>{const it=ITEMS[r.dataset.id],k=isKnown(it.id);tot++;if(k)kn++;
+   const show=(it.kind==='chunk'||it.stars>=settings.minStars)&&(!q||it.search.includes(q))&&!(settings.hideKnown&&k);
+   r.hidden=!show;if(show)vis++});
+  $('.count',lv).textContent=kn+'/'+tot;$('.bar i',lv).style.width=(tot?kn/tot*100:0)+'%';
+  lv.classList.toggle('done',tot>0&&kn===tot);
+  const e=$('.empty',lv);e.hidden=vis>0;e.textContent=(settings.hideKnown&&kn===tot)?'Alles abgehakt. Super gemacht! 🎉':(settings.hideKnown&&!q?'All the words shown here are ticked. 🎉':'Keine Treffer.');
+  lv.style.display=(q&&vis===0)?'none':'';
+ });
+}
+function pct(a,b){return b?Math.round(a/b*100):0}
+function updateStats(){
+ const v=Object.values(ITEMS).filter(i=>i.kind==='vocab'),c=Object.values(ITEMS).filter(i=>i.kind==='chunk');
+ const kv=v.filter(i=>isKnown(i.id)).length,kc=c.filter(i=>isKnown(i.id)).length,kg=GRAM_CH.filter(ch=>isKnown('g-'+ch.id)).length;
+ $('#st-v').textContent=kv+'/'+v.length;$('#st-c').textContent=kc+'/'+c.length;$('#st-g').textContent=kg+'/'+GRAM_CH.length;
+ $('#ring-v').style.setProperty('--p',pct(kv,v.length));$('#ring-c').style.setProperty('--p',pct(kc,c.length));$('#ring-g').style.setProperty('--p',pct(kg,GRAM_CH.length));
+ $('#st-best').textContent=settings.best;$('#gg-best').textContent=settings.best;
+ $('#lc-rolle-bar').style.width=pct(kv+kc,v.length+c.length)+'%';$('#lc-rolle-txt').textContent=(kv+kc)+'/'+(v.length+c.length)+' abgehakt';
+ $('#lc-gram-bar').style.width=pct(kg,GRAM_CH.length)+'%';$('#lc-gram-txt').textContent=kg+'/'+GRAM_CH.length+' Kapitel verstanden';
+ $$('.understood').forEach(b=>{const on=isKnown(b.dataset.id);b.classList.toggle('on',on);b.textContent=on?'✓ Verstanden':'○ Als verstanden markieren'});
+ $$('#tabs-grammatik .tab-btn').forEach(b=>b.classList.toggle('done',isKnown('g-'+b.dataset.tab)));
+}
+function syncTicks(){$$('.row').forEach(r=>{const k=isKnown(r.dataset.id);r.classList.toggle('known',k);$('input',r).checked=k});applyFilters();updateStats()}
+
+/* ---------- Toolbar ---------- */
+function paintToolbar(){
+ $('#hideBtn').textContent=settings.hideKnown?'👁 Alle zeigen':'🙈 Abgehakte ausblenden';
+ $('#hideBtn').classList.toggle('on',settings.hideKnown);
+ $$('#stars button').forEach(b=>b.classList.toggle('on',+b.dataset.s===settings.minStars));
+ $$('#gg-src button').forEach(b=>b.classList.toggle('on',b.dataset.s===settings.ggSrc));
+ $('#test').value=settings.test;document.body.dataset.test=settings.test;
+ $('#rate').value=settings.rate;
+}
+$('#hideBtn').onclick=()=>{settings.hideKnown=!settings.hideKnown;saveSettings();paintToolbar();applyFilters()};
+$('#stars').onclick=e=>{const b=e.target.closest('button');if(!b)return;settings.minStars=+b.dataset.s;saveSettings();paintToolbar();applyFilters()};
+$('#test').onchange=e=>{settings.test=e.target.value;saveSettings();$$('.cell.revealed').forEach(c=>c.classList.remove('revealed'));paintToolbar()};
+$('#q').oninput=e=>{query=e.target.value;applyFilters()};
+$('#rate').oninput=e=>{settings.rate=+e.target.value;saveSettings()};
+$('#voice').onchange=e=>{settings.voice=e.target.value;saveSettings();pickVoice();speak(VOICE_TESTS[0])};
+$('#voice-test').onclick=()=>speak(VOICE_TESTS[Math.random()*VOICE_TESTS.length|0]);
+if(hasSpeech)pickVoice();
+
+document.addEventListener('change',e=>{
+ if(!e.target.matches('.tick input'))return;
+ const row=e.target.closest('.row'),on=e.target.checked;
+ setKnown(row.dataset.id,on);row.classList.toggle('known',on);updateStats();
+ if(on&&settings.hideKnown){row.classList.add('leaving');setTimeout(()=>{row.classList.remove('leaving');applyFilters()},380)}else applyFilters();
+});
+document.addEventListener('click',e=>{
+ const sp=e.target.closest('.row .speak');if(sp){speak(ITEMS[sp.closest('.row').dataset.id].say);return}
+ const cell=e.target.closest('.row .cell');
+ if(cell&&settings.test!=='none'){const side=cell.classList.contains('en')?'hide-en':'hide-de';if(side===settings.test){cell.classList.add('revealed');if(side==='hide-de')speak(ITEMS[cell.closest('.row').dataset.id].say)}return}
+ const go=e.target.closest('[data-goto]');
+ if(go){const [l,t]=go.dataset.goto.split(':');if(go.dataset.src){settings.ggSrc=go.dataset.src;gg.pool=[];gg.cur=null;paintToolbar()}showLesson(l,t);return}
+ const lb=e.target.closest('.lesson-btn');if(lb){showLesson(lb.dataset.lesson);return}
+ const lc=e.target.closest('.lcard[data-open]');if(lc){showLesson(lc.dataset.open);return}
+ const tb=e.target.closest('.tab-btn');if(tb){showTab(tb.closest('.tabs').dataset.lesson,tb.dataset.tab);toTop();return}
+ const un=e.target.closest('.understood');if(un){setKnown(un.dataset.id,!isKnown(un.dataset.id));updateStats();return}
+});
+
+/* ---------- Lessons & tabs ---------- */
+function toTop(){const h=$('.hero').offsetHeight;if(scrollY>h)scrollTo({top:h})}
+function showLesson(l,t){
+ settings.lesson=l;if(t)settings.tabs[l]=t;saveSettings();
+ $$('.lesson-btn').forEach(b=>b.classList.toggle('active',b.dataset.lesson===l));
+ $$('.lesson').forEach(x=>x.classList.toggle('active',x.id==='lesson-'+l));
+ $$('nav.tabs').forEach(n=>n.hidden=n.dataset.lesson!==l);
+ if(l==='home'){$('#toolbar').hidden=true;stopReading()}else showTab(l,settings.tabs[l]);
+ toTop();
+}
+function showTab(l,t){
+ const box=$('#lesson-'+l),nav=$('#tabs-'+l);
+ if(!t||!$('.tab[data-tab="'+t+'"]',box))t=$('.tab',box).dataset.tab;
+ settings.tabs[l]=t;saveSettings();
+ $$('.tab-btn',nav).forEach(b=>b.classList.toggle('active',b.dataset.tab===t));
+ $$('.tab',box).forEach(s=>s.classList.toggle('active',s.dataset.tab===t));
+ $('#toolbar').hidden=!(l==='rolle'&&(t==='vocab'||t==='chunks'));
+ $('#stars').style.display=t==='vocab'?'':'none';
+ if(!(l==='rolle'&&t==='story'))stopReading();
+ if(l==='rolle'&&t==='gender'&&!gg.cur)ggNext();
+}
+
+/* ---------- Story ---------- */
+function renderStory(){
+ const s=DATA.story;
+ $('#story').innerHTML='<h2 class="story-title">'+esc(s.title)+'</h2><p class="story-sub">'+esc(s.titleEn)+'</p>'+
+  s.paras.map((p,i)=>'<div class="para" data-i="'+i+'"><div class="para-tools"><button class="pbtn p-say" title="Read paragraph aloud">🔊</button><button class="pbtn p-en" title="Show translation">EN</button></div><p class="de-text">'+p.de_html+'</p><p class="en-text" hidden>'+esc(p.en)+'</p></div>').join('');
+}
+let readToken=0;
+function stopReading(){readToken++;if(hasSpeech)speechSynthesis.cancel();$$('.para.reading').forEach(p=>p.classList.remove('reading'));$('#st-stop').hidden=true;$('#st-read').hidden=false}
+function readFrom(i,tok){
+ const ps=$$('.para');$$('.para.reading').forEach(p=>p.classList.remove('reading'));
+ if(tok!==readToken||i>=ps.length){if(tok===readToken)stopReading();return}
+ ps[i].classList.add('reading');ps[i].scrollIntoView({behavior:'smooth',block:'center'});
+ speak(DATA.story.paras[i].de_plain,()=>{if(tok===readToken)readFrom(i+1,tok)});
+}
+$('#st-read').onclick=()=>{stopReading();const t=++readToken;$('#st-stop').hidden=false;$('#st-read').hidden=true;readFrom(0,t)};
+$('#st-stop').onclick=stopReading;
+$('#st-cloze').onclick=e=>{const on=$('#story').classList.toggle('cloze');e.currentTarget.classList.toggle('on',on);$$('.g.revealed').forEach(g=>g.classList.remove('revealed'))};
+$('#st-en').onclick=e=>{const on=!e.currentTarget.classList.contains('on');e.currentTarget.classList.toggle('on',on);$$('.para').forEach(p=>{$('.en-text',p).hidden=!on;$('.p-en',p).classList.toggle('on',on)})};
+$('#story').addEventListener('click',e=>{
+ const g=e.target.closest('.g');
+ if(g){const cloze=$('#story').classList.contains('cloze');
+  if(cloze&&!g.classList.contains('revealed')){g.classList.add('revealed');speak(g.textContent);return}
+  const was=g.classList.contains('show');$$('.g.show').forEach(x=>x.classList.remove('show'));if(!was){g.classList.add('show');speak(g.textContent)}return}
+ const p=e.target.closest('.para');if(!p)return;const i=+p.dataset.i;
+ if(e.target.closest('.p-say')){stopReading();p.classList.add('reading');speak(DATA.story.paras[i].de_plain,()=>p.classList.remove('reading'))}
+ if(e.target.closest('.p-en')){const en=$('.en-text',p);en.hidden=!en.hidden;$('.p-en',p).classList.toggle('on',!en.hidden)}
+});
+
+/* ---------- Grammar lesson: tap-to-hear ---------- */
+$('#lesson-grammatik').addEventListener('click',e=>{
+ const el=e.target.closest('.gde');if(!el)return;
+ const c=el.cloneNode(true);$$('.en',c).forEach(x=>x.remove());
+ let t=c.textContent.replace(/\s+/g,' ').trim();
+ if(el.tagName==='TD')t=t.split(' · ')[0];
+ t=t.replace(/[„“"]/g,'').replace(/\|/g,'');
+ if(t==='German example')t='Hallo! Tippe auf ein Beispiel.';
+ speak(t);el.classList.add('saying');setTimeout(()=>el.classList.remove('saying'),700);
+});
+
+/* ---------- Flashcards ---------- */
+const fc={deck:[],total:0,cur:null,dir:'de',running:false};
+function fcStart(){
+ const src=$('#fc-src').value,only=$('#fc-new').checked,min=+$('#fc-stars').value;fc.dir=$('#fc-dir').value;
+ let pool=Object.values(ITEMS).filter(it=>(src==='both'||(src==='vocab')===(it.kind==='vocab'))&&(it.kind==='chunk'||it.stars>=min)&&(!only||!isKnown(it.id)));
+ fc.deck=shuffle(pool.slice());fc.total=fc.deck.length;
+ $('#fc-done').hidden=true;
+ if(!fc.total){fcDone(true);return}
+ fc.running=true;$('#fc-area').hidden=false;$('#fc-setup').hidden=true;fcShow();
+}
+function fcShow(){
+ if(!fc.deck.length){fcDone();return}
+ const it=fc.cur=fc.deck[0],card=$('#fc-card');card.classList.remove('flipped');
+ const de='<div class="big">'+it.deHtml+'</div>',en='<div class="big">'+esc(it.en)+'</div>';
+ const tag=it.kind==='vocab'?starHTML(it.stars):'Chunk';
+ const sp='<button class="speak" data-fcsay aria-label="Anhören">🔊</button>';
+ setTimeout(()=>{
+  $('#fc-front').innerHTML='<span class="tag">'+tag+'</span>'+(fc.dir==='de'?sp+de:en);
+  $('#fc-back').innerHTML='<span class="tag">Antwort</span>'+sp+(fc.dir==='de'?en+'<div class="small">'+it.deHtml+'</div>':de+'<div class="small">'+esc(it.en)+'</div>');
+ },fc.flippedOnce?180:0);
+ fc.flippedOnce=false;
+ const done=fc.total-fc.deck.length;$('#fc-left').textContent='Noch '+fc.deck.length+(fc.deck.length===1?' Karte':' Karten');
+ $('#fc-bar').style.width=(done/fc.total*100)+'%';
+}
+function fcFlip(){const c=$('#fc-card');c.classList.toggle('flipped');fc.flippedOnce=c.classList.contains('flipped');if(fc.flippedOnce&&fc.dir==='en')speak(fc.cur.say)}
+function fcAgain(){if(!fc.running)return;const it=fc.deck.shift();fc.deck.splice(Math.min(fc.deck.length,3+(Math.random()*3|0)),0,it);fcShow()}
+function fcKnow(){if(!fc.running)return;const it=fc.deck.shift();setKnown(it.id,true);syncTicks();fcShow()}
+function fcDone(empty){
+ fc.running=false;$('#fc-area').hidden=true;$('#fc-setup').hidden=false;const d=$('#fc-done');d.hidden=false;
+ d.innerHTML=empty?'<div class="em">🤷</div><h3>Keine Karten</h3><p class="hint">Nothing matches those settings. Untick “Nur nicht abgehakte” or lower the star filter.</p>'
+  :'<div class="em">🎉</div><h3>Geschafft!</h3><p class="hint">You got through all '+fc.total+' cards. Your ticks have been saved.</p>';
+}
+$('#fc-start').onclick=fcStart;$('#fc-end').onclick=()=>{fc.running=false;$('#fc-area').hidden=true;$('#fc-setup').hidden=false};
+$('#fc-card').addEventListener('click',e=>{if(e.target.closest('[data-fcsay]')){e.stopPropagation();speak(fc.cur.say);return}fcFlip()});
+$('#fc-flip').onclick=fcFlip;$('#fc-again').onclick=fcAgain;$('#fc-know').onclick=fcKnow;
+
+/* ---------- der/die/das game (business nouns + general nouns from Lektion 2) ---------- */
+const NOUNS=[];
+DATA.levels.forEach(l=>l.items.forEach(it=>it.de.split(' / ').forEach(seg=>{
+ if(seg.includes('(pl.)'))return;
+ const m=seg.match(/^(der|die|das)\s([^,(]+?)\s*(?:,\s*([^()]+?))?\s*(\([^)]*\))?$/);
+ if(m)NOUNS.push({art:m[1],noun:m[2],plural:m[3]||'',en:it.en});
+})));
+const GENERAL=GRAM.NOUNS.map(a=>({art:ARTS[a[1]],noun:a[0],plural:'',en:'',why:a[2]}));
+const gg={pool:[],cur:null,streak:0,right:0,total:0,locked:false,timer:0};
+function ggSource(){return settings.ggSrc==='general'?GENERAL:settings.ggSrc==='both'?NOUNS.concat(GENERAL):NOUNS}
+function ggNext(){
+ clearTimeout(gg.timer);
+ if(!gg.pool.length)gg.pool=shuffle(ggSource().slice());
+ gg.cur=gg.pool.pop();gg.locked=false;
+ $('#gg-word').innerHTML=esc(gg.cur.noun);$('#gg-en').textContent=gg.cur.en;
+ $('#gg-fb').textContent='';$('#gg-fb').className='gg-fb';$('#gg-why').innerHTML='';$('#gg-next').hidden=true;
+ $$('.art-btn').forEach(b=>{b.disabled=false;b.classList.remove('right')});
+}
+function ggWhy(c){
+ if(c.why)return '💡 '+esc(c.why);
+ const words=c.noun.split(' ');
+ const w=/\s(in|für|von|der|des)\s/.test(' '+c.noun+' ')?words[0]:words[words.length-1];
+ const r=GRAM.guess(w);if(!r)return '';
+ if(ARTS[r.g]===c.art)return '💡 '+esc(r.why);
+ if(r.c<=55)return '🧠 No reliable rule here, so this one just has to be learned.';
+ return '⚠️ <b>Exception:</b> the rule of thumb says <b>'+ARTS[r.g]+'</b> ('+esc(r.why)+'), but it\'s <b>'+c.art+'</b>.';
+}
+function ggAnswer(a){
+ if(gg.locked||!gg.cur)return;gg.locked=true;const c=gg.cur,ok=a===c.art;gg.total++;
+ $$('.art-btn').forEach(b=>{b.disabled=true;if(b.dataset.a===c.art){b.disabled=false;b.classList.add('right')}});
+ $('#gg-word').innerHTML='<span class="g-'+c.art+'"><span class="art">'+c.art+'</span>'+esc(c.noun)+'</span>'+(c.plural?'<span class="plu" style="font-size:.5em">, '+esc(c.plural)+'</span>':'');
+ $('#gg-why').innerHTML=ggWhy(c);
+ speak(c.art+' '+c.noun);
+ if(ok){gg.right++;gg.streak++;if(gg.streak>settings.best){settings.best=gg.streak;saveSettings()}
+  $('#gg-fb').textContent=['Richtig!','Genau!','Super!','Perfekt!','Sehr gut!'][Math.random()*5|0]+(gg.streak>2?' 🔥 '+gg.streak+' in Folge':'');$('#gg-fb').className='gg-fb good';
+  gg.timer=setTimeout(()=>{if(gg.cur===c)ggNext()},2600);
+ }else{gg.streak=0;$('#gg-fb').textContent='Leider nein. Es heißt „'+c.art+' '+c.noun+'“.';$('#gg-fb').className='gg-fb bad';
+  $('#gg').classList.remove('shake');void $('#gg').offsetWidth;$('#gg').classList.add('shake')}
+ $('#gg-next').hidden=false;
+ $('#gg-streak').textContent=gg.streak;$('#gg-right').textContent=gg.right;$('#gg-total').textContent=gg.total;updateStats();
+}
+$$('.art-btn').forEach(b=>b.onclick=()=>ggAnswer(b.dataset.a));
+$('#gg-next').onclick=ggNext;
+$('#gg-src').onclick=e=>{const b=e.target.closest('button');if(!b)return;settings.ggSrc=b.dataset.s;saveSettings();paintToolbar();gg.pool=[];ggNext()};
+
+/* ---------- Keyboard ---------- */
+document.addEventListener('keydown',e=>{
+ if(e.target.matches('input,select,textarea'))return;
+ if(settings.lesson!=='rolle')return;
+ const t=settings.tabs.rolle;
+ if(t==='cards'&&fc.running){
+  if(e.key===' '){e.preventDefault();fcFlip()}else if(e.key==='1'||e.key==='ArrowLeft')fcAgain();else if(e.key==='2'||e.key==='ArrowRight')fcKnow();
+ }else if(t==='gender'){
+  const m={'1':'der','2':'die','3':'das'};if(m[e.key])ggAnswer(m[e.key]);else if(e.key==='Enter'&&gg.locked)ggNext();
+ }
+});
+
+$('#reset').onclick=()=>{if(confirm('Alle Häkchen löschen? This clears all your ticks.')){known={};save(KEY,known);settings.best=0;saveSettings();syncTicks()}};
+
+render();renderStory();paintToolbar();applyFilters();updateStats();showLesson(settings.lesson||'home');
+
 </script>
 </body>
 </html>
