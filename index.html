@@ -1188,16 +1188,26 @@ function voiceLabel(v){const reg=(v.lang.split(/[-_]/)[1]||'').toUpperCase();
  let n=v.name.replace(/^Microsoft\s+/,'').replace(/\s*-\s*German.*$/i,'').replace(/\s*\((Natural)\)/i,' ✨ Natural').replace(/\s+Online/,'');
  return n+(reg&&reg!=='DE'?' · '+reg:'')}
 function germanVoices(){return speechSynthesis.getVoices().filter(v=>/^de/i.test(v.lang)).sort((a,b)=>voiceRank(a)-voiceRank(b)||a.name.localeCompare(b.name))}
+/* Edge fires 'voiceschanged' repeatedly and can briefly report an empty or partial list.
+   So: never wipe a working list, only redraw the menu when the list really changes, and look the
+   chosen voice up fresh before every utterance (old voice objects can go stale). */
+let voiceSig='',sayTok=0;
+function findVoice(id){if(!id)return null;const vs=germanVoices();return vs.find(v=>v.voiceURI===id)||vs.find(v=>v.name===id)||null}
 function pickVoice(){
- const vs=germanVoices();
- deVoice=vs.find(v=>v.voiceURI===settings.voice)||vs[0]||null;
+ const vs=germanVoices();if(!vs.length&&deVoice)return;
+ deVoice=findVoice(settings.voice)||(deVoice&&findVoice(deVoice.voiceURI))||vs[0]||null;
  const sel=$('#voice');if(!sel)return;
- sel.innerHTML=vs.length?vs.map(v=>'<option value="'+esc(v.voiceURI)+'">'+esc(voiceLabel(v))+'</option>').join(''):'<option>Keine deutsche Stimme gefunden</option>';
- sel.disabled=!vs.length;if(deVoice)sel.value=deVoice.voiceURI;
+ const sig=vs.map(v=>v.voiceURI).join('|');
+ if(sig!==voiceSig){
+  voiceSig=sig;
+  sel.innerHTML=vs.length?vs.map(v=>'<option value="'+esc(v.voiceURI)+'">'+esc(voiceLabel(v))+'</option>').join(''):'<option>Keine deutsche Stimme gefunden</option>';
+  sel.disabled=!vs.length;
+ }
+ if(deVoice&&document.activeElement!==sel)sel.value=deVoice.voiceURI;
 }
 const VOICE_TESTS=['Hallo! Ich bin deine neue Stimme.','Willkommen in unserem Client Experience Center in München.','Bevor wir ein Angebot abgeben, muss es intern freigegeben werden.'];
 if(hasSpeech){pickVoice();speechSynthesis.onvoiceschanged=pickVoice}else document.body.classList.add('no-speech');
-function speak(text,onend){if(!hasSpeech)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='de-DE';if(deVoice)u.voice=deVoice;u.rate=settings.rate;if(onend){u.onend=onend}speechSynthesis.speak(u)}
+function speak(text,onend){if(!hasSpeech)return;const busy=speechSynthesis.speaking||speechSynthesis.pending;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='de-DE';const v=findVoice(settings.voice)||(deVoice&&findVoice(deVoice.voiceURI))||deVoice;if(v){u.voice=v;deVoice=v}u.rate=settings.rate;if(onend){u.onend=onend}const tok=++sayTok;if(busy)setTimeout(()=>{if(tok===sayTok)speechSynthesis.speak(u)},120);else speechSynthesis.speak(u)}
 function sayable(de){return de.replace(/\([^)]*\)/g,'').replace(/\+\s*Akk\./,'').split(' / ').map(s=>s.split(',')[0].trim()).join('. ').replace('der/die','der oder die')}
 
 /* ---------- Grammar engine (gender guesser from Lektion 2) ---------- */
@@ -1398,7 +1408,7 @@ $('#rate').oninput=e=>{settings.rate=+e.target.value;saveSettings()};
 function paintTheme(){const d=document.documentElement.dataset.theme==='dark';$('#themeBtn').textContent=d?'☀️':'🌙';$('#themeBtn').title=d?'Hell (light mode)':'Dunkel (dark mode)'}
 $('#themeBtn').onclick=()=>{const t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;settings.theme=t;saveSettings();paintTheme()};
 paintTheme();
-$('#voice').onchange=e=>{settings.voice=e.target.value;saveSettings();pickVoice();speak(VOICE_TESTS[0])};
+$('#voice').onchange=e=>{settings.voice=e.target.value;saveSettings();deVoice=findVoice(settings.voice);speak(VOICE_TESTS[0])};
 $('#voice-test').onclick=()=>speak(VOICE_TESTS[Math.random()*VOICE_TESTS.length|0]);
 if(hasSpeech)pickVoice();
 
@@ -1463,7 +1473,7 @@ function renderStory(){
   s.paras.map((p,i)=>'<div class="para" data-i="'+i+'"><div class="para-tools"><button class="pbtn p-say" title="Read paragraph aloud">🔊</button><button class="pbtn p-en" title="Show translation">EN</button></div><p class="de-text">'+p.de_html+'</p><p class="en-text" hidden>'+esc(p.en)+'</p></div>').join('');
 }
 let readToken=0;
-function stopReading(){readToken++;if(hasSpeech)speechSynthesis.cancel();$$('.para.reading').forEach(p=>p.classList.remove('reading'));$('#st-stop').hidden=true;$('#st-read').hidden=false}
+function stopReading(){readToken++;sayTok++;if(hasSpeech)speechSynthesis.cancel();$$('.para.reading').forEach(p=>p.classList.remove('reading'));$('#st-stop').hidden=true;$('#st-read').hidden=false}
 function readFrom(i,tok){
  const ps=$$('.para');$$('.para.reading').forEach(p=>p.classList.remove('reading'));
  if(tok!==readToken||i>=ps.length){if(tok===readToken)stopReading();return}
