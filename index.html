@@ -499,7 +499,7 @@ footer{max-width:1040px;margin:0 auto;padding:0 14px 40px;color:var(--muted);fon
 .mw-ico{border:0;background:none;width:32px;height:32px;border-radius:50%;opacity:.55;font-size:15px}
 .mw-ico:hover{opacity:1;background:var(--accent-soft)}
 .mw-ico.armed{opacity:1;width:auto;padding:0 10px;border-radius:999px;background:var(--die);color:#fff;font-size:12.5px;font-weight:700}
-.mw-nudge{background:color-mix(in srgb,var(--gold) 14%,transparent);border:1px solid color-mix(in srgb,var(--gold) 40%,transparent);border-radius:12px;padding:10px 14px;margin-bottom:14px;font-size:14px}
+.mw-nudge{background:color-mix(in srgb,var(--gold) 14%,transparent);border:1px solid color-mix(in srgb,var(--gold) 40%,transparent);border-radius:12px;padding:10px 14px;margin-top:16px;font-size:14px}
 .bk-list{columns:2 200px;padding-left:18px;margin:6px 0 10px}
 @media (max-width:680px){.mrow{grid-template-columns:36px minmax(0,1fr) auto;grid-template-areas:"t d a" "t e a"}.mrow .tick{grid-area:t}.mrow .mw-de{grid-area:d}.mrow .mw-en{grid-area:e;font-size:14px}.mrow .mw-act{grid-area:a;flex-direction:column}}
 </style>
@@ -1175,7 +1175,6 @@ footer{max-width:1040px;margin:0 auto;padding:0 14px 40px;color:var(--muted);fon
 </div>
 <div class="lesson gl" id="lesson-woerter">
 <section class="tab" data-tab="liste"><div class="sec-head"><span class="sec-num">6.1</span><h2>Meine Wörter</h2><p>Add a word whenever you look one up. For nouns, choose the gender yourself. The Genus-Rater suggests one, and anything taken from it is marked <b>? prüfen</b> until you've checked it.</p></div>
-<div class="mw-nudge" id="mw-nudge" hidden></div>
 <div class="mw-grid">
  <form class="panel mw-form" id="mw-form" autocomplete="off">
   <h3 id="mw-form-title">Neues Wort</h3>
@@ -1199,7 +1198,8 @@ footer{max-width:1040px;margin:0 auto;padding:0 14px 40px;color:var(--muted);fon
   <div class="panel flush mw-listpanel"><div id="mw-list"></div></div>
   <p class="hint" id="mw-count"></p>
  </div>
-</div><div class="next-chap"><button class="btn" data-goto="woerter:cards">Weiter: Karteikarten →</button></div></section>
+</div>
+<div class="mw-nudge" id="mw-nudge" hidden></div><div class="next-chap"><button class="btn" data-goto="woerter:cards">Weiter: Karteikarten →</button></div></section>
 <section class="tab" data-tab="cards"><div class="sec-head"><span class="sec-num">6.2</span><h2>Karteikarten</h2><p>Test yourself on your own words, your business vocabulary or both. <b>Kann ich</b> ticks a card everywhere on the page.</p></div>
   <div class="panel fc-setup" id="fc-setup">
    <label>Quelle<select class="sel" id="fc-src"><option value="mine">Meine Wörter</option><option value="vocab">Business-Vokabeln</option><option value="chunks">Business-Chunks</option><option value="all">Alles</option></select></label>
