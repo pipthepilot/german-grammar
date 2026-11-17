@@ -457,6 +457,51 @@ footer{max-width:1040px;margin:0 auto;padding:0 14px 40px;color:var(--muted);fon
 .ws-fb.info{color:var(--accent);background:var(--accent-soft)}
 .ws-say{margin-top:8px;border:1.5px solid currentColor;background:transparent;color:inherit;border-radius:999px;padding:4px 12px;font-weight:700;font-size:13.5px}
 .ws-say:hover{background:color-mix(in srgb,currentColor 12%,transparent)}
+
+/* ===== Lesson 6: Meine Wörter ===== */
+.mw-grid{display:grid;grid-template-columns:minmax(0,370px) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:860px){.mw-grid{grid-template-columns:1fr}}
+.gl .mw-form{position:sticky;top:120px}
+@media (max-width:860px){.gl .mw-form{position:static}}
+.mw-type{display:flex;margin-bottom:12px}.mw-type button{flex:1}
+.mw-l{display:block;font-size:13px;font-weight:700;color:var(--muted);margin:10px 0 4px}
+.mw-l small{font-weight:400}
+.mw-in{display:block;width:100%;margin-top:4px;padding:9px 11px;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);font-size:16px;color:var(--ink)}
+.mw-in:focus{outline:none;border-color:var(--accent)}
+#mw-de{font-size:19px;font-weight:700}
+.mw-look{font-size:13px;color:var(--muted);margin-top:6px}
+.mw-look a{color:var(--accent);font-weight:600}
+.mw-look.dim a{pointer-events:none;opacity:.45}
+.mw-arts{display:flex;gap:6px;flex-wrap:wrap}
+.art-pick{flex:1;min-width:60px;padding:8px 0;border-radius:10px;border:2px solid currentColor;background:var(--card);font-weight:800;font-size:16px}
+.art-pick.der{color:var(--der)}.art-pick.die{color:var(--die)}.art-pick.das{color:var(--das)}.art-pick.pl{color:var(--pl);font-size:13px}
+.art-pick.on{background:currentColor}
+.art-pick.der.on,.art-pick.die.on,.art-pick.das.on,.art-pick.pl.on{color:var(--card)}
+.art-pick.der.on{background:var(--der)}.art-pick.die.on{background:var(--die)}.art-pick.das.on{background:var(--das)}.art-pick.pl.on{background:var(--pl)}
+.mw-guess{font-size:14px;margin-top:8px;min-height:1.2em}
+.mw-guess .why{color:var(--muted)}.mw-guess .ok{color:var(--ok);font-weight:700}
+.mw-guess .warn{margin-top:4px;color:var(--die);font-size:13px}
+.mw-btns{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mw-msg{margin-top:10px;font-size:14px;border-radius:10px}
+.mw-msg:not(:empty){padding:9px 12px}
+.mw-msg.good{background:color-mix(in srgb,var(--ok) 10%,transparent)}
+.mw-msg.bad{background:var(--die-bg);color:var(--die)}
+.mw-tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.mrow{display:grid;grid-template-columns:40px minmax(0,1.3fr) minmax(0,1fr) auto;gap:8px;align-items:center;padding:10px 12px;border-bottom:1px solid var(--line)}
+.mrow:last-child{border-bottom:0}
+.mrow.known .mw-word,.mrow.known .mw-en{opacity:.5}
+.mw-de{font-weight:600}
+.mw-ex{display:block;font-weight:400;font-style:italic;color:var(--muted);font-size:13.5px;margin-top:2px}
+.mw-en{color:var(--muted)}
+.mw-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:1px 6px;margin-left:4px}
+.unv{border:1px dashed var(--die);color:var(--die);background:var(--die-bg);border-radius:6px;font-size:11.5px;font-weight:700;padding:1px 6px;margin-left:4px}
+.mw-act{display:flex;gap:2px;align-items:center}
+.mw-ico{border:0;background:none;width:32px;height:32px;border-radius:50%;opacity:.55;font-size:15px}
+.mw-ico:hover{opacity:1;background:var(--accent-soft)}
+.mw-ico.armed{opacity:1;width:auto;padding:0 10px;border-radius:999px;background:var(--die);color:#fff;font-size:12.5px;font-weight:700}
+.mw-nudge{background:color-mix(in srgb,var(--gold) 14%,transparent);border:1px solid color-mix(in srgb,var(--gold) 40%,transparent);border-radius:12px;padding:10px 14px;margin-bottom:14px;font-size:14px}
+.bk-list{columns:2 200px;padding-left:18px;margin:6px 0 10px}
+@media (max-width:680px){.mrow{grid-template-columns:36px minmax(0,1fr) auto;grid-template-areas:"t d a" "t e a"}.mrow .tick{grid-area:t}.mrow .mw-de{grid-area:d}.mrow .mw-en{grid-area:e;font-size:14px}.mrow .mw-act{grid-area:a;flex-direction:column}}
 </style>
 </head>
 <body>
@@ -476,6 +521,7 @@ footer{max-width:1040px;margin:0 auto;padding:0 14px 40px;color:var(--muted);fon
    <div class="stat"><div class="ring" id="ring-c"></div><div><b id="st-c">0/0</b><span>Chunks</span></div></div>
    <div class="stat"><div class="ring" id="ring-g"></div><div><b id="st-g">0/0</b><span>Kapitel verstanden</span></div></div>
    <div class="stat"><div class="ring" id="ring-s"></div><div><b id="st-s">0/0</b><span>Sätze gebaut</span></div></div>
+   <div class="stat"><div class="ring" id="ring-w"></div><div><b id="st-w">0/0</b><span>Meine Wörter</span></div></div>
    <div class="stat"><div class="ring trophy">🏆</div><div><b id="st-best">0</b><span>der/die/das-Rekord</span></div></div>
   </div>
  </div>
@@ -489,6 +535,7 @@ footer{max-width:1040px;margin:0 auto;padding:0 14px 40px;color:var(--muted);fon
   <button class="lesson-btn" data-lesson="genus"><small>3</small>Genus</button>
   <button class="lesson-btn" data-lesson="faelle"><small>4</small>Fälle</button>
   <button class="lesson-btn" data-lesson="rolle"><small>5</small>Business-Deutsch</button>
+  <button class="lesson-btn" data-lesson="woerter"><small>6</small>Meine Wörter</button>
 
  </nav>
  <nav class="tabs" id="tabs-verben" data-lesson="verben" hidden>
@@ -524,7 +571,11 @@ footer{max-width:1040px;margin:0 auto;padding:0 14px 40px;color:var(--muted);fon
   <button class="tab-btn" data-tab="vocab"><span class="tnum">5.1</span> 📚 Vokabeln</button>
   <button class="tab-btn" data-tab="chunks"><span class="tnum">5.2</span> 🧩 Chunks</button>
   <button class="tab-btn" data-tab="story"><span class="tnum">5.3</span> 📖 Geschichte</button>
-  <button class="tab-btn" data-tab="cards"><span class="tnum">5.4</span> 🃏 Karteikarten</button>
+ </nav>
+ <nav class="tabs" id="tabs-woerter" data-lesson="woerter" hidden>
+  <button class="tab-btn" data-tab="liste"><span class="tnum">6.1</span> 📝 Meine Wörter</button>
+  <button class="tab-btn" data-tab="cards"><span class="tnum">6.2</span> 🃏 Karteikarten</button>
+  <button class="tab-btn" data-tab="backup"><span class="tnum">6.3</span> 💾 Sicherung</button>
  </nav>
  <div class="toolbar" id="toolbar" hidden>
   <input class="search" id="q" type="search" placeholder="Suchen … (Deutsch oder Englisch)">
@@ -541,7 +592,7 @@ footer{max-width:1040px;margin:0 auto;padding:0 14px 40px;color:var(--muted);fon
 </div>
 
 <main>
-<div class="lesson" id="lesson-home"><h2 class="home-h">Grammatik, Schritt für Schritt</h2><p class="home-sub">Start with the verb, then build sentences around it, then learn what the nouns are doing. Each lesson builds on the one before.</p><div class="lesson-cards"><article class="lcard" data-open="verben"><div class="lc-num">1</div><h3>Verben <span class="lc-sub">Das Herz jedes Satzes</span></h3><p>Conjugation, helper verbs, the past tense, separable verbs and the polite forms. Every German sentence is built around its verb, so start here.</p><ul class="lc-meta"><li>📐 5 Kapitel</li><li>🔊 Beispiele zum Anhören</li></ul><div class="lc-prog"><span class="bar"><i class="lc-bar"></i></span><span class="lc-txt"></span></div><div class="lc-tabs"><button class="chip" data-goto="verben:praesens">1.1 Präsens</button> <button class="chip" data-goto="verben:modal">1.2 Modalverben &amp; werden</button> <button class="chip" data-goto="verben:perfekt">1.3 Perfekt</button> <button class="chip" data-goto="verben:trennbar">1.4 Trennbare Verben</button> <button class="chip" data-goto="verben:konjunktiv">1.5 Konjunktiv II</button></div></article><article class="lcard" data-open="satzbau"><div class="lc-num">2</div><h3>Satzbau <span class="lc-sub">Wo steht das Verb?</span></h3><p>Verb second, the verb bracket, weil clauses and what happens when they come first. Then build sentences in the workshop and check your word order.</p><ul class="lc-meta"><li>📐 6 Kapitel</li><li>🔄 Satz-Dreher</li><li>🛠 41 Übungssätze</li></ul><div class="lc-prog"><span class="bar"><i class="lc-bar"></i></span><span class="lc-txt"></span></div><div class="lc-tabs"><button class="chip" data-goto="satzbau:overview">2.1 Überblick</button> <button class="chip" data-goto="satzbau:v2">2.2 Verb an Position 2</button> <button class="chip" data-goto="satzbau:klammer">2.3 Satzklammer</button> <button class="chip" data-goto="satzbau:nebensatz">2.4 Nebensätze</button> <button class="chip" data-goto="satzbau:weilzuerst">2.5 Nebensatz zuerst</button> <button class="chip" data-goto="satzbau:mittelfeld">2.6 Mittelfeld</button> <button class="chip" data-goto="satzbau:werkstatt">2.7 Werkstatt</button></div></article><article class="lcard" data-open="genus"><div class="lc-num">3</div><h3>Genus <span class="lc-sub">der, die oder das?</span></h3><p>The endings and meanings that predict a noun's gender, a gender guesser, the oddities worth knowing, and a der/die/das game with your own business words.</p><ul class="lc-meta"><li>📐 3 Kapitel</li><li>🔎 Genus-Rater</li><li>🎯 Spiel</li></ul><div class="lc-prog"><span class="bar"><i class="lc-bar"></i></span><span class="lc-txt"></span></div><div class="lc-tabs"><button class="chip" data-goto="genus:regeln">3.1 Endungen &amp; Bedeutung</button> <button class="chip" data-goto="genus:rater">3.2 Genus-Rater &amp; Merkhilfen</button> <button class="chip" data-goto="genus:kurios">3.3 Kuriositäten</button> <button class="chip" data-goto="genus:spiel">3.4 Spiel</button></div></article><article class="lcard" data-open="faelle"><div class="lc-num">4</div><h3>Fälle <span class="lc-sub">Wer macht was mit wem?</span></h3><p>The four cases and everything that depends on them: articles, pronouns, prepositions, verbs that choose a case, and adjective endings.</p><ul class="lc-meta"><li>📐 5 Kapitel</li><li>🧩 Tabellen &amp; Eselsbrücken</li></ul><div class="lc-prog"><span class="bar"><i class="lc-bar"></i></span><span class="lc-txt"></span></div><div class="lc-tabs"><button class="chip" data-goto="faelle:faelle">4.1 Die vier Fälle</button> <button class="chip" data-goto="faelle:pronomen">4.2 Pronomen</button> <button class="chip" data-goto="faelle:praep">4.3 Präpositionen</button> <button class="chip" data-goto="faelle:verbfall">4.4 Verben &amp; Fälle</button> <button class="chip" data-goto="faelle:adjektive">4.5 Adjektivendungen</button></div></article></div><h2 class="home-h" style="margin-top:28px">Deutsch für meinen Job</h2><p class="home-sub">Put the grammar to work: the words, phrases and story you need to explain your role.</p><div class="lesson-cards"><article class="lcard" data-open="rolle"><div class="lc-num">5</div><h3>Business-Deutsch <span class="lc-sub">Meine Rolle</span></h3><p>Words, phrases and a story for explaining my job: Sovereign AI, pre-sales, deal assurance, delivery and the Munich Client Experience Center.</p><ul class="lc-meta"><li>📚 130 Vokabeln</li><li>🧩 56 Chunks</li><li>📖 Geschichte</li><li>🃏 Karteikarten</li></ul><div class="lc-prog"><span class="bar"><i class="lc-bar"></i></span><span class="lc-txt"></span></div><div class="lc-tabs"><button class="chip" data-goto="rolle:vocab">5.1 Vokabeln</button> <button class="chip" data-goto="rolle:chunks">5.2 Chunks</button> <button class="chip" data-goto="rolle:story">5.3 Geschichte</button> <button class="chip" data-goto="rolle:cards">5.4 Karteikarten</button></div></article></div><div class="gl" style="margin-top:28px"><div class="sec-head"><span class="sec-num">★</span><h2>Spickzettel: die 12 Cheat-Codes</h2><p>If you remember nothing else, remember these. Each one links to the chapter that explains it.</p></div><div class="codes">
+<div class="lesson" id="lesson-home"><h2 class="home-h">Grammatik, Schritt für Schritt</h2><p class="home-sub">Start with the verb, then build sentences around it, then learn what the nouns are doing. Each lesson builds on the one before.</p><div class="lesson-cards"><article class="lcard" data-open="verben"><div class="lc-num">1</div><h3>Verben <span class="lc-sub">Das Herz jedes Satzes</span></h3><p>Conjugation, helper verbs, the past tense, separable verbs and the polite forms. Every German sentence is built around its verb, so start here.</p><ul class="lc-meta"><li>📐 5 Kapitel</li><li>🔊 Beispiele zum Anhören</li></ul><div class="lc-prog"><span class="bar"><i class="lc-bar"></i></span><span class="lc-txt"></span></div><div class="lc-tabs"><button class="chip" data-goto="verben:praesens">1.1 Präsens</button> <button class="chip" data-goto="verben:modal">1.2 Modalverben &amp; werden</button> <button class="chip" data-goto="verben:perfekt">1.3 Perfekt</button> <button class="chip" data-goto="verben:trennbar">1.4 Trennbare Verben</button> <button class="chip" data-goto="verben:konjunktiv">1.5 Konjunktiv II</button></div></article><article class="lcard" data-open="satzbau"><div class="lc-num">2</div><h3>Satzbau <span class="lc-sub">Wo steht das Verb?</span></h3><p>Verb second, the verb bracket, weil clauses and what happens when they come first. Then build sentences in the workshop and check your word order.</p><ul class="lc-meta"><li>📐 6 Kapitel</li><li>🔄 Satz-Dreher</li><li>🛠 41 Übungssätze</li></ul><div class="lc-prog"><span class="bar"><i class="lc-bar"></i></span><span class="lc-txt"></span></div><div class="lc-tabs"><button class="chip" data-goto="satzbau:overview">2.1 Überblick</button> <button class="chip" data-goto="satzbau:v2">2.2 Verb an Position 2</button> <button class="chip" data-goto="satzbau:klammer">2.3 Satzklammer</button> <button class="chip" data-goto="satzbau:nebensatz">2.4 Nebensätze</button> <button class="chip" data-goto="satzbau:weilzuerst">2.5 Nebensatz zuerst</button> <button class="chip" data-goto="satzbau:mittelfeld">2.6 Mittelfeld</button> <button class="chip" data-goto="satzbau:werkstatt">2.7 Werkstatt</button></div></article><article class="lcard" data-open="genus"><div class="lc-num">3</div><h3>Genus <span class="lc-sub">der, die oder das?</span></h3><p>The endings and meanings that predict a noun's gender, a gender guesser, the oddities worth knowing, and a der/die/das game with your own business words.</p><ul class="lc-meta"><li>📐 3 Kapitel</li><li>🔎 Genus-Rater</li><li>🎯 Spiel</li></ul><div class="lc-prog"><span class="bar"><i class="lc-bar"></i></span><span class="lc-txt"></span></div><div class="lc-tabs"><button class="chip" data-goto="genus:regeln">3.1 Endungen &amp; Bedeutung</button> <button class="chip" data-goto="genus:rater">3.2 Genus-Rater &amp; Merkhilfen</button> <button class="chip" data-goto="genus:kurios">3.3 Kuriositäten</button> <button class="chip" data-goto="genus:spiel">3.4 Spiel</button></div></article><article class="lcard" data-open="faelle"><div class="lc-num">4</div><h3>Fälle <span class="lc-sub">Wer macht was mit wem?</span></h3><p>The four cases and everything that depends on them: articles, pronouns, prepositions, verbs that choose a case, and adjective endings.</p><ul class="lc-meta"><li>📐 5 Kapitel</li><li>🧩 Tabellen &amp; Eselsbrücken</li></ul><div class="lc-prog"><span class="bar"><i class="lc-bar"></i></span><span class="lc-txt"></span></div><div class="lc-tabs"><button class="chip" data-goto="faelle:faelle">4.1 Die vier Fälle</button> <button class="chip" data-goto="faelle:pronomen">4.2 Pronomen</button> <button class="chip" data-goto="faelle:praep">4.3 Präpositionen</button> <button class="chip" data-goto="faelle:verbfall">4.4 Verben &amp; Fälle</button> <button class="chip" data-goto="faelle:adjektive">4.5 Adjektivendungen</button></div></article></div><h2 class="home-h" style="margin-top:28px">Wortschatz und Üben</h2><p class="home-sub">Put the grammar to work: the words you need for your role, and the words you collect yourself.</p><div class="lesson-cards"><article class="lcard" data-open="rolle"><div class="lc-num">5</div><h3>Business-Deutsch <span class="lc-sub">Meine Rolle</span></h3><p>Words, phrases and a story for explaining my job: Sovereign AI, pre-sales, deal assurance, delivery and the Munich Client Experience Center.</p><ul class="lc-meta"><li>📚 130 Vokabeln</li><li>🧩 56 Chunks</li><li>📖 Geschichte</li></ul><div class="lc-prog"><span class="bar"><i class="lc-bar"></i></span><span class="lc-txt"></span></div><div class="lc-tabs"><button class="chip" data-goto="rolle:vocab">5.1 Vokabeln</button> <button class="chip" data-goto="rolle:chunks">5.2 Chunks</button> <button class="chip" data-goto="rolle:story">5.3 Geschichte</button></div></article><article class="lcard" data-open="woerter"><div class="lc-num">6</div><h3>Meine Wörter <span class="lc-sub">Mein persönlicher Wortschatz</span></h3><p>Collect the words you look up while reading, with gender, meaning and an example. Practise them, and everything else, with flashcards. Back up your progress.</p><ul class="lc-meta"><li>📝 Eigene Wortliste</li><li>🃏 Karteikarten</li><li>💾 Sicherung</li></ul><div class="lc-prog"><span class="bar"><i class="lc-bar"></i></span><span class="lc-txt"></span></div><div class="lc-tabs"><button class="chip" data-goto="woerter:liste">6.1 Meine Wörter</button> <button class="chip" data-goto="woerter:cards">6.2 Karteikarten</button> <button class="chip" data-goto="woerter:backup">6.3 Sicherung</button></div></article></div><div class="gl" style="margin-top:28px"><div class="sec-head"><span class="sec-num">★</span><h2>Spickzettel: die 12 Cheat-Codes</h2><p>If you remember nothing else, remember these. Each one links to the chapter that explains it.</p></div><div class="codes">
     <div class="code"><b>01 · Genus</b><strong>Ends in -e? Bet on <span class="f">die</span>.</strong><span>Right about 90% of the time across some 15,000 nouns. Male people and animals are the main exceptions (<span class="m">der Junge</span>).</span><button class="code-link" data-goto="genus:regeln">→ Lektion 3.1</button></div>
     <div class="code"><b>02 · Genus</b><strong>-ung, -heit, -keit, -schaft, -ion, -tät = <span class="f">die</span>. Always.</strong><span>These suffixes are close to 100% reliable.</span><button class="code-link" data-goto="genus:regeln">→ Lektion 3.1</button></div>
     <div class="code"><b>03 · Genus</b><strong>-chen and -lein = <span class="n">das</span>. Always.</strong><span>Even when it's a girl: <span class="n">das Mädchen</span>.</span><button class="code-link" data-goto="genus:regeln">→ Lektion 3.1</button></div>
@@ -756,7 +807,7 @@ footer{max-width:1040px;margin:0 auto;padding:0 14px 40px;color:var(--muted);fon
       </ul></div><div class="nug"><h3>-ck vs -cke</h3><p>Nouns ending in <b>-ck</b> are almost never feminine, yet <b>-cke</b> nouns are virtually always feminine. Compare <span class="n">das Eck</span> (southern German) and <span class="f">die Ecke</span>: same corner, one letter apart.</p></div><div class="nug"><h3>Abbreviations keep the gender of their last word</h3><p><span class="f">die EU</span> (Union), <span class="m">der ICE</span> (Zug), <span class="n">das Kfz</span> (Fahrzeug), <span class="f">die AG</span> (Gesellschaft), <span class="m">der PC</span> (Computer).</p></div><div class="nug"><h3>English loanwords borrow a German twin's gender</h3><p><span class="f">die E-Mail</span> (die Post), <span class="m">der Laptop</span> (der Rechner), <span class="f">die Party</span> (die Feier), <span class="m">der Job</span> (der Beruf). When you meet a new loanword, ask what the German word for it would be.</p></div><div class="nug"><h3>The sun is she, the moon is he</h3><p><span class="f">die Sonne</span>, <span class="m">der Mond</span>: the reverse of French, Italian and Spanish. Handy as a reminder that you can't import genders from other languages.</p></div><div class="nug"><h3>Nationalities flip with -in</h3><p><span class="m">der Engländer</span> → <span class="f">die Engländerin</span>. But -e nationalities are weak nouns: <span class="m">der Franzose</span>, <span class="m">den Franzosen</span>, <span class="f">die Französin</span>. Adjectival ones change ending: <span class="m">ein Deutscher</span>, <span class="m">der Deutsche</span>, <span class="f">eine Deutsche</span>.</p></div><div class="nug"><h3>Anything can become a neuter noun</h3><p>Capitalise an infinitive and it's <span class="n">das</span>: <span class="n">das Lesen, das Autofahren</span>. Very useful after <span class="gde">beim</span>: <span class="gde">beim Kochen</span> = "while cooking".</p></div><div class="nug"><h3>Some nouns double their gender</h3><p>A few common nouns have two acceptable genders, often regional: <span class="m">der</span>/<span class="n">das</span> Joghurt, <span class="m">der</span>/<span class="n">das</span> Teil, <span class="n">das</span>/<span class="m">der</span> Virus, <span class="f">die</span>/<span class="n">das</span> Cola (south). Native speakers argue about these too.</p></div><div class="nug"><h3>Compound nouns build from right to left</h3><p>Read long words backwards to find the head: <span class="gde">Donau|dampf|schiff|fahrt</span> is a <span class="f">trip</span> (die Fahrt) by steamship on the Danube. The last part gives the meaning and the gender; the rest just describes it. Linking letters (-s-, -n-, -es-) are glue: <span class="gde">Arbeit<b>s</b>platz</span>.</p></div></div><div class="next-chap"><button class="btn" data-goto="genus:spiel">Weiter: Spiel →</button></div></section>
 <section class="tab" data-tab="spiel"><div class="sec-head"><span class="sec-num">3.4</span><h2>Das der-die-das-Spiel</h2><p>Guess the article. After each answer you'll see the rule behind it, or a warning when a word breaks the rules.</p></div><div class="game-wrap"><div class="panel gg" id="gg">
    <div class="gg-src"><div class="seg" id="gg-src">
-    <button data-s="vocab">Meine Vokabeln</button><button data-s="general">Allgemeine Nomen</button><button data-s="both">Beides</button>
+    <button data-s="vocab">Business-Wörter</button><button data-s="general">Allgemeine Nomen</button><button data-s="both">Beides</button><button data-s="mine">Meine Wörter</button>
    </div></div>
    <div class="gg-score"><span>Serie <b id="gg-streak">0</b></span><span>Richtig <b id="gg-right">0</b>/<b id="gg-total">0</b></span><span>Rekord <b id="gg-best">0</b></span></div>
    <div class="gg-word" id="gg-word"></div>
@@ -1120,10 +1171,38 @@ footer{max-width:1040px;margin:0 auto;padding:0 14px 40px;color:var(--muted);fon
    <button class="btn" id="st-stop" hidden>■ Stopp</button>
    <p class="hint">Tap a dotted word for its meaning. In <b>Lückentext</b> mode the key words are blanked out. Guess each one aloud, then tap to reveal it.</p>
   </div>
-  <article class="story" id="story"></article><div class="next-chap"><button class="btn" data-goto="rolle:cards">Weiter: Karteikarten →</button></div></section>
-<section class="tab" data-tab="cards"><div class="sec-head"><span class="sec-num">5.4</span><h2>Karteikarten</h2><p>Test yourself on the words and chunks. <b>Kann ich</b> ticks a card everywhere on the page.</p></div>
+  <article class="story" id="story"></article><div class="next-chap"><button class="btn primary" data-goto="woerter:">Nächste Lektion: 6 · Meine Wörter →</button></div></section>
+</div>
+<div class="lesson gl" id="lesson-woerter">
+<section class="tab" data-tab="liste"><div class="sec-head"><span class="sec-num">6.1</span><h2>Meine Wörter</h2><p>Add a word whenever you look one up. For nouns, choose the gender yourself. The Genus-Rater suggests one, and anything taken from it is marked <b>? prüfen</b> until you've checked it.</p></div>
+<div class="mw-nudge" id="mw-nudge" hidden></div>
+<div class="mw-grid">
+ <form class="panel mw-form" id="mw-form" autocomplete="off">
+  <h3 id="mw-form-title">Neues Wort</h3>
+  <div class="seg mw-type" id="mw-type"><button type="button" data-t="noun">Nomen</button><button type="button" data-t="verb">Verb</button><button type="button" data-t="adj">Adjektiv</button><button type="button" data-t="phrase">Ausdruck</button></div>
+  <label class="mw-l">Deutsch<input id="mw-de" class="mw-in" placeholder="z. B. Ausschreibung" spellcheck="false"></label>
+  <div class="mw-look" id="mw-look">Nachschlagen: <a id="lk-dictcc" target="_blank" rel="noopener">dict.cc</a> · <a id="lk-leo" target="_blank" rel="noopener">LEO</a> · <a id="lk-dwds" target="_blank" rel="noopener">DWDS</a></div>
+  <div id="mw-noun">
+   <div class="mw-l">Genus</div>
+   <div class="mw-arts" id="mw-arts"><button type="button" class="art-pick der" data-a="der">der</button><button type="button" class="art-pick die" data-a="die">die</button><button type="button" class="art-pick das" data-a="das">das</button><button type="button" class="art-pick pl" data-a="pl">nur Plural</button></div>
+   <div class="mw-guess" id="mw-guess"></div>
+   <label class="mw-l">Plural <small>optional</small><input id="mw-pl" class="mw-in" placeholder="z. B. -en"></label>
+  </div>
+  <label class="mw-l">Englisch<input id="mw-en" class="mw-in" placeholder="e.g. tender, call for bids"></label>
+  <label class="mw-l">Beispielsatz <small>optional</small><input id="mw-ex" class="mw-in" placeholder="The sentence where you found it"></label>
+  <div class="mw-btns"><button class="btn primary" type="submit" id="mw-save">＋ Hinzufügen</button><button type="button" class="btn" id="mw-cancel" hidden>Abbrechen</button></div>
+  <div class="mw-msg" id="mw-msg"></div>
+ </form>
+ <div class="mw-listwrap">
+  <div class="mw-tools"><input class="search" id="mw-q" type="search" placeholder="In meinen Wörtern suchen …">
+   <div class="seg" id="mw-filter"><button data-f="all" class="on">Alle</button><button data-f="new">Zu lernen</button><button data-f="known">Gelernt</button><button data-f="check">? Prüfen</button></div></div>
+  <div class="panel flush mw-listpanel"><div id="mw-list"></div></div>
+  <p class="hint" id="mw-count"></p>
+ </div>
+</div><div class="next-chap"><button class="btn" data-goto="woerter:cards">Weiter: Karteikarten →</button></div></section>
+<section class="tab" data-tab="cards"><div class="sec-head"><span class="sec-num">6.2</span><h2>Karteikarten</h2><p>Test yourself on your own words, your business vocabulary or both. <b>Kann ich</b> ticks a card everywhere on the page.</p></div>
   <div class="panel fc-setup" id="fc-setup">
-   <label>Quelle<select class="sel" id="fc-src"><option value="vocab">Vokabeln</option><option value="chunks">Chunks</option><option value="both">Beides</option></select></label>
+   <label>Quelle<select class="sel" id="fc-src"><option value="mine">Meine Wörter</option><option value="vocab">Business-Vokabeln</option><option value="chunks">Business-Chunks</option><option value="all">Alles</option></select></label>
    <label>Richtung<select class="sel" id="fc-dir"><option value="de">Deutsch → Englisch</option><option value="en">Englisch → Deutsch</option></select></label>
    <label>Vokabeln ab<select class="sel" id="fc-stars"><option value="1">★1</option><option value="3">★3</option><option value="4">★4</option><option value="5" selected>★5</option></select></label>
    <label class="chk"><input type="checkbox" id="fc-new" checked> Nur nicht abgehakte</label>
@@ -1139,12 +1218,29 @@ footer{max-width:1040px;margin:0 auto;padding:0 14px 40px;color:var(--muted);fon
    </div>
    <p class="hint" style="text-align:center">Say the answer out loud before you flip. <b>Kann ich</b> ticks the word everywhere.</p>
   </div>
-  <div class="panel done-box" id="fc-done" hidden></div><div class="next-chap"><button class="btn" data-goto="home:">Zur Übersicht →</button></div></section>
+  <div class="panel done-box" id="fc-done" hidden></div><div class="next-chap"><button class="btn" data-goto="woerter:backup">Weiter: Sicherung →</button></div></section>
+<section class="tab" data-tab="backup"><div class="sec-head"><span class="sec-num">6.3</span><h2>Sicherung: Backup und Wiederherstellen</h2><p>Download all your progress as one file, and restore it on any browser or computer.</p></div>
+<div class="grid g2">
+ <div class="panel"><h3>💾 Sicherung herunterladen</h3>
+  <p>Saves everything in one small file: your word list, every tick, the chapters you've marked as understood, your Werkstatt sentences, your game record and your settings (voice, speed, theme).</p>
+  <p class="hint" id="bk-last"></p>
+  <button class="btn primary" id="bk-export">⬇ Sicherung herunterladen</button>
+  <div class="mw-msg" id="bk-msg"></div>
+  <p class="hint">Keep the file somewhere safe, such as OneDrive or iCloud. It's also how you move your progress to another browser or computer.</p></div>
+ <div class="panel"><h3>📂 Sicherung wiederherstellen</h3>
+  <p>Choose a backup file, then decide whether to merge it with what's here or replace everything.</p>
+  <input type="file" id="bk-file" accept=".json,application/json" hidden>
+  <button class="btn" id="bk-pick">Datei auswählen …</button>
+  <div id="bk-preview"></div></div>
+</div>
+<div class="panel" style="margin-top:14px"><h3>Was gerade gespeichert ist</h3><div id="bk-summary"></div>
+ <p class="hint">Everything is stored in this browser only. Clearing your browsing data deletes it, so back up regularly, ideally every time you've added a few words.</p></div><div class="next-chap"><button class="btn" data-goto="home:">Zur Übersicht →</button></div></section>
 </div>
 </main>
 
 <footer>
  <span>Your progress is saved in this browser.</span>
+ <button class="link" data-goto="woerter:backup">💾 Sicherung</button>
  <button class="link" id="reset">Fortschritt zurücksetzen</button>
 </footer>
 
@@ -1171,7 +1267,7 @@ const settings=Object.assign({hideKnown:false,test:'none',minStars:1,rate:0.9,be
 if(typeof settings.tab==='string'){delete settings.tab}
 if(!settings.tabs||typeof settings.tabs!=='object')settings.tabs={};
 if(['grammatik'].includes(settings.lesson))settings.lesson='home';
-if(settings.tabs.rolle==='gender')delete settings.tabs.rolle;
+if(settings.tabs.rolle==='gender'||settings.tabs.rolle==='cards')delete settings.tabs.rolle;
 if(settings.tabs.satzbau==='trennbar')delete settings.tabs.satzbau;
 let query='';
 const saveSettings=()=>save(SKEY,settings);
@@ -1376,6 +1472,7 @@ function updateStats(){
  $('#st-v').textContent=kv+'/'+v.length;$('#st-c').textContent=kc+'/'+c.length;$('#st-g').textContent=ku+'/'+uids.length;$('#st-s').textContent=kx+'/'+xs.length;
  $('#ring-v').style.setProperty('--p',pct(kv,v.length));$('#ring-c').style.setProperty('--p',pct(kc,c.length));$('#ring-g').style.setProperty('--p',pct(ku,uids.length));$('#ring-s').style.setProperty('--p',pct(kx,xs.length));
  $('#st-best').textContent=settings.best;$('#gg-best').textContent=settings.best;
+ {const w=mwAll(),kw=w.filter(x=>isKnown(x.id)).length;$('#st-w').textContent=kw+'/'+w.length;$('#ring-w').style.setProperty('--p',pct(kw,w.length))}
  $$('.understood').forEach(b=>{const on=isKnown(b.dataset.id);b.classList.toggle('on',on);b.textContent=on?'✓ Verstanden':'○ Als verstanden markieren'});
  $$('.tab-btn[data-uid]').forEach(b=>b.classList.toggle('done',isKnown(b.dataset.uid)));
  /* home cards */
@@ -1386,10 +1483,11 @@ function updateStats(){
   if(l==='satzbau'){done+=kx;tot+=xs.length;parts.push(kx+'/'+xs.length+' Sätze')}
   if(l==='rolle'){done+=kv+kc;tot+=v.length+c.length;parts.push((kv+kc)+'/'+(v.length+c.length)+' abgehakt')}
   if(l==='genus'&&settings.best)parts.push('Rekord '+settings.best);
+  if(l==='woerter'){const w=mwAll(),kw=w.filter(x=>isKnown(x.id)).length;done+=kw;tot+=w.length;parts.push(w.length?(kw+'/'+w.length+' gelernt'):'Noch keine Wörter')}
   $('.lc-bar',card).style.width=pct(done,tot)+'%';$('.lc-txt',card).textContent=parts.join(' · ');
  });
 }
-function syncTicks(){$$('.row').forEach(r=>{const k=isKnown(r.dataset.id);r.classList.toggle('known',k);$('input',r).checked=k});applyFilters();updateStats()}
+function syncTicks(){$$('.row').forEach(r=>{const k=isKnown(r.dataset.id);r.classList.toggle('known',k);$('input',r).checked=k});applyFilters();if(typeof mwRender==='function')mwRender();updateStats()}
 
 /* ---------- Toolbar ---------- */
 function paintToolbar(){
@@ -1413,7 +1511,7 @@ $('#voice-test').onclick=()=>speak(VOICE_TESTS[Math.random()*VOICE_TESTS.length|
 if(hasSpeech)pickVoice();
 
 document.addEventListener('change',e=>{
- if(!e.target.matches('.tick input'))return;
+ if(!e.target.matches('.row .tick input'))return;
  const row=e.target.closest('.row'),on=e.target.checked;
  setKnown(row.dataset.id,on);row.classList.toggle('known',on);updateStats();
  if(on&&settings.hideKnown){row.classList.add('leaving');setTimeout(()=>{row.classList.remove('leaving');applyFilters()},380)}else applyFilters();
@@ -1510,7 +1608,8 @@ $$('.lesson.gl').forEach(L=>L.addEventListener('click',e=>{
 const fc={deck:[],total:0,cur:null,dir:'de',running:false};
 function fcStart(){
  const src=$('#fc-src').value,only=$('#fc-new').checked,min=+$('#fc-stars').value;fc.dir=$('#fc-dir').value;
- let pool=Object.values(ITEMS).filter(it=>(src==='both'||(src==='vocab')===(it.kind==='vocab'))&&(it.kind==='chunk'||it.stars>=min)&&(!only||!isKnown(it.id)));
+ const KIND={mine:'mine',vocab:'vocab',chunks:'chunk'};
+ let pool=Object.values(ITEMS).filter(it=>(src==='all'||it.kind===KIND[src])&&(it.kind!=='vocab'||it.stars>=min)&&(!only||!isKnown(it.id)));
  fc.deck=shuffle(pool.slice());fc.total=fc.deck.length;
  $('#fc-done').hidden=true;
  if(!fc.total){fcDone(true);return}
@@ -1520,7 +1619,7 @@ function fcShow(){
  if(!fc.deck.length){fcDone();return}
  const it=fc.cur=fc.deck[0],card=$('#fc-card');card.classList.remove('flipped');
  const de='<div class="big">'+it.deHtml+'</div>',en='<div class="big">'+esc(it.en)+'</div>';
- const tag=it.kind==='vocab'?starHTML(it.stars):'Chunk';
+ const tag=it.kind==='vocab'?starHTML(it.stars):it.kind==='mine'?'Mein Wort':'Chunk';
  const sp='<button class="speak" data-fcsay aria-label="Anhören">🔊</button>';
  setTimeout(()=>{
   $('#fc-front').innerHTML='<span class="tag">'+tag+'</span>'+(fc.dir==='de'?sp+de:en);
@@ -1551,13 +1650,15 @@ DATA.levels.forEach(l=>l.items.forEach(it=>it.de.split(' / ').forEach(seg=>{
 })));
 const GENERAL=GRAM.NOUNS.map(a=>({art:ARTS[a[1]],noun:a[0],plural:'',en:'',why:a[2]}));
 const gg={pool:[],cur:null,streak:0,right:0,total:0,locked:false,timer:0};
-function ggSource(){return settings.ggSrc==='general'?GENERAL:settings.ggSrc==='both'?NOUNS.concat(GENERAL):NOUNS}
+function ggSource(){
+ if(settings.ggSrc==='mine'){const m=mwNouns();if(m.length)return m;$('#gg-why').innerHTML='Your word list has no nouns yet. Add some in Lektion 6 · Meine Wörter. Using your business words for now.';return NOUNS}
+ return settings.ggSrc==='general'?GENERAL:settings.ggSrc==='both'?NOUNS.concat(GENERAL):NOUNS}
 function ggNext(){
  clearTimeout(gg.timer);
- if(!gg.pool.length)gg.pool=shuffle(ggSource().slice());
+ if(!gg.pool.length){const before=$('#gg-why').innerHTML;$('#gg-why').innerHTML='';gg.pool=shuffle(ggSource().slice());gg.keepWhy=!!$('#gg-why').innerHTML}
  gg.cur=gg.pool.pop();gg.locked=false;
  $('#gg-word').innerHTML=esc(gg.cur.noun);$('#gg-en').textContent=gg.cur.en;
- $('#gg-fb').textContent='';$('#gg-fb').className='gg-fb';$('#gg-why').innerHTML='';$('#gg-next').hidden=true;
+ $('#gg-fb').textContent='';$('#gg-fb').className='gg-fb';if(!gg.keepWhy)$('#gg-why').innerHTML='';gg.keepWhy=false;$('#gg-next').hidden=true;
  $$('.art-btn').forEach(b=>{b.disabled=false;b.classList.remove('right')});
 }
 function ggWhy(c){
@@ -1593,8 +1694,8 @@ document.addEventListener('keydown',e=>{
  if(settings.lesson==='satzbau'&&settings.tabs.satzbau==='werkstatt'){wsKey(e);return}
  if(settings.lesson==='genus'&&settings.tabs.genus==='spiel'){
   const m={'1':'der','2':'die','3':'das'};if(m[e.key])ggAnswer(m[e.key]);else if(e.key==='Enter'&&gg.locked)ggNext();return}
- if(settings.lesson!=='rolle')return;
- const t=settings.tabs.rolle;
+ if(settings.lesson!=='woerter')return;
+ const t=settings.tabs.woerter;
  if(t==='cards'&&fc.running){
   if(e.key===' '){e.preventDefault();fcFlip()}else if(e.key==='1'||e.key==='ArrowLeft')fcAgain();else if(e.key==='2'||e.key==='ArrowRight')fcKnow();
  }
@@ -1757,7 +1858,174 @@ function wsKey(e){
 }
 function satzInit(){spinRender(false);flipRender();svRender();wsLevels();wsLoad()}
 
-render();renderStory();satzInit();paintToolbar();applyFilters();updateStats();showLesson(settings.lesson||'home');
+/* ---------- Lektion 6: Meine Wörter (personal word list) + Sicherung (backup) ---------- */
+const WKEY='bg-myrole-words-v1';
+let MW=load(WKEY,[]);if(!Array.isArray(MW))MW=[];
+const saveMW=()=>save(WKEY,MW);
+const TYPE_LABEL={noun:'Nomen',verb:'Verb',adj:'Adjektiv',phrase:'Ausdruck'};
+function mwAll(){return MW}
+function mwDeHtml(w){
+ if(w.type!=='noun')return esc(w.de);
+ const art=w.art==='pl'?'die':w.art,cls=w.art==='pl'?'g-pl':'g-'+w.art;
+ return '<span class="'+cls+'"><span class="art">'+art+'</span> '+esc(w.de)+'</span>'+(w.art==='pl'?' <span class="paren">(Pl.)</span>':'')+(w.pl?', <span class="plu">'+esc(w.pl)+'</span>':'');
+}
+function mwSay(w){return w.type==='noun'?(w.art==='pl'?'die':w.art)+' '+w.de:w.de}
+function mwSync(){
+ Object.keys(ITEMS).forEach(k=>{if(ITEMS[k].kind==='mine')delete ITEMS[k]});
+ MW.forEach(w=>{ITEMS[w.id]={id:w.id,kind:'mine',stars:5,deHtml:mwDeHtml(w),en:w.en,say:mwSay(w),search:(w.de+' '+w.en+' '+(w.ex||'')).toLowerCase()}});
+}
+function mwNouns(){return MW.filter(w=>w.type==='noun'&&['der','die','das'].includes(w.art)).map(w=>({art:w.art,noun:w.de,plural:w.pl||'',en:w.en}))}
+
+/* ---- form ---- */
+const mf={type:'noun',art:'',guessed:false,editing:null,suggest:null};
+function mwType(t){mf.type=t;$$('#mw-type button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));$('#mw-noun').hidden=t!=='noun';mwGuess()}
+function mwArt(a,fromGuess){mf.art=a;mf.guessed=!!fromGuess;$$('#mw-arts button').forEach(b=>b.classList.toggle('on',b.dataset.a===a));mwGuess()}
+function mwLinks(){
+ const q=encodeURIComponent($('#mw-de').value.trim()||'');
+ $('#lk-dictcc').href='https://www.dict.cc/?s='+q;$('#lk-leo').href='https://dict.leo.org/englisch-deutsch/'+q;$('#lk-dwds').href='https://www.dwds.de/wb/'+q;
+ $('#mw-look').classList.toggle('dim',!q);
+}
+function mwGuess(){
+ mwLinks();
+ const box=$('#mw-guess'),word=$('#mw-de').value.trim();
+ if(mf.type!=='noun'||word.length<3){box.innerHTML='';mf.suggest=null;return}
+ const last=word.split(/\s+/).pop(),r=GRAM.guess(last);
+ if(!r){box.innerHTML='';mf.suggest=null;return}
+ const a=ARTS[r.g];mf.suggest=a;
+ const sure=r.c>=85?'very likely':r.c>=65?'probably':'only a guess';
+ box.innerHTML='🔎 <b>Genus-Rater:</b> '+sure+' <b class="g-'+a+'">'+a+'</b> ('+r.c+'%). <span class="why">'+esc(r.why)+'</span>'+
+  (mf.art===a?' <span class="ok">✓ selected</span>':' <button type="button" class="link" id="mw-take">Übernehmen</button>')+
+  (r.c<85?'<div class="warn">Not certain: check the dictionary link above before you rely on it.</div>':'');
+}
+function mwMsg(cls,h){const m=$('#mw-msg');m.className='mw-msg '+cls;m.innerHTML=h}
+function mwReset(){
+ mf.editing=null;$('#mw-form').reset();mwType('noun');mwArt('',false);
+ $('#mw-form-title').textContent='Neues Wort';$('#mw-save').textContent='＋ Hinzufügen';$('#mw-cancel').hidden=true;mwGuess();
+}
+function mwSubmit(ev){
+ ev.preventDefault();
+ let de=$('#mw-de').value.trim().replace(/\s+/g,' '),en=$('#mw-en').value.trim();
+ if(mf.type==='noun'){de=de.replace(/^(der|die|das)\s+/i,m=>{if(!mf.art)mwArt(m.trim().toLowerCase(),false);return ''});de=de.charAt(0).toUpperCase()+de.slice(1)}
+ if(!de){mwMsg('bad','Enter the German word.');$('#mw-de').focus();return}
+ if(!en){mwMsg('bad','Add the English meaning, so you can test yourself on it.');$('#mw-en').focus();return}
+ if(mf.type==='noun'&&!mf.art){mwMsg('bad','Choose <b>der, die</b> or <b>das</b>. Use the Genus-Rater suggestion or check a dictionary.');return}
+ const dup=MW.find(w=>w.id!==mf.editing&&w.type===mf.type&&w.de.toLowerCase()===de.toLowerCase());
+ if(dup){mwMsg('bad','<b>'+esc(de)+'</b> is already in your list.');return}
+ const w={id:mf.editing||('w-'+Date.now().toString(36)),type:mf.type,de,art:mf.type==='noun'?mf.art:'',pl:mf.type==='noun'?$('#mw-pl').value.trim():'',
+  en,ex:$('#mw-ex').value.trim(),guessed:mf.type==='noun'&&mf.guessed,added:mf.editing?(MW.find(x=>x.id===mf.editing)||{}).added:new Date().toISOString()};
+ if(mf.editing){MW[MW.findIndex(x=>x.id===mf.editing)]=w}else MW.unshift(w);
+ saveMW();mwSync();const was=!!mf.editing;mwReset();mwRender();updateStats();
+ mwMsg('good',(was?'Saved: ':'Added: ')+mwDeHtml(w)+(w.guessed?' <span class="unv">?</span> gender from the Genus-Rater, worth checking.':''));
+ speak(mwSay(w));$('#mw-de').focus();
+}
+function mwEdit(id){
+ const w=MW.find(x=>x.id===id);if(!w)return;mf.editing=id;
+ mwType(w.type);$('#mw-de').value=w.de;$('#mw-en').value=w.en;$('#mw-pl').value=w.pl||'';$('#mw-ex').value=w.ex||'';mwArt(w.art||'',w.guessed);
+ $('#mw-form-title').textContent='Wort bearbeiten';$('#mw-save').textContent='✓ Speichern';$('#mw-cancel').hidden=false;mwMsg('','');mwGuess();
+ $('#mw-form').scrollIntoView({behavior:'smooth',block:'start'});$('#mw-de').focus();
+}
+
+/* ---- list ---- */
+const ml={q:'',f:'all',delArm:null};
+function mwRender(){
+ const box=$('#mw-list');if(!box)return;
+ const q=ml.q.toLowerCase();
+ const rows=MW.filter(w=>{const k=isKnown(w.id);
+  if(ml.f==='new'&&k)return false;if(ml.f==='known'&&!k)return false;if(ml.f==='check'&&!w.guessed)return false;
+  return !q||(w.de+' '+w.en+' '+(w.ex||'')).toLowerCase().includes(q)});
+ box.innerHTML=rows.length?rows.map(w=>'<div class="mrow'+(isKnown(w.id)?' known':'')+'" data-id="'+w.id+'">'+
+  '<label class="tick" title="Gelernt – I know this"><input type="checkbox"'+(isKnown(w.id)?' checked':'')+' aria-label="Gelernt"></label>'+
+  '<div class="mw-de"><span class="mw-word">'+mwDeHtml(w)+'</span>'+(w.guessed?' <button class="unv" title="Gender came from the Genus-Rater. Tap once you have checked it.">? prüfen</button>':'')+
+  (w.type!=='noun'?' <span class="mw-tag">'+TYPE_LABEL[w.type]+'</span>':'')+(w.ex?'<span class="mw-ex">'+esc(w.ex)+'</span>':'')+'</div>'+
+  '<div class="mw-en">'+esc(w.en)+'</div>'+
+  '<div class="mw-act"><button class="speak" title="Anhören">🔊</button><button class="mw-ico" data-act="edit" title="Bearbeiten">✎</button>'+
+  '<button class="mw-ico'+(ml.delArm===w.id?' armed':'')+'" data-act="del" title="Löschen">'+(ml.delArm===w.id?'Löschen?':'🗑')+'</button></div></div>').join('')
+  :'<div class="empty">'+(MW.length?'No words match.':'Your list is empty. Add the first word you look up while reading.')+'</div>';
+ const k=MW.filter(w=>isKnown(w.id)).length,c=MW.filter(w=>w.guessed).length;
+ $('#mw-count').textContent=MW.length?(MW.length+(MW.length===1?' Wort':' Wörter')+' · '+k+' gelernt'+(c?' · '+c+' to check':'')):'';
+ mwNudge();
+}
+function mwNudge(){
+ const n=$('#mw-nudge');if(!n)return;const last=settings.lastBackup?new Date(settings.lastBackup):null;
+ const unsaved=MW.filter(w=>!last||new Date(w.added)>last).length;
+ n.hidden=!unsaved;n.innerHTML=unsaved?'💾 '+unsaved+(unsaved===1?' word hasn\'t':' words haven\'t')+' been backed up yet. <button class="link" data-goto="woerter:backup">Sicherung →</button>':'';
+}
+
+/* ---- backup ---- */
+function ago(d){const days=Math.floor((Date.now()-d)/864e5);return days<=0?'today':days===1?'yesterday':days+' days ago'}
+function bkSummary(k,words,st){
+ const ks=Object.keys(k||{});const c=p=>ks.filter(x=>x.startsWith(p)).length;
+ return '<ul class="bk-list"><li><b>'+(words||[]).length+'</b> eigene Wörter</li><li><b>'+c('v')+'</b> Business-Vokabeln abgehakt</li><li><b>'+c('c')+'</b> Chunks abgehakt</li><li><b>'+c('x')+'</b> Werkstatt-Sätze gebaut</li><li><b>'+c('u-')+'</b> Kapitel verstanden</li><li>der/die/das-Rekord: <b>'+((st&&st.best)||0)+'</b></li></ul>';
+}
+function bkPaint(){
+ $('#bk-last').textContent=settings.lastBackup?'Last backup: '+ago(new Date(settings.lastBackup))+' ('+new Date(settings.lastBackup).toLocaleDateString('en-GB')+').':'No backup yet.';
+ $('#bk-summary').innerHTML=bkSummary(known,MW,settings);
+}
+function bkExport(){
+ const now=new Date();
+ const data={app:'mein-deutsch-lektionen',version:1,exported:now.toISOString(),known,settings:Object.assign({},settings,{lastBackup:now.toISOString()}),words:MW};
+ const blob=new Blob([JSON.stringify(data,null,1)],{type:'application/json'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='mein-deutsch-sicherung-'+now.toISOString().slice(0,10)+'.json';
+ document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500);
+ settings.lastBackup=now.toISOString();saveSettings();bkPaint();mwNudge();
+ $('#bk-msg').className='mw-msg good';$('#bk-msg').textContent='Saved. Check your Downloads folder for '+a.download+'.';
+}
+let bkData=null;
+function bkPick(file){
+ const r=new FileReader();
+ r.onload=()=>{
+  try{const d=JSON.parse(r.result);if(d.app!=='mein-deutsch-lektionen'||typeof d.known!=='object'||!Array.isArray(d.words))throw 0;bkData=d}
+  catch(e){bkData=null;$('#bk-preview').innerHTML='<div class="mw-msg bad">That doesn\'t look like a backup from this page.</div>';return}
+  $('#bk-preview').innerHTML='<p>Backup from <b>'+new Date(bkData.exported).toLocaleString('en-GB')+'</b>:</p>'+bkSummary(bkData.known,bkData.words,bkData.settings)+
+   '<div class="mw-btns"><button class="btn primary" id="bk-merge">Zusammenführen</button><button class="btn" id="bk-replace">Ersetzen …</button></div>'+
+   '<p class="hint"><b>Zusammenführen</b> (merge) keeps everything here and adds what\'s in the file. <b>Ersetzen</b> (replace) makes this page exactly like the backup.</p>';
+ };
+ r.readAsText(file);
+}
+function bkApply(mode){
+ const d=bkData;if(!d)return;
+ if(mode==='replace'){known=Object.assign({},d.known);MW=d.words.slice();Object.assign(settings,d.settings||{},{lesson:'woerter'})}
+ else{
+  Object.keys(d.known).forEach(k=>{known[k]=1});
+  const have=new Set(MW.map(w=>w.id)),keys=new Set(MW.map(w=>w.type+'|'+w.de.toLowerCase()));
+  d.words.forEach(w=>{if(!have.has(w.id)&&!keys.has(w.type+'|'+String(w.de).toLowerCase()))MW.push(w)});
+  settings.best=Math.max(settings.best||0,(d.settings&&d.settings.best)||0);
+ }
+ save(KEY,known);saveMW();settings.tabs=Object.assign({},settings.tabs,{woerter:'backup'});saveSettings();location.reload();
+}
+
+/* ---- wiring ---- */
+function mwInit(){
+ mwSync();
+ $('#mw-type').onclick=e=>{const b=e.target.closest('button');if(b)mwType(b.dataset.t)};
+ $('#mw-arts').onclick=e=>{const b=e.target.closest('button');if(b)mwArt(b.dataset.a,false)};
+ $('#mw-guess').onclick=e=>{if(e.target.id==='mw-take'&&mf.suggest)mwArt(mf.suggest,true)};
+ $('#mw-de').oninput=mwGuess;
+ $('#mw-form').onsubmit=mwSubmit;$('#mw-cancel').onclick=()=>{mwReset();mwMsg('','')};
+ $('#mw-q').oninput=e=>{ml.q=e.target.value;mwRender()};
+ $('#mw-filter').onclick=e=>{const b=e.target.closest('button');if(!b)return;ml.f=b.dataset.f;$$('#mw-filter button').forEach(x=>x.classList.toggle('on',x===b));mwRender()};
+ $('#mw-list').addEventListener('change',e=>{if(!e.target.matches('.tick input'))return;const id=e.target.closest('.mrow').dataset.id;setKnown(id,e.target.checked);mwRender();updateStats()});
+ $('#mw-list').addEventListener('click',e=>{
+  const row=e.target.closest('.mrow');if(!row)return;const id=row.dataset.id,w=MW.find(x=>x.id===id);
+  if(e.target.closest('.speak')){speak(mwSay(w));return}
+  if(e.target.closest('.unv')){w.guessed=false;saveMW();mwRender();return}
+  const act=e.target.closest('[data-act]');if(!act)return;
+  if(act.dataset.act==='edit')mwEdit(id);
+  else if(ml.delArm===id){MW=MW.filter(x=>x.id!==id);delete known[id];save(KEY,known);saveMW();mwSync();ml.delArm=null;mwRender();updateStats()}
+  else{ml.delArm=id;mwRender();setTimeout(()=>{if(ml.delArm===id){ml.delArm=null;mwRender()}},3000)}
+ });
+ $('#bk-export').onclick=bkExport;$('#bk-pick').onclick=()=>$('#bk-file').click();
+ $('#bk-file').onchange=e=>{if(e.target.files[0])bkPick(e.target.files[0]);e.target.value=''};
+ $('#bk-preview').addEventListener('click',e=>{
+  if(e.target.id==='bk-merge')bkApply('merge');
+  if(e.target.id==='bk-replace'){if(e.target.classList.contains('armed'))bkApply('replace');else{e.target.classList.add('armed');e.target.textContent='Sicher? Alles ersetzen'}}
+ });
+ if(!MW.length&&!settings.fcSrcSet)$('#fc-src').value='vocab';
+ $('#fc-src').onchange=()=>{settings.fcSrcSet=1;saveSettings()};
+ mwReset();mwRender();bkPaint();
+}
+
+mwInit();render();renderStory();satzInit();paintToolbar();applyFilters();updateStats();showLesson(settings.lesson||'home');
 
 </script>
 </body>
